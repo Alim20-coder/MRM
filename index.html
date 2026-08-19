@@ -21,12 +21,10 @@
 <meta name="twitter:image" content="css/logo.JPG">
 <link rel="icon" type="image/jpg" href="css/logo.JPG">
 
-<!-- Google Fonts: Cairo & Outfit -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<!-- Font Awesome 6.5.1 CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <script type="application/ld+json">
@@ -60,73 +58,79 @@
 
 <style>
 :root{
-  --bg: #0d0b09;
-  --bg-alt: #16120e;
-  --bg-alt-2: #1e1813;
-  --bg-card: #18130f;
-  --bg-card-hover: #221a14;
-  --bg-light: #fbf9f5;
+  --bg: #f6f2e8;
+  --bg-alt: #efe7d6;
+  --bg-alt-2: #f6f2e8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fbf6ea;
+  --bg-light: #ffffff;
   --bg-light-card: #ffffff;
-  
-  --cocoa-dark: #1f1712;
-  --cocoa-rich: #322116;
-  --cocoa-mid: #4a3222;
-  --cocoa-light: #6d4b35;
+
+  --cocoa-dark: #2b1d12;
+  --cocoa-rich: #7a5230;
+  --cocoa-mid: #9a6c42;
+  --cocoa-light: #c79a67;
   --cocoa-warm-beige: #efe8de;
-  
-  --wood-deep: #26160c;
-  --wood-rich: #482b15;
-  --wood-warm: #754926;
-  --wood-amber: #b07438;
-  --wood-light: #dca665;
-  
-  --gold-primary: #f5b300;
-  --gold-bright: #ffca36;
-  --gold-deep: #b38200;
-  --gold-glow: rgba(245, 179, 0, 0.4);
-  
+
+  --wood-deep: #4a2f16;
+  --wood-rich: #6d4322;
+  --wood-warm: #a06835;
+  --wood-amber: #c88c48;
+  --wood-light: #e2b884;
+
+  /* Blue removed — replaced with rich black / charcoal tones */
+  --navy-deep: #0a0908;
+  --navy-mid: #191512;
+  --navy-light: #2c2620;
+
+  --gold-primary: #c9971f;
+  --gold-bright: #e9b93a;
+  --gold-deep: #96700f;
+  --gold-glow: rgba(201, 151, 31, 0.35);
+
   --text-light: #ffffff;
   --text-pure-white: #ffffff;
-  --text-muted: #d5cbbf;
-  --text-dim: #9e9082;
-  --text-gold: #ffcf54;
-  --text-dark: #1a1612;
-  --text-dark-muted: #5c5248;
-  
-  --border-subtle: rgba(245, 179, 0, 0.18);
-  --border-medium: rgba(245, 179, 0, 0.35);
-  --border-highlight: rgba(255, 202, 54, 0.7);
-  
+  --text-muted: #35291a;
+  --text-dim: #4a3c28;
+  --text-gold: #96700f;
+  --text-dark: #17130e;
+  --text-dark-muted: #3a332b;
+
+  --border-subtle: rgba(201, 151, 31, 0.28);
+  --border-medium: rgba(201, 151, 31, 0.45);
+  --border-highlight: rgba(233, 185, 58, 0.8);
+
   --radius: 18px;
   --radius-lg: 26px;
   --radius-sm: 10px;
-  
-  --gold-grad: linear-gradient(135deg, #f5b300 0%, #ffca36 50%, #f5b300 100%);
-  --gold-grad-rev: linear-gradient(135deg, #ffca36 0%, #f5b300 50%, #d49800 100%);
-  --wood-grad: linear-gradient(135deg, #1f1712 0%, #322116 40%, #482b15 70%, #754926 100%);
-  --cocoa-card-grad: linear-gradient(160deg, rgba(50, 33, 22, 0.75) 0%, rgba(24, 19, 15, 0.98) 100%);
-  --luxury-glass: rgba(22, 18, 14, 0.85);
-  
+
+  --gold-grad: linear-gradient(135deg, #c9971f 0%, #e9b93a 50%, #c9971f 100%);
+  --gold-grad-rev: linear-gradient(135deg, #e9b93a 0%, #c9971f 50%, #96700f 100%);
+  --wood-grad: linear-gradient(135deg, #4a2f16 0%, #6d4322 40%, #a06835 70%, #c88c48 100%);
+  --cocoa-card-grad: linear-gradient(160deg, #ffffff 0%, #faf5ea 100%);
+  --navy-card-grad: linear-gradient(160deg, #ffffff 0%, #faf5ea 100%);
+  --luxury-glass: rgba(255, 255, 255, 0.9);
+
   --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   --ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
-  --shadow-sm: 0 4px 20px rgba(0,0,0,0.4);
-  --shadow-md: 0 12px 36px rgba(0,0,0,0.55), 0 0 20px rgba(245, 179, 0, 0.15);
-  --shadow-lg: 0 24px 60px rgba(0,0,0,0.7), 0 0 35px rgba(245, 179, 0, 0.25);
-  --shadow-gold: 0 8px 25px rgba(245, 179, 0, 0.4);
+  --shadow-sm: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-md: 0 12px 36px rgba(0,0,0,0.12), 0 0 20px rgba(201, 151, 31, 0.12);
+  --shadow-lg: 0 24px 60px rgba(0,0,0,0.18), 0 0 35px rgba(201, 151, 31, 0.2);
+  --shadow-gold: 0 8px 25px rgba(201, 151, 31, 0.35);
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{
   background: var(--bg);
-  color: var(--text-light);
+  color: var(--text-dark);
   font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
   overflow-x: hidden;
   line-height: 1.8;
   font-size: 16px;
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(117, 73, 38, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 85% 85%, rgba(245, 179, 0, 0.08) 0%, transparent 45%);
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(117, 73, 38, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(201, 151, 31, 0.06) 0%, transparent 45%);
   background-attachment: fixed;
 }
 [dir="ltr"] body{
@@ -149,7 +153,6 @@ h1,h2,h3,h4,h5,h6,.display-font{
 }
 section{overflow-x: hidden;}
 
-/* Luxury Typography & Gradients */
 .gold-text{
   background: var(--gold-grad);
   -webkit-background-clip: text;
@@ -158,7 +161,7 @@ section{overflow-x: hidden;}
   display: inline-block;
 }
 .gold-text-shimmer{
-  background: linear-gradient(90deg, #f5b300 0%, #fff 50%, #f5b300 100%);
+  background: linear-gradient(90deg, #c9971f 0%, #6d4b35 50%, #c9971f 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -171,7 +174,7 @@ section{overflow-x: hidden;}
 }
 
 .eyebrow{
-  color: var(--text-gold);
+  color: var(--gold-deep);
   letter-spacing: 2px;
   font-size: 0.84rem;
   font-weight: 700;
@@ -180,13 +183,13 @@ section{overflow-x: hidden;}
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
-  background: rgba(245, 179, 0, 0.12);
+  background: rgba(201, 151, 31, 0.12);
   padding: 5px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(245, 179, 0, 0.3);
+  border: 1px solid rgba(201, 151, 31, 0.3);
 }
 .eyebrow i {
-  color: var(--gold-bright);
+  color: var(--gold-primary);
   font-size: 0.9rem;
 }
 [dir="ltr"] .eyebrow { letter-spacing: 1.5px; }
@@ -195,39 +198,51 @@ section{overflow-x: hidden;}
   font-size: clamp(2rem, 4.2vw, 3.2rem);
   margin-bottom: 0.6rem;
   line-height: 1.25;
-  color: #fff;
+  color: var(--text-dark);
+  font-weight: 900;
 }
 .section-sub{
-  color: var(--text-muted);
+  color: var(--text-dark-muted);
   max-width: 700px;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.85;
 }
 .section-pad{padding: 100px 0;}
-.bg-alt{background: var(--bg-alt);}
-.bg-alt2{background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-alt-2) 50%, var(--bg) 100%);}
+
+/* ===== Background system: DARK / LIGHT / GRADIENT ===== */
+.bg-alt{background: var(--navy-deep); color:#fff;}
+.bg-alt .section-title{color:#fff;}
+.bg-alt .section-sub{color:#e7ded0;}
+.bg-alt .eyebrow{color:var(--gold-bright);background:rgba(233,185,58,0.14);border-color:rgba(233,185,58,0.35);}
+
+.bg-alt2{background: linear-gradient(160deg, #0a0908 0%, #241a10 45%, #0a0908 100%); color:#fff;}
+.bg-alt2 .section-title{color:#fff;}
+.bg-alt2 .section-sub{color:#e7ded0;}
+.bg-alt2 .eyebrow{color:var(--gold-bright);background:rgba(233,185,58,0.14);border-color:rgba(233,185,58,0.35);}
+
 .bg-cocoa-mesh{
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(72, 43, 21, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(50, 33, 22, 0.3) 0%, transparent 50%),
-    var(--bg-alt);
+  background: #ffffff;
+  color: var(--text-dark);
+}
+.bg-cocoa-mesh .section-title{color:#12100e;}
+.bg-cocoa-mesh .section-sub{color:var(--text-dark-muted);}
+.bg-cocoa-mesh .eyebrow{
+  background: rgba(201, 151, 31, 0.15);
+  color: #a37200;
+  border-color: rgba(201, 151, 31, 0.4);
 }
 
-/* Light Section Stylings */
 .section-light{
   background: var(--bg-light);
   color: var(--text-dark);
 }
-.section-light .section-title{
-  color: #12100e;
-}
-.section-light .section-sub{
-  color: var(--text-dark-muted);
-}
+.section-light .section-title{color: #12100e;}
+.section-light .section-sub{color: var(--text-dark-muted);}
 .section-light .eyebrow{
-  background: rgba(245, 179, 0, 0.15);
+  background: rgba(201, 151, 31, 0.15);
   color: #a37200;
-  border-color: rgba(245, 179, 0, 0.4);
+  border-color: rgba(201, 151, 31, 0.4);
 }
 
 .divider-gold{
@@ -249,21 +264,10 @@ section{overflow-x: hidden;}
   border-radius: 50%;
   box-shadow: 0 0 8px var(--gold-bright);
 }
-[dir="ltr"] .divider-gold::after{
-  right: auto;
-  left: 0;
-}
-.text-center .divider-gold{
-  margin-left: auto;
-  margin-right: auto;
-}
-.text-center .divider-gold::after{
-  left: 50%;
-  transform: translateX(-50%);
-  right: auto;
-}
+[dir="ltr"] .divider-gold::after{right: auto; left: 0;}
+.text-center .divider-gold{margin-left: auto; margin-right: auto;}
+.text-center .divider-gold::after{left: 50%; transform: translateX(-50%); right: auto;}
 
-/* Layout Container & Grid */
 .container{width:100%;max-width:1260px;margin:0 auto;padding:0 24px;}
 .row{display:flex;flex-wrap:wrap;margin:0 -12px;}
 .col-3{flex:0 0 25%;max-width:25%;padding:0 12px;}
@@ -313,122 +317,94 @@ section{overflow-x: hidden;}
 .position-relative{position:relative!important;}
 .w-100{width:100%!important;}.h-100{height:100%!important;}
 
-/* ===== PRELOADER ===== */
 #preloader{
-  position:fixed;inset:0;background:var(--bg);z-index:99999;
+  position:fixed;inset:0;background:var(--navy-deep);z-index:99999;
   display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;
   transition:opacity .8s var(--ease-out),visibility .8s var(--ease-out);
 }
 #preloader img{width:110px;height:auto;border-radius:18px;border:2px solid var(--gold-primary);box-shadow:0 0 40px var(--gold-glow);animation:pulse 1.4s ease-in-out infinite;}
 #preloader .ldr-text{font-size:1.1rem;font-weight:700;letter-spacing:2px;color:var(--gold-bright);}
-#preloader .ldr-bar{width:220px;height:4px;background:var(--cocoa-rich);border-radius:4px;overflow:hidden;border:1px solid rgba(245,179,0,0.25);}
+#preloader .ldr-bar{width:220px;height:4px;background:var(--cocoa-rich);border-radius:4px;overflow:hidden;border:1px solid rgba(201,151,31,0.25);}
 #preloader .ldr-bar span{display:block;height:100%;width:0%;background:var(--gold-grad);animation:ldr 1.8s var(--ease-out) forwards;}
 @keyframes ldr{to{width:100%;}}
 @keyframes pulse{0%,100%{transform:scale(1);filter:brightness(1);}50%{transform:scale(1.06);filter:brightness(1.15);}}
 #preloader.hide{opacity:0;visibility:hidden;pointer-events:none;}
 
-/* ===== LIVE FLOATING ICONS & MICRO-ANIMATIONS ===== */
-.floating-live-icon{
-  animation: floatIcon 3.5s ease-in-out infinite alternate;
-  display: inline-block;
-}
-.floating-live-icon.reverse{
-  animation: floatIconReverse 4s ease-in-out infinite alternate;
-}
-.floating-live-icon.pulse-live{
-  animation: pulseLive 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-.floating-live-icon.spin-slow{
-  animation: spin 20s linear infinite;
-}
-@keyframes floatIcon{
-  0%{transform: translateY(0px) rotate(0deg);}
-  100%{transform: translateY(-8px) rotate(4deg);}
-}
-@keyframes floatIconReverse{
-  0%{transform: translateY(0px) rotate(0deg);}
-  100%{transform: translateY(8px) rotate(-4deg);}
-}
-@keyframes pulseLive{
-  0%, 100%{transform: scale(1); filter: brightness(1);}
-  50%{transform: scale(1.15); filter: brightness(1.3) drop-shadow(0 0 10px var(--gold-bright));}
-}
+.floating-live-icon{animation: floatIcon 3.5s ease-in-out infinite alternate; display: inline-block;}
+.floating-live-icon.reverse{animation: floatIconReverse 4s ease-in-out infinite alternate;}
+.floating-live-icon.pulse-live{animation: pulseLive 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;}
+.floating-live-icon.spin-slow{animation: spin 20s linear infinite;}
+@keyframes floatIcon{0%{transform: translateY(0px) rotate(0deg);}100%{transform: translateY(-8px) rotate(4deg);}}
+@keyframes floatIconReverse{0%{transform: translateY(0px) rotate(0deg);}100%{transform: translateY(8px) rotate(-4deg);}}
+@keyframes pulseLive{0%, 100%{transform: scale(1); filter: brightness(1);}50%{transform: scale(1.15); filter: brightness(1.3) drop-shadow(0 0 10px var(--gold-bright));}}
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR — padding top/bottom, cancelled on scroll ===== */
 .navbar{
-  background: linear-gradient(180deg, rgba(22, 17, 13, 0.95) 0%, rgba(13, 11, 9, 0.92) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 16px 0;
+  background: transparent;
+  padding: 34px 0;
   transition: all .4s var(--ease-out);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid transparent;
   position: fixed; top: 0; left: 0; right: 0; z-index: 9990;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  box-shadow: none;
 }
 .navbar.scrolled{
-  background: rgba(12, 10, 8, 0.98);
-  padding: 10px 0;
+  background: rgba(10, 9, 8, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0;
   border-bottom-color: var(--border-medium);
-  box-shadow: 0 8px 35px rgba(0,0,0,0.7);
+  box-shadow: 0 8px 35px rgba(0,0,0,0.35);
 }
-.navbar .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;width:100%;max-width:100%;padding:0 30px;}
+.navbar.scrolled .container{padding-top:12px;padding-bottom:12px;}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;width:100%;max-width:100%;padding:0 30px;transition:var(--transition-smooth);}
 .navbar-brand{display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.navbar-brand img{height: 48px; border-radius: 10px; border: 1.5px solid rgba(245,179,0,0.4); transition: transform 0.35s ease, box-shadow 0.35s ease;}
-.navbar-brand:hover img{transform: scale(1.05); box-shadow: 0 0 20px rgba(245,179,0,0.45);}
+.navbar-brand img{height: 48px; border-radius: 10px; border: 1.5px solid rgba(201,151,31,0.5); transition: transform 0.35s ease, box-shadow 0.35s ease;}
+.navbar-brand:hover img{transform: scale(1.05); box-shadow: 0 0 20px rgba(201,151,31,0.45);}
 .brand-text{display:flex;flex-direction:column;}
-.brand-text .title{font-size:1.15rem;font-weight:900;color:#fff;line-height:1.1;letter-spacing:0.5px;}
-.brand-text .sub{font-size:0.7rem;color:var(--text-gold);font-weight:600;letter-spacing:1px;}
+.brand-text .title{font-size:1.15rem;font-weight:900;color:#fff;line-height:1.1;letter-spacing:0.5px;text-shadow:0 2px 10px rgba(0,0,0,0.7);}
+.brand-text .sub{font-size:0.7rem;color:var(--gold-bright);font-weight:700;letter-spacing:1px;text-shadow:0 2px 10px rgba(0,0,0,0.7);}
 
 .navbar-nav{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;margin:0 16px;}
 .nav-link{
   color: #fff!important;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0 2px;
   position: relative;
   padding: 8px 12px!important;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   border-radius: 8px;
   transition: all .3s var(--ease-out);
   white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
-.nav-link:hover, .nav-link.active{
-  color: var(--gold-bright)!important;
-  background: rgba(245, 179, 0, 0.12);
-}
-.nav-link::after{
-  content:'';position:absolute;bottom:0;right:10px;width:0;height:2.5px;
-  background:var(--gold-grad);transition:width .35s var(--ease-out);border-radius:2px;
-}
+.nav-link:hover, .nav-link.active{color: var(--gold-bright)!important; background: rgba(233, 185, 58, 0.14);}
+.nav-link::after{content:'';position:absolute;bottom:0;right:10px;width:0;height:2.5px;background:var(--gold-grad);transition:width .35s var(--ease-out);border-radius:2px;}
 [dir="ltr"] .nav-link::after{right:auto;left:10px;}
 .nav-link:hover::after,.nav-link.active::after{width:calc(100% - 20px);}
 
-.btn-lang{
+.btn-lang, .btn-navbar-call{
   border: 1.5px solid var(--gold-primary);
   color: var(--gold-bright);
   border-radius: 30px;
   padding: 8px 20px;
   font-size: 0.88rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(72,43,21,0.4) 0%, rgba(50,33,22,0.7) 100%);
+  font-weight: 800;
+  background: rgba(10, 9, 8, 0.55);
+  backdrop-filter: blur(6px);
   transition: all .35s var(--ease-out);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-.btn-lang:hover{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245,179,0,0.5);
-}
+.btn-lang:hover, .btn-navbar-call:hover{background: var(--gold-grad); color: #0c0a08; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,151,31,0.5);}
 
 .navbar-toggler{
-  background: var(--cocoa-rich);
+  background: rgba(10,9,8,0.6);
   border: 1px solid var(--border-medium);
   cursor: pointer;
   padding: 8px 14px;
@@ -444,28 +420,23 @@ section{overflow-x: hidden;}
   .navbar-nav-desktop{display:none!important;}
 }
 
-/* ===== OFFCANVAS MOBILE MENU ===== */
 .offcanvas{
   position:fixed;top:0;bottom:0;
-  background: linear-gradient(160deg, #1d1611 0%, #14100d 50%, #0d0b09 100%);
+  background: linear-gradient(160deg, #191512 0%, #100d0a 50%, #0a0908 100%);
   color:var(--text-light);
   z-index:99999;width:320px;max-width:85vw;
   transition:transform .45s var(--ease-out);overflow-y:auto;padding:26px;
   border-left:1px solid var(--border-medium);
-  box-shadow: -10px 0 40px rgba(0,0,0,0.8);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.5);
 }
 .offcanvas-end{right:0;transform:translateX(100%);}
-[dir="ltr"] .offcanvas-end{right:auto;left:0;transform:translateX(-100%);border-left:none;border-right:1px solid var(--border-medium);box-shadow: 10px 0 40px rgba(0,0,0,0.8);}
+[dir="ltr"] .offcanvas-end{right:auto;left:0;transform:translateX(-100%);border-left:none;border-right:1px solid var(--border-medium);box-shadow: 10px 0 40px rgba(0,0,0,0.5);}
 .offcanvas.show{transform:translateX(0);}
-.offcanvas-backdrop{
-  position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:99998;
-  opacity:0;visibility:hidden;transition:all .35s var(--ease-out);
-  backdrop-filter: blur(8px);
-}
+.offcanvas-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99998;opacity:0;visibility:hidden;transition:all .35s var(--ease-out);backdrop-filter: blur(8px);}
 .offcanvas-backdrop.show{opacity:1;visibility:visible;}
 .offcanvas-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border-subtle);}
 .offcanvas-body .navbar-nav{flex-direction:column;align-items:stretch;gap:4px;margin:0;}
-.offcanvas-body .nav-link{padding:14px 12px!important;margin:0;border-bottom:1px solid rgba(245,179,0,.08);font-size:1.05rem;}
+.offcanvas-body .nav-link{padding:14px 12px!important;margin:0;border-bottom:1px solid rgba(201,151,31,.1);font-size:1.05rem;}
 .btn-close-custom{
   background:var(--cocoa-rich);border:1px solid var(--border-medium);color:var(--gold-bright);
   font-size:1.1rem;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;
@@ -473,798 +444,199 @@ section{overflow-x: hidden;}
 }
 .btn-close-custom:hover{background:var(--gold-primary);color:#0c0a08;transform:rotate(90deg);}
 
-/* ===== BUTTONS ===== */
 .btn-gold{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  border: 1px solid var(--gold-bright);
-  font-weight: 800;
-  padding: 14px 34px;
-  border-radius: 30px;
-  position: relative;
-  overflow: hidden;
-  transition: all .4s var(--ease-out);
-  z-index: 1;
-  cursor: pointer;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: var(--shadow-gold);
+  background: var(--gold-grad); color: #0c0a08; border: 1px solid var(--gold-bright);
+  font-weight: 800; padding: 14px 34px; border-radius: 30px; position: relative;
+  overflow: hidden; transition: all .4s var(--ease-out); z-index: 1; cursor: pointer;
+  font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: var(--shadow-gold);
 }
-.btn-gold:hover{
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 16px 40px rgba(245, 179, 0, 0.55);
-  color: #000;
-}
+.btn-gold:hover{transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 40px rgba(201, 151, 31, 0.5); color: #000;}
 
 .btn-hero-contact{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 44px;
-  border: 1.5px solid rgba(255,255,255,0.7);
-  border-radius: 40px;
-  color: #ffffff;
-  font-size: 1.15rem;
-  font-weight: 800;
-  background: rgba(18, 14, 10, 0.4);
-  backdrop-filter: blur(10px);
-  transition: all .35s var(--ease-out);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  display: inline-flex; align-items: center; justify-content: center; padding: 14px 44px;
+  border: 1.5px solid rgba(255,255,255,0.7); border-radius: 40px; color: #ffffff;
+  font-size: 1.15rem; font-weight: 800; background: rgba(18, 14, 10, 0.4);
+  backdrop-filter: blur(10px); transition: all .35s var(--ease-out); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
-.btn-hero-contact:hover{
-  background: #ffffff;
-  color: #0c0a08;
-  border-color: #ffffff;
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 12px 30px rgba(255,255,255,0.3);
-}
+.btn-hero-contact:hover{background: #ffffff; color: #0c0a08; border-color: #ffffff; transform: translateY(-3px) scale(1.04); box-shadow: 0 12px 30px rgba(255,255,255,0.3);}
 
 .btn-card-yellow{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  font-weight: 800;
-  padding: 12px 20px;
-  border-radius: 25px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  font-size: 0.98rem;
-  border: none;
-  transition: all .35s var(--ease-out);
-  box-shadow: 0 4px 15px rgba(245,179,0,0.35);
-  cursor: pointer;
+  background: var(--gold-grad); color: #0c0a08; font-weight: 800; padding: 12px 20px;
+  border-radius: 25px; display: inline-flex; align-items: center; justify-content: center;
+  width: 100%; font-size: 0.98rem; border: none; transition: all .35s var(--ease-out);
+  box-shadow: 0 4px 15px rgba(201,151,31,0.3); cursor: pointer;
 }
-.btn-card-yellow:hover{
-  background: #fff;
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255,255,255,0.4);
-}
+.btn-card-yellow:hover{background: #fff; color: #000; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,255,255,0.4);}
 
 .btn-outline-gold{
-  border: 1.5px solid var(--gold-primary);
-  color: var(--gold-bright);
-  background: rgba(40, 26, 17, 0.4);
-  backdrop-filter: blur(10px);
-  padding: 13px 30px;
-  border-radius: 30px;
-  font-weight: 700;
-  transition: all .4s var(--ease-out);
-  cursor: pointer;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  border: 1.5px solid var(--gold-primary); color: var(--gold-deep); background: rgba(201, 151, 31, 0.08);
+  backdrop-filter: blur(10px); padding: 13px 30px; border-radius: 30px; font-weight: 700;
+  transition: all .4s var(--ease-out); cursor: pointer; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px;
 }
-.btn-outline-gold:hover{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  border-color: transparent;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 32px rgba(245, 179, 0, 0.4);
-}
+.btn-outline-gold:hover{background: var(--gold-grad); color: #0c0a08; border-color: transparent; transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 32px rgba(201, 151, 31, 0.35);}
 
-/* ===== HERO SECTION (MATCHING IMAGE 1) ===== */
 .hero-image-style{
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background: linear-gradient(180deg, rgba(12, 10, 8, 0.75) 0%, rgba(12, 10, 8, 0.88) 100%), url('css/v2 (3).jpg') center/cover no-repeat;
-  padding: 140px 0 100px;
-  text-align: center;
-  overflow: hidden;
+  min-height: 85vh; display: flex; align-items: center; justify-content: center; position: relative;
+  background: linear-gradient(180deg, rgba(10, 9, 8, 0.7) 0%, rgba(10, 9, 8, 0.88) 100%), url('css/hero.JPG') center/cover no-repeat;
+  padding: 140px 0 100px; text-align: center; overflow: hidden;
 }
-.hero-image-style::before{
-  content:'';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 40%, rgba(245, 179, 0, 0.15) 0%, transparent 65%);
-  pointer-events: none;
-}
-.hero-top-eyebrow{
-  color: var(--gold-bright);
-  font-size: 1.25rem;
-  font-weight: 800;
-  margin-bottom: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
-.hero-main-title{
-  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.2;
-  margin-bottom: 22px;
-  letter-spacing: -0.5px;
-  text-shadow: 0 4px 25px rgba(0,0,0,0.9);
-}
-.hero-sub-desc{
-  color: #ffffff;
-  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-  font-weight: 500;
-  max-width: 820px;
-  margin: 0 auto 36px;
-  line-height: 1.8;
-  opacity: 0.95;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-}
-.hero-counter-wrap{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(20, 16, 12, 0.6);
-  border: 1px solid rgba(245, 179, 0, 0.3);
-  padding: 6px 18px;
-  border-radius: 30px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(8px);
-}
-.hero-counter-num{
-  color: var(--gold-bright);
-  font-weight: 900;
-  font-size: 1.1rem;
-}
+.hero-image-style::before{content:'';position: absolute;inset: 0;background: radial-gradient(circle at 50% 40%, rgba(201, 151, 31, 0.15) 0%, transparent 65%);pointer-events: none;}
+.hero-top-eyebrow{color: var(--gold-bright); font-size: 1.25rem; font-weight: 800; margin-bottom: 18px; display: inline-flex; align-items: center; gap: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.8);}
+.hero-main-title{font-weight: 900; color: #ffffff; line-height: 1.25; margin-bottom: 22px; letter-spacing: -0.5px; text-shadow: 0 4px 25px rgba(0,0,0,0.9); display:flex; flex-direction: column; align-items: center; gap: 6px;}
+.hero-main-title .line-en{font-size: clamp(2.4rem, 5.6vw, 4.4rem);}
+.hero-main-title .line-ar{font-size: clamp(1.6rem, 3.2vw, 2.4rem); color: var(--gold-bright); font-weight: 800;}
+.hero-sub-desc{color: #ffffff; font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 600; max-width: 820px; margin: 0 auto 36px; line-height: 1.8; opacity: 0.97; text-shadow: 0 2px 10px rgba(0,0,0,0.8);}
+.hero-counter-wrap{display: inline-flex; align-items: center; gap: 10px; background: rgba(14, 12, 10, 0.6); border: 1px solid rgba(201, 151, 31, 0.35); padding: 6px 18px; border-radius: 30px; margin-bottom: 20px; backdrop-filter: blur(8px);}
+.hero-counter-num{color: var(--gold-bright); font-weight: 900; font-size: 1.1rem;}
 
-/* ===== SERVICES SECTION (MATCHING IMAGE 2) ===== */
-.services-white-section{
-  background: #ffffff;
-  color: #1a1612;
-  padding: 90px 0 100px;
-}
+/* ===== ABOUT SECTION — LIGHT, bigger text ===== */
+.about-section{background: #ffffff; padding: 90px 0;}
+.about-card{background: linear-gradient(160deg, #ffffff 0%, #faf6ec 100%); border: 1px solid rgba(201,151,31,0.25); border-radius: var(--radius-lg); padding: 44px 40px; box-shadow: var(--shadow-sm);}
+.about-card p{color: var(--text-dark); font-size: 1.28rem; font-weight: 600; line-height: 2.05; margin-bottom: 20px;}
+.about-card p:last-child{margin-bottom:0;}
+
+/* ===== SERVICES SECTION — DARK ===== */
+.services-white-section{background: var(--navy-deep); color: #fff; padding: 90px 0 100px;}
+.services-white-section .section-title{color:#fff;}
+.services-white-section .section-sub{color:#e7ded0;}
+.services-white-section .eyebrow{color:var(--gold-bright);background:rgba(233,185,58,0.14);border-color:rgba(233,185,58,0.35);}
 .service-white-card{
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.06);
-  border: 1px solid #f0eae1;
-  transition: var(--transition-smooth);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: var(--navy-mid); border-radius: 20px; padding: 40px 30px; text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3); border: 1px solid rgba(201,151,31,0.2);
+  transition: var(--transition-smooth); height: 100%; display: flex; flex-direction: column; align-items: center;
 }
-.service-white-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(245, 179, 0, 0.18);
-  border-color: var(--gold-primary);
-}
+.service-white-card:hover{transform: translateY(-8px); box-shadow: 0 18px 45px rgba(201, 151, 31, 0.25); border-color: var(--gold-primary);}
 .service-white-icon{
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: #fff8e7;
-  color: #f5b300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.2rem;
-  margin-bottom: 24px;
-  transition: var(--transition-smooth);
+  width: 96px; height: 96px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(201,151,31,0.18) 0%, rgba(201,151,31,0.06) 100%);
+  border: 3px solid var(--gold-primary); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px; transition: var(--transition-smooth); overflow: hidden; box-shadow: 0 6px 18px rgba(201,151,31,0.25);
 }
-.service-white-card:hover .service-white-icon{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  transform: scale(1.1) rotate(6deg);
-}
-.service-white-card h3{
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: #1a1612;
-  margin-bottom: 14px;
-}
-.service-white-card p{
-  color: #635b52;
-  font-size: 0.98rem;
-  line-height: 1.8;
-  margin-bottom: 0;
-}
+.service-white-icon i{font-size: 2.4rem; color: var(--gold-bright);}
+.service-white-card:hover .service-white-icon{transform: scale(1.08) rotate(4deg); box-shadow: 0 10px 28px rgba(201,151,31,0.4);}
+.service-white-card h3{font-size: 1.45rem; font-weight: 800; color: #ffffff; margin-bottom: 14px;}
+.service-white-card p{color: #d8cfc3; font-size: 1rem; font-weight: 500; line-height: 1.85; margin-bottom: 0;}
 
-/* Commitment & Contact Dark Pill Banner (Image 2 Bottom) */
 .commitment-contact-banner{
-  background: #181410;
-  border-radius: 24px;
-  padding: 34px 44px;
-  margin-top: 50px;
-  color: #ffffff;
-  box-shadow: 0 16px 45px rgba(0,0,0,0.25);
-  border: 1px solid rgba(245, 179, 0, 0.25);
+  background: #0a0908; border-radius: 24px; padding: 34px 44px; margin-top: 50px; color: #ffffff;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.3); border: 1px solid rgba(201, 151, 31, 0.3);
 }
-.banner-block-title{
-  color: var(--gold-bright);
-  font-size: 1.35rem;
-  font-weight: 800;
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.banner-checklist{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.banner-checklist li{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  color: #ded6cc;
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-.banner-checklist li i{
-  color: var(--gold-bright);
-  font-size: 1.05rem;
-}
-.banner-contact-info{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.banner-contact-item{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #ffffff;
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-.banner-contact-item i{
-  color: var(--gold-bright);
-  font-size: 1.2rem;
-}
+.banner-block-title{color: var(--gold-bright); font-size: 1.35rem; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;}
+.banner-checklist{list-style: none; padding: 0; margin: 0;}
+.banner-checklist li{display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #efe8dc; font-size: 1.02rem; font-weight: 700;}
+.banner-checklist li i{color: var(--gold-bright); font-size: 1.05rem;}
+.banner-contact-info{display: flex; flex-direction: column; gap: 10px;}
+.banner-contact-item{display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: 1.08rem; font-weight: 800;}
+.banner-contact-item i{color: var(--gold-bright); font-size: 1.2rem;}
 
-/* ===== INTEGRATED COMPANIES SECTION (MATCHING IMAGE 3) ===== */
-.companies-grid-section{
-  background: var(--bg);
-  padding: 100px 0;
-}
-.company-card-v3{
-  background: #1a1612;
-  border: 1px solid rgba(245, 179, 0, 0.2);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  transition: var(--transition-smooth);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.company-card-v3:hover{
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 16px 40px rgba(245, 179, 0, 0.25);
-}
-.company-card-v3 .card-img-wrap{
-  width: 100%;
-  height: 190px;
-  overflow: hidden;
-  position: relative;
-}
-.company-card-v3 .card-img-wrap img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover !important;
-  transition: transform 0.6s var(--ease-out);
-}
-.company-card-v3:hover .card-img-wrap img{
-  transform: scale(1.08);
-}
-.company-card-v3 .card-content{
-  padding: 22px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.company-card-v3 h4{
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-.company-card-v3 .card-location{
-  color: #d1c5b8;
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-.company-card-v3 .card-location i{
-  color: var(--gold-bright);
-}
+.material-box{background: var(--cocoa-card-grad); border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 30px; height: 100%; display: flex; gap: 20px; align-items: flex-start; transition: var(--transition-smooth);}
+.material-box:hover{border-color: var(--gold-primary); transform: translateY(-6px); box-shadow: var(--shadow-md);}
+.material-icon{width: 60px; height: 60px; flex-shrink: 0; border-radius: 16px; background: linear-gradient(135deg, #322116 0%, #482b15 100%); border: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--gold-bright);}
 
-/* Luxury Material Box & Generic Cards */
-.material-box{
-  background: var(--cocoa-card-grad);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius);
-  padding: 30px;
-  height: 100%;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  transition: var(--transition-smooth);
-}
-.material-box:hover{
-  border-color: var(--gold-primary);
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-}
-.material-icon{
-  width: 60px; height: 60px; flex-shrink: 0;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #322116 0%, #482b15 100%);
-  border: 1px solid var(--border-medium);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; color: var(--gold-bright);
-}
+.mrm-card{background: var(--bg-card); background-image: var(--cocoa-card-grad); border: 1px solid var(--border-subtle); border-radius: var(--radius); padding: 38px 28px; position: relative; overflow: hidden; transition: var(--transition-smooth); z-index: 1; height: 100%; box-shadow: var(--shadow-sm);}
+.mrm-card:hover{transform: translateY(-8px); border-color: var(--gold-primary); box-shadow: var(--shadow-md);}
+.mrm-card .icon-circle{width: 68px; height: 68px; border-radius: 18px; background: linear-gradient(135deg, rgba(72, 43, 21, 0.6) 0%, rgba(50, 33, 22, 0.8) 100%); border: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--gold-bright); margin-bottom: 22px; transition: var(--transition-smooth);}
+.mrm-card:hover .icon-circle{background: var(--gold-grad); color: #0c0a08; transform: scale(1.1) rotate(6deg);}
 
-.mrm-card{
-  background: var(--bg-card);
-  background-image: var(--cocoa-card-grad);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius);
-  padding: 38px 28px;
-  position: relative;
-  overflow: hidden;
-  transition: var(--transition-smooth);
-  z-index: 1;
-  height: 100%;
-  box-shadow: var(--shadow-sm);
-}
-.mrm-card:hover{
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: var(--shadow-md);
-}
-.mrm-card .icon-circle{
-  width: 68px; height: 68px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, rgba(72, 43, 21, 0.6) 0%, rgba(50, 33, 22, 0.8) 100%);
-  border: 1px solid var(--border-medium);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  color: var(--gold-bright);
-  margin-bottom: 22px;
-  transition: var(--transition-smooth);
-}
-.mrm-card:hover .icon-circle{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  transform: scale(1.1) rotate(6deg);
-}
-
-/* Gallery Section */
 .filter-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:40px;}
-.filter-btn{
-  border: 1.5px solid var(--border-medium);
-  background: rgba(30, 24, 19, 0.6);
-  color: var(--text-light);
-  padding: 10px 28px;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  transition: all .35s var(--ease-out);
-  cursor: pointer;
-}
-.filter-btn:hover, .filter-btn.active{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  border-color: transparent;
-  transform: scale(1.05);
-  box-shadow: var(--shadow-gold);
-}
+.filter-btn{border: 1.5px solid var(--border-medium); background: rgba(30, 24, 19, 0.6); color: var(--text-light); padding: 10px 28px; border-radius: 30px; font-size: 0.95rem; font-weight: 700; transition: all .35s var(--ease-out); cursor: pointer;}
+.filter-btn:hover, .filter-btn.active{background: var(--gold-grad); color: #0c0a08; border-color: transparent; transform: scale(1.05); box-shadow: var(--shadow-gold);}
 
-.gallery-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.gallery-item{
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  aspect-ratio: 4/3;
-  width: 100%;
-  height: 260px;
-  border: 1px solid var(--border-subtle);
-  background: var(--cocoa-rich);
-  transition: var(--transition-smooth);
-  box-shadow: var(--shadow-sm);
-}
-.gallery-item:hover{
-  border-color: var(--gold-primary);
-  border-radius: 20px;
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: var(--shadow-lg);
-}
-.gallery-item img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover !important;
-  object-position: center;
-  transition: transform 0.7s var(--ease-out);
-}
+.gallery-grid{display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
+.gallery-item{position: relative; border-radius: 16px; overflow: hidden; cursor: pointer; aspect-ratio: 4/3; width: 100%; height: 260px; border: 1px solid var(--border-subtle); background: var(--cocoa-rich); transition: var(--transition-smooth); box-shadow: var(--shadow-sm);}
+.gallery-item:hover{border-color: var(--gold-primary); border-radius: 20px; transform: translateY(-6px) scale(1.03); box-shadow: var(--shadow-lg);}
+.gallery-item img{width: 100%; height: 100%; object-fit: cover !important; object-position: center; transition: transform 0.7s var(--ease-out);}
 .gallery-item:hover img{transform: scale(1.12);}
-.gallery-item .gi-overlay{
-  position: absolute; inset: 0;
-  background: linear-gradient(0deg, rgba(12, 10, 8, 0.9) 0%, rgba(12, 10, 8, 0.3) 50%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.4s var(--ease-out);
-}
+.gallery-item .gi-overlay{position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10, 9, 8, 0.92) 0%, rgba(10, 9, 8, 0.3) 50%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; opacity: 0; transition: opacity 0.4s var(--ease-out);}
 .gallery-item:hover .gi-overlay{opacity: 1;}
-.gallery-item .gi-overlay span{
-  color: var(--gold-bright);
-  font-weight: 800;
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-.gallery-item .gi-overlay small{
-  color: #fff;
-  font-size: 0.8rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
+.gallery-item .gi-overlay span{color: var(--gold-bright); font-weight: 800; font-size: 1rem; margin-bottom: 4px;}
+.gallery-item .gi-overlay small{color: #fff; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 6px;}
 .gallery-item.hide{display: none;}
 
-/* ===== ACCORDION (FAQ) ===== */
-.accordion-item{
-  background: var(--cocoa-card-grad);
-  border: 1px solid var(--border-subtle)!important;
-  margin-bottom: 14px;
-  border-radius: 16px!important;
-  overflow: hidden;
-  transition: var(--transition-smooth);
-}
+.accordion-item{background: var(--cocoa-card-grad); border: 1px solid var(--border-subtle)!important; margin-bottom: 14px; border-radius: 16px!important; overflow: hidden; transition: var(--transition-smooth);}
 .accordion-item:hover{border-color: var(--border-medium);}
-.accordion-button{
-  background: transparent!important;
-  color: #ffffff!important;
-  font-weight: 700;
-  width: 100%;
-  border: none;
-  padding: 20px 24px;
-  text-align: inherit;
-  font-size: 1.05rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: inherit;
-  transition: var(--transition-smooth);
-}
+.accordion-button{background: transparent!important; color: #ffffff!important; font-weight: 700; width: 100%; border: none; padding: 20px 24px; text-align: inherit; font-size: 1.05rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-family: inherit; transition: var(--transition-smooth);}
 .accordion-button:hover{color: var(--gold-bright)!important;}
-.accordion-button:not(.collapsed){color: var(--gold-bright)!important; background: rgba(245, 179, 0, 0.08)!important;}
-.accordion-button::after{
-  content: "\f078";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 0.9rem;
-  color: var(--gold-bright);
-  transition: transform 0.4s var(--ease-out);
-  flex-shrink: 0;
-  margin-inline-start: 14px;
-}
+.accordion-button:not(.collapsed){color: var(--gold-bright)!important; background: rgba(201, 151, 31, 0.08)!important;}
+.accordion-button::after{content: "\f078"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 0.9rem; color: var(--gold-bright); transition: transform 0.4s var(--ease-out); flex-shrink: 0; margin-inline-start: 14px;}
 .accordion-button:not(.collapsed)::after{transform: rotate(180deg);}
 .accordion-collapse{max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out);}
 .accordion-collapse.show{max-height: 500px;}
 .accordion-body{color: var(--text-muted); padding: 0 24px 22px; font-size: 1rem; line-height: 1.8;}
 
-/* Branch Cards */
-.branch-card{
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius);
-  padding: 34px 28px;
-  background: var(--cocoa-card-grad);
-  transition: var(--transition-smooth);
-  height: 100%;
-}
-.branch-card:hover{
-  transform: translateY(-8px);
-  border-color: var(--gold-primary);
-  box-shadow: var(--shadow-md);
-}
-.branch-card .b-icon{
-  width: 56px; height: 56px; border-radius: 16px;
-  background: rgba(245, 179, 0, 0.15);
-  border: 1px solid var(--border-subtle);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--gold-bright); font-size: 1.5rem;
-  margin-bottom: 18px;
-}
+/* Branch Cards — LIGHT SECTION */
+.branch-card{border: 1px solid rgba(201,151,31,0.3); border-radius: var(--radius); padding: 34px 28px; background: linear-gradient(160deg, #ffffff 0%, #faf6ec 100%); transition: var(--transition-smooth); height: 100%; box-shadow: var(--shadow-sm);}
+.branch-card:hover{transform: translateY(-8px); border-color: var(--gold-primary); box-shadow: var(--shadow-md);}
+.branch-card .b-icon{width: 56px; height: 56px; border-radius: 16px; background: rgba(201, 151, 31, 0.15); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; color: var(--gold-deep); font-size: 1.5rem; margin-bottom: 18px;}
 
-/* Direct Contact Big Card */
-.direct-contact-card{
-  background: linear-gradient(145deg, #241b14 0%, #15110d 100%);
-  border: 1.5px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 50px 40px;
-  box-shadow: var(--shadow-lg);
-}
+.direct-contact-card{background: linear-gradient(145deg, #241b14 0%, #15110d 100%); border: 1.5px solid var(--border-medium); border-radius: var(--radius-lg); padding: 50px 40px; box-shadow: var(--shadow-lg);}
 
-/* ===== LUXURY FOOTER ===== */
-footer{
-  background: linear-gradient(180deg, #140f0c 0%, #080605 100%);
-  border-top: 1px solid var(--border-medium);
-  padding: 80px 0 35px;
-  position: relative;
-}
-footer h5{
-  color: var(--gold-bright);
-  margin-bottom: 24px;
-  font-size: 1.2rem;
-  font-weight: 800;
-  position: relative;
-  padding-bottom: 10px;
-}
-footer h5::after{
-  content:'';
-  position: absolute; bottom: 0; right: 0;
-  width: 35px; height: 2.5px;
-  background: var(--gold-grad);
-  border-radius: 2px;
-}
+/* ===== FOOTER — LIGHT, bold black text ===== */
+footer{background: linear-gradient(180deg, #ffffff 0%, #f6f0e4 100%); border-top: 3px solid var(--gold-primary); padding: 70px 0 30px; position: relative; color: var(--text-dark);}
+footer h5{color: #12100e; margin-bottom: 24px; font-size: 1.25rem; font-weight: 900; position: relative; padding-bottom: 10px;}
+footer h5::after{content:''; position: absolute; bottom: 0; right: 0; width: 35px; height: 2.5px; background: var(--gold-grad); border-radius: 2px;}
 [dir="ltr"] footer h5::after{right: auto; left: 0;}
-footer a{color: var(--text-muted); transition: all .3s var(--ease-out); display: inline-block;}
-footer a:hover{color: var(--gold-bright); transform: translateX(-5px);}
+footer p{color:#17130e; font-weight: 600;}
+footer a{color: #17130e; font-weight: 700; transition: all .3s var(--ease-out); display: inline-block;}
+footer a:hover{color: var(--gold-deep); transform: translateX(-5px);}
 [dir="ltr"] footer a:hover{transform: translateX(5px);}
 
-.footer-company-item{
-  margin-bottom: 12px;
-  padding: 10px 14px;
-  background: rgba(30, 24, 19, 0.5);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  transition: var(--transition-smooth);
-}
-.footer-company-item:hover{
-  background: rgba(50, 33, 22, 0.8);
-  border-color: var(--gold-primary);
-  transform: translateX(-4px);
-}
-[dir="ltr"] .footer-company-item:hover{transform: translateX(4px);}
-.footer-company-item h6{color: #fff; margin:0 0 2px 0; font-size: 0.95rem;}
-.footer-company-item span{color: var(--text-gold); font-size: 0.75rem;}
+.footer-contact-badge{display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: #ffffff; border: 1px solid rgba(201,151,31,0.3); border-radius: 14px; margin-bottom: 12px; transition: var(--transition-smooth); box-shadow: 0 4px 14px rgba(0,0,0,0.06);}
+.footer-contact-badge:hover{border-color: var(--gold-primary); box-shadow: 0 8px 22px rgba(201,151,31,0.15);}
+.footer-contact-badge i{font-size: 1.3rem; color: var(--gold-deep);}
+.footer-contact-badge span, .footer-contact-badge a{color: #17130e!important; font-weight: 800!important;}
+.footer-contact-badge small.text-gold{color: var(--gold-deep)!important; font-weight: 800!important;}
 
-.footer-contact-badge{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
-  background: rgba(30, 24, 19, 0.6);
-  border: 1px solid var(--border-subtle);
-  border-radius: 14px;
-  margin-bottom: 12px;
-  transition: var(--transition-smooth);
-}
-.footer-contact-badge:hover{
-  border-color: var(--gold-primary);
-  background: rgba(50, 33, 22, 0.9);
-}
-.footer-contact-badge i{
-  font-size: 1.3rem;
-  color: var(--gold-bright);
-}
+footer .social-ic{width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border-medium); display: inline-flex; align-items: center; justify-content: center; color: var(--gold-deep); background: #ffffff; transition: var(--transition-smooth);}
+footer .social-ic:hover{background: var(--gold-grad); color: #0c0a08; border-color: transparent; transform: scale(1.15) rotate(8deg); box-shadow: var(--shadow-gold);}
 
-footer .social-ic{
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--border-medium);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold-bright);
-  background: rgba(50, 33, 22, 0.6);
-  transition: var(--transition-smooth);
-}
-footer .social-ic:hover{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  border-color: transparent;
-  transform: scale(1.15) rotate(8deg);
-  box-shadow: var(--shadow-gold);
-}
+.footer-bottom{border-top: 1px solid rgba(201, 151, 31, 0.25); margin-top: 50px; padding-top: 25px; font-size: 0.95rem; color: #17130e; font-weight: 700;}
+.footer-bottom a{color: var(--gold-deep); font-weight: 800;}
 
-.footer-bottom{
-  border-top: 1px solid rgba(245, 179, 0, 0.15);
-  margin-top: 50px;
-  padding-top: 25px;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-}
-.footer-bottom a{color: var(--gold-bright); font-weight: 700;}
-
-/* ===== FLOATING ACTION BUTTONS ===== */
-.floating-btns{
-  position: fixed;
-  bottom: 30px;
-  inset-inline-end: 30px;
-  z-index: 9000;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-}
-.fbtn{
-  width: 58px; height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-  transition: var(--transition-smooth);
-  position: relative;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-}
+.floating-btns{position: fixed; bottom: 30px; inset-inline-end: 30px; z-index: 9000; display: flex; flex-direction: column; gap: 14px; align-items: center;}
+.fbtn{width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.35); transition: var(--transition-smooth); position: relative; cursor: pointer; border: none; text-decoration: none;}
 .fbtn:hover{transform: scale(1.15) rotate(6deg);}
-.fbtn.wa1, .fbtn.wa2{background: #25D366;}
-.fbtn.wa1:hover, .fbtn.wa2:hover{box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);}
-.fbtn.call{background: var(--gold-grad); color: #0c0a08;}
-.fbtn.call:hover{box-shadow: 0 10px 30px rgba(245, 179, 0, 0.5);}
-.fbtn .fbtn-badge{
-  position: absolute;
-  inset-inline-end: 100%;
-  margin-inline-end: 12px;
-  background: #18130f;
-  color: var(--gold-bright);
-  border: 1px solid var(--border-medium);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .3s var(--ease-out);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
+.fbtn.wa1{background: #25D366;}
+.fbtn.wa1:hover{box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);}
+.fbtn .fbtn-badge{position: absolute; inset-inline-end: 100%; margin-inline-end: 12px; background: #18130f; color: var(--gold-bright); border: 1px solid var(--border-medium); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; white-space: nowrap; opacity: 0; pointer-events: none; transition: all .3s var(--ease-out); box-shadow: 0 4px 15px rgba(0,0,0,0.4);}
 .fbtn:hover .fbtn-badge{opacity: 1; transform: translateX(-4px);}
 [dir="ltr"] .fbtn:hover .fbtn-badge{transform: translateX(4px);}
 
-/* Back to Top */
-#backToTop{
-  position: fixed;
-  bottom: 30px;
-  inset-inline-start: 30px;
-  width: 50px; height: 50px;
-  border-radius: 50%;
-  background: #18130f;
-  border: 1.5px solid var(--gold-primary);
-  color: var(--gold-bright);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9000;
-  transition: var(--transition-smooth);
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-}
+#backToTop{position: fixed; bottom: 30px; inset-inline-start: 30px; width: 50px; height: 50px; border-radius: 50%; background: #18130f; border: 1.5px solid var(--gold-primary); color: var(--gold-bright); display: none; align-items: center; justify-content: center; z-index: 9000; transition: var(--transition-smooth); cursor: pointer; font-size: 1.2rem; box-shadow: 0 8px 24px rgba(0,0,0,0.3);}
 #backToTop.show{display: flex;}
-#backToTop:hover{
-  background: var(--gold-grad);
-  color: #0c0a08;
-  transform: scale(1.12) rotate(8deg);
-  box-shadow: var(--shadow-gold);
-}
+#backToTop:hover{background: var(--gold-grad); color: #0c0a08; transform: scale(1.12) rotate(8deg); box-shadow: var(--shadow-gold);}
 
-/* ===== LIGHTBOX ===== */
-.lightbox{
-  position: fixed; inset: 0;
-  background: rgba(8, 6, 4, 0.96);
-  z-index: 99998;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-}
+.lightbox{position: fixed; inset: 0; background: rgba(8, 6, 4, 0.96); z-index: 99998; display: none; align-items: center; justify-content: center; flex-direction: column; padding: 20px;}
 .lightbox.show{display: flex;}
-.lightbox img{
-  max-width: 90%;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 16px;
-  border: 1.5px solid var(--border-medium);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-}
-.lightbox .lb-close{
-  position: absolute;
-  top: 24px; inset-inline-end: 30px;
-  font-size: 2rem; color: var(--gold-bright);
-  cursor: pointer; background: none; border: none;
-  transition: transform .3s ease;
-}
+.lightbox img{max-width: 90%; max-height: 80vh; object-fit: contain; border-radius: 16px; border: 1.5px solid var(--border-medium); box-shadow: 0 20px 60px rgba(0,0,0,0.8);}
+.lightbox .lb-close{position: absolute; top: 24px; inset-inline-end: 30px; font-size: 2rem; color: var(--gold-bright); cursor: pointer; background: none; border: none; transition: transform .3s ease;}
 .lightbox .lb-close:hover{transform: rotate(90deg) scale(1.2);}
-.lightbox .lb-nav{
-  position: absolute; top: 50%; transform: translateY(-50%);
-  font-size: 1.8rem; color: var(--gold-bright);
-  width: 58px; height: 58px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  background: rgba(50, 33, 22, 0.6);
-  border: 1px solid var(--border-medium);
-  cursor: pointer;
-  transition: var(--transition-smooth);
-}
+.lightbox .lb-nav{position: absolute; top: 50%; transform: translateY(-50%); font-size: 1.8rem; color: var(--gold-bright); width: 58px; height: 58px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(50, 33, 22, 0.6); border: 1px solid var(--border-medium); cursor: pointer; transition: var(--transition-smooth);}
 .lightbox .lb-nav:hover{background: var(--gold-grad); color: #0c0a08; transform: translateY(-50%) scale(1.1);}
 .lightbox .lb-prev{inset-inline-start: 24px;}
 .lightbox .lb-next{inset-inline-end: 24px;}
 .lightbox .lb-caption{color: var(--text-light); margin-top: 18px; font-size: 1.1rem; font-weight: 700;}
 
-/* ===== ANIMATIONS ===== */
-[data-anim]{
-  opacity: 0;
-  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
-  will-change: opacity, transform;
-}
+[data-anim]{opacity: 0; transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); will-change: opacity, transform;}
 [data-anim="fade-up"]{transform: translateY(40px);}
 [data-anim="zoom-in"]{transform: scale(0.92) translateY(20px);}
 [data-anim="fade-left"]{transform: translateX(-35px);}
 [data-anim="fade-right"]{transform: translateX(35px);}
 [data-anim].visible{opacity: 1; transform: none;}
 
-/* ===== RESPONSIVE FIXES ===== */
 @media (max-width: 1200px) {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .nav-link { font-size: 0.84rem; padding: 6px 8px!important; }
 }
-
 @media (max-width: 991px) {
   .hero-main-title { font-size: 2.8rem; }
   .section-pad { padding: 75px 0; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .commitment-contact-banner { padding: 30px 24px; }
 }
-
 @media (max-width: 767px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .gallery-item { height: 180px; }
-  .hero-main-title { font-size: 2.1rem; }
   .hero-sub-desc { font-size: 1rem; }
   .btn-hero-contact { width: 100%; }
   .fbtn { width: 50px; height: 50px; font-size: 1.3rem; }
@@ -1272,7 +644,6 @@ footer .social-ic:hover{
   #backToTop { bottom: 18px; inset-inline-start: 18px; width: 42px; height: 42px; }
   .commitment-contact-banner { padding: 24px 18px; }
 }
-
 @media (max-width: 480px) {
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item { height: 220px; }
@@ -1281,14 +652,12 @@ footer .social-ic:hover{
 </head>
 <body>
 
-<!-- PRELOADER -->
 <div id="preloader">
   <img src="css/logo.JPG" alt="MRM Group Logo">
   <div class="ldr-text">MRM GROUP</div>
   <div class="ldr-bar"><span></span></div>
 </div>
 
-<!-- NAVBAR -->
 <nav class="navbar" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="#home">
@@ -1298,25 +667,24 @@ footer .social-ic:hover{
         <span class="sub" data-i18n="nav.brand_sub">مجموعة إم آر إم للشركات</span>
       </div>
     </a>
-    
+
     <button class="navbar-toggler" id="navToggler" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars"></i>
     </button>
-    
+
     <div class="navbar-nav navbar-nav-desktop" id="navbarContent">
       <a class="nav-link active" href="#home" data-i18n="nav.home">الرئيسية</a>
+      <a class="nav-link" href="#about" data-i18n="nav.about">من نحن</a>
       <a class="nav-link" href="#services" data-i18n="nav.services">خدماتنا</a>
-      <a class="nav-link" href="#companies" data-i18n="nav.companies">شركاتنا</a>
-      <a class="nav-link" href="#materials" data-i18n="nav.materials">معايير الجودة</a>
-      <a class="nav-link" href="#portfolio" data-i18n="nav.portfolio">أعمالنا</a>
-      <a class="nav-link" href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a>
+      <a class="nav-link" href="#portfolio2" data-i18n="nav.portfolio">أعمالنا</a>
+      <a class="nav-link" href="#branches" data-i18n="nav.branches">فروعنا</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">تواصل معنا</a>
+      <a class="btn-navbar-call" href="tel:+97167649900"><i class="fa-solid fa-phone"></i> <span data-i18n="nav.call">اتصل بنا</span></a>
       <button class="btn-lang" id="langToggle" aria-label="Switch Language"><i class="fa-solid fa-globe"></i> <span>EN</span></button>
     </div>
   </div>
 </nav>
 
-<!-- OFFCANVAS FOR MOBILE -->
 <div class="offcanvas offcanvas-end" id="mobileNav">
   <div class="offcanvas-header">
     <div class="d-flex align-items-center gap-2">
@@ -1328,30 +696,25 @@ footer .social-ic:hover{
   <div class="offcanvas-body">
     <ul class="navbar-nav">
       <li><a class="nav-link" href="#home" data-offcanvas data-i18n="nav.home">الرئيسية</a></li>
+      <li><a class="nav-link" href="#about" data-offcanvas data-i18n="nav.about">من نحن</a></li>
       <li><a class="nav-link" href="#services" data-offcanvas data-i18n="nav.services">خدماتنا</a></li>
-      <li><a class="nav-link" href="#companies" data-offcanvas data-i18n="nav.companies">شركاتنا</a></li>
-      <li><a class="nav-link" href="#materials" data-offcanvas data-i18n="nav.materials">معايير الجودة</a></li>
-      <li><a class="nav-link" href="#portfolio" data-offcanvas data-i18n="nav.portfolio">أعمالنا</a></li>
-      <li><a class="nav-link" href="#faq" data-offcanvas data-i18n="nav.faq">الأسئلة الشائعة</a></li>
+      <li><a class="nav-link" href="#portfolio2" data-offcanvas data-i18n="nav.portfolio">أعمالنا</a></li>
+      <li><a class="nav-link" href="#branches" data-offcanvas data-i18n="nav.branches">فروعنا</a></li>
       <li><a class="nav-link" href="#contact" data-offcanvas data-i18n="nav.contact">تواصل معنا</a></li>
+      <li><a class="nav-link" href="tel:+97167649900" data-offcanvas><i class="fa-solid fa-phone me-2"></i> <span data-i18n="nav.call">اتصل بنا</span></a></li>
     </ul>
     <button class="btn-lang mt-4 w-100 justify-content-center" id="langToggleMobile"><i class="fa-solid fa-globe"></i> <span>English</span></button>
   </div>
 </div>
 <div class="offcanvas-backdrop" id="offcanvasBackdrop"></div>
 
-<!-- HERO SECTION (MATCHING IMAGE 1) -->
 <section class="hero-image-style" id="home">
   <div class="container position-relative" style="z-index:2;">
     <div class="text-center" data-anim="fade-up">
-      
-      <!-- Top Eyebrow -->
       <div class="hero-top-eyebrow">
         <i class="fa-solid fa-hammer text-gold floating-live-icon"></i>
         <span data-i18n="hero.top_badge">نحن نبني المستقبل</span>
       </div>
-      
-      <!-- Live Counter & Scrambler Box -->
       <div class="d-block mb-2">
         <div class="hero-counter-wrap">
           <i class="fa-solid fa-bolt text-gold floating-live-icon pulse-live"></i>
@@ -1359,95 +722,80 @@ footer .social-ic:hover{
           <span style="color:#ded6cc;font-size:0.85rem;" data-i18n="hero.counter_text">مشروع متكامل</span>
         </div>
       </div>
-      
-      <!-- Main Big Centered Title with Scrambler ending with MRM Group -->
       <h1 class="hero-main-title">
-        <span id="scrambleText" class="gold-text-shimmer">MRM Group</span>
+        <span class="line-en gold-text-shimmer" id="scrambleText">MRM Group of Companies</span>
+        <span class="line-ar">ام ار ام</span>
       </h1>
-      
-      <!-- Subtitle Description -->
       <p class="hero-sub-desc" data-i18n="hero.desc">
         حلول هندسية وتطويرية مبتكرة في البنية التحتية، العقارات، المقاولات، أعمال النجارة، والألمنيوم والزجاج المعماري بأعلى المعايير.
       </p>
-      
-      <!-- Centered Outline/Pill Contact Button -->
       <div class="d-flex justify-content-center gap-3 flex-wrap">
         <a href="#contact" class="btn-hero-contact">
           <span data-i18n="hero.cta_contact">تواصل معنا</span>
           <i class="fa-solid fa-arrow-left ms-2" style="font-size:0.95rem;"></i>
         </a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- SERVICES SECTION (MATCHING IMAGE 2 - WHITE CARDS & DARK PILL BANNER) -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="text-center mb-5" data-anim="fade-up">
+      <span class="eyebrow"><i class="fa-solid fa-building-columns floating-live-icon"></i> <span data-i18n="about.eyebrow">من نحن</span></span>
+      <h2 class="section-title text-dark" data-i18n="about.title">مجموعة <span class="gold-text">ام ار ام</span></h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="about-card" data-anim="fade-up">
+      <p data-i18n="about.p1">مجموعة أعمال متكاملة ومتخصصة في مجال العقارات والخدمات الإنشائية، نقدم خدمات تأجير العقارات الخاصة مثل المباني والمستودعات والفلل والشقق وسكن العمال، بالإضافة إلى بيع وشراء وتأجير العقارات للغير.</p>
+      <p data-i18n="about.p2">كما نقدم خدمات صيانة وتجهيز المباني وتركيب السيراميك والجبس والإنترلوك، إلى جانب تصنيع وتركيب المطابخ والأبواب والشبابيك الألمنيوم، وتنفيذ أعمال النجارة وتصنيع الأبواب الخشبية للفلل والشقق.</p>
+      <p data-i18n="about.p3">نحرص على تقديم خدمات احترافية بجودة عالية وأسعار تنافسية، مع الالتزام بالمصداقية والدقة وتلبية احتياجات عملائنا.</p>
+    </div>
+  </div>
+</section>
+
 <section class="services-white-section" id="services">
   <div class="container">
-    
-    <!-- Title & Subtitle -->
     <div class="text-center mb-5" data-anim="fade-up">
       <span class="eyebrow"><i class="fa-solid fa-layer-group floating-live-icon"></i> <span data-i18n="svc.eyebrow">خدماتنا الهندسية</span></span>
-      <h2 class="section-title text-dark" data-i18n="svc.title">خدماتنا</h2>
+      <h2 class="section-title" data-i18n="svc.title">خدماتنا</h2>
       <div class="divider-gold"></div>
-      <p class="section-sub mx-auto text-dark" style="color:#5c5248!important;" data-i18n="svc.sub">نقدم حلولاً هندسية وتطويرية شاملة بأعلى المعايير</p>
+      <p class="section-sub mx-auto" data-i18n="svc.sub">نقدم حلولاً هندسية وتطويرية شاملة بأعلى المعايير</p>
     </div>
-    
-    <!-- 4 Clean White Cards -->
+
     <div class="row g-4 justify-content-center" data-anim="fade-up">
-      
-      <!-- Card 1: Contracting & Maintenance -->
       <div class="col-lg-3 col-md-6">
         <div class="service-white-card">
-          <div class="service-white-icon">
-            <i class="fa-solid fa-city floating-live-icon"></i>
-          </div>
-          <h3 data-i18n="svc.c1_title">المقاولات العامة والصيانة</h3>
-          <p data-i18n="svc.c1_desc">تنفيذ مشاريع البناء وصيانة المباني السكنية والتجارية بدقة واحترافية متناهية مع ضمان الجودة.</p>
+          <div class="service-white-icon"><i class="fa-solid fa-city"></i></div>
+          <h3 data-i18n="svc.c1_title">العقارات</h3>
+          <p data-i18n="svc.c1_desc">إدارة وتأجير وتطوير العقارات وتسويق الفرص الاستثمارية المتميزة في أم القيوين والإمارات.</p>
         </div>
       </div>
-      
-      <!-- Card 2: Carpentry & Decor -->
       <div class="col-lg-3 col-md-6">
         <div class="service-white-card">
-          <div class="service-white-icon">
-            <i class="fa-solid fa-lightbulb floating-live-icon reverse"></i>
-          </div>
-          <h3 data-i18n="svc.c2_title">تصنيع وتصميم النجارة والديكور</h3>
-          <p data-i18n="svc.c2_desc">تصميم وتنفيذ المطابخ الحديثة، الدريسنج روم، والأعمال الخشبية والديكورات الداخلية الفاخرة.</p>
+          <div class="service-white-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3 data-i18n="svc.c2_title">صيانة المباني</h3>
+          <p data-i18n="svc.c2_desc">تنفيذ مشاريع الصيانة العامة للمباني السكنية والتجارية بدقة واحترافية متناهية مع ضمان الجودة.</p>
         </div>
       </div>
-      
-      <!-- Card 3: Aluminum & Glass -->
       <div class="col-lg-3 col-md-6">
         <div class="service-white-card">
-          <div class="service-white-icon">
-            <i class="fa-solid fa-bolt floating-live-icon pulse-live"></i>
-          </div>
-          <h3 data-i18n="svc.c3_title">الألمنيوم والواجهات والزجاج</h3>
-          <p data-i18n="svc.c3_desc">تركيب الواجهات الزجاجية الحديثة، قطاعات الألمنيوم العازلة، والحلول المعمارية المبتكرة.</p>
+          <div class="service-white-icon"><i class="fa-solid fa-hammer"></i></div>
+          <h3 data-i18n="svc.c3_title">أعمال النجارة</h3>
+          <p data-i18n="svc.c3_desc">تصميم وتنفيذ المطابخ الحديثة، الدريسنج روم، والأعمال الخشبية والديكورات الداخلية الفاخرة.</p>
         </div>
       </div>
-
-      <!-- Card 4: Real Estate & Investment -->
       <div class="col-lg-3 col-md-6">
         <div class="service-white-card">
-          <div class="service-white-icon">
-            <i class="fa-solid fa-building-user floating-live-icon"></i>
-          </div>
-          <h3 data-i18n="svc.c4_title">التطوير والوساطة العقارية</h3>
-          <p data-i18n="svc.c4_desc">إدارة وتأجير العقارات، تسويق الفرص الاستثمارية المتميزة في أم القيوين والإمارات.</p>
+          <div class="service-white-icon"><i class="fa-solid fa-border-all"></i></div>
+          <h3 data-i18n="svc.c4_title">أعمال الألمنيوم والزجاج</h3>
+          <p data-i18n="svc.c4_desc">تركيب الواجهات الزجاجية الحديثة، قطاعات الألمنيوم العازلة، والحلول المعمارية المبتكرة.</p>
         </div>
       </div>
-
     </div>
-    
-    <!-- Dark Bottom Banner: Commitment + Contact (Image 2 Style) -->
+
     <div class="commitment-contact-banner" data-anim="fade-up">
       <div class="row align-items-center g-4">
-        
-        <!-- Right Column: Commitment -->
         <div class="col-lg-6">
           <div class="banner-block-title">
             <i class="fa-solid fa-shield-halved text-gold"></i>
@@ -1459,8 +807,6 @@ footer .social-ic:hover{
             <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="svc.commit_3">تحقيق رضا العملاء التام</span></li>
           </ul>
         </div>
-        
-        <!-- Left Column: Contact Us -->
         <div class="col-lg-6">
           <div class="banner-block-title">
             <i class="fa-solid fa-phone-volume text-gold"></i>
@@ -1481,382 +827,127 @@ footer .social-ic:hover{
             </div>
           </div>
         </div>
-        
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- COMPANIES SECTION (MATCHING IMAGE 3 - SIDE BY SIDE CARDS WITH PROJECT PHOTOS) -->
-<section class="companies-grid-section" id="companies">
-  <div class="container">
-    
-    <!-- Title with Accent Vertical Bar (Image 3 Style) -->
-    <div class="d-flex align-items-center gap-3 mb-2" data-anim="fade-up">
-      <div style="width: 5px; height: 38px; background: var(--gold-primary); border-radius: 4px;"></div>
-      <h2 class="section-title mb-0" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem);" data-i18n="companies.title_v3">شركات مجموعة MRM المتكاملة</h2>
-    </div>
-    <p class="section-sub mb-5" data-i18n="companies.sub_v3">فخورون بتقديم أضخم المشاريع السكنية والتجارية بأعلى معايير الجودة والاتقان.</p>
-    
-    <!-- 4 Side-by-Side Cards in Grid -->
-    <div class="row g-4" data-anim="fade-up">
-      
-      <!-- Company 1: Real Estate -->
-      <div class="col-lg-3 col-md-6">
-        <div class="company-card-v3">
-          <div class="card-img-wrap">
-            <img src="css/v1 (2).jpg" alt="Cougar Real Estate Project">
-          </div>
-          <div class="card-content">
-            <h4 data-i18n="companies.c1title">كوجر للعقارات</h4>
-            <div class="card-location">
-              <i class="fa-solid fa-location-dot"></i>
-              <span data-i18n="companies.loc_tag">أم القيوين - الإمارات</span>
-            </div>
-            <a href="https://wa.me/971503447262?text=استفسار عن كوجر للعقارات" target="_blank" class="btn-card-yellow">
-              <span data-i18n="companies.btn_details">عرض التفاصيل</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Company 2: Maintenance -->
-      <div class="col-lg-3 col-md-6">
-        <div class="company-card-v3">
-          <div class="card-img-wrap">
-            <img src="css/v2 (5).jpg" alt="Cougar Building Maintenance Project">
-          </div>
-          <div class="card-content">
-            <h4 data-i18n="companies.c2title">كوجر لصيانة المباني</h4>
-            <div class="card-location">
-              <i class="fa-solid fa-location-dot"></i>
-              <span data-i18n="companies.loc_tag">أم القيوين - الإمارات</span>
-            </div>
-            <a href="https://wa.me/971503447262?text=استفسار عن كوجر لصيانة المباني" target="_blank" class="btn-card-yellow">
-              <span data-i18n="companies.btn_details">عرض التفاصيل</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Company 3: Carpentry -->
-      <div class="col-lg-3 col-md-6">
-        <div class="company-card-v3">
-          <div class="card-img-wrap">
-            <img src="css/v1 (12).jpg" alt="Cougar Luxury Carpentry Project">
-          </div>
-          <div class="card-content">
-            <h4 data-i18n="companies.c3title">كوجر للنجارة</h4>
-            <div class="card-location">
-              <i class="fa-solid fa-location-dot"></i>
-              <span data-i18n="companies.loc_tag">أم القيوين - الإمارات</span>
-            </div>
-            <a href="https://wa.me/971503447262?text=استفسار عن كوجر للنجارة" target="_blank" class="btn-card-yellow">
-              <span data-i18n="companies.btn_details">عرض التفاصيل</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Company 4: Aluminum & Glass -->
-      <div class="col-lg-3 col-md-6">
-        <div class="company-card-v3">
-          <div class="card-img-wrap">
-            <img src="css/v2 (20).jpg" alt="Cougar Aluminum and Glass Project">
-          </div>
-          <div class="card-content">
-            <h4 data-i18n="companies.c4title">ورشة كوجر للألمنيوم والزجاج</h4>
-            <div class="card-location">
-              <i class="fa-solid fa-location-dot"></i>
-              <span data-i18n="companies.loc_tag">أم القيوين - الإمارات</span>
-            </div>
-            <a href="https://wa.me/971503447262?text=استفسار عن ورشة كوجر للألمنيوم والزجاج" target="_blank" class="btn-card-yellow">
-              <span data-i18n="companies.btn_details">عرض التفاصيل</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    
-  </div>
-</section>
-
-<!-- MATERIALS & CRAFTSMANSHIP -->
-<section class="section-pad" id="materials">
-  <div class="container">
-    <div class="text-center mb-5" data-anim="fade-up">
-      <span class="eyebrow"><i class="fa-solid fa-gem floating-live-icon"></i> <span data-i18n="mat.eyebrow">هندسة المواد والتصنيع</span></span>
-      <h2 class="section-title" data-i18n="mat.title">معايير التصنيع وخامات <span class="gold-text">الدرجة الأولى</span></h2>
-      <div class="divider-gold"></div>
-      <p class="section-sub mx-auto" data-i18n="mat.sub">في مجموعة MRM لا نعتمد إلا على خامات النخبة المستوردة والمطابقة لأعلى مقاييس الجودة والسلامة المعمارية الدولية.</p>
-    </div>
-    
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3" data-anim="fade-up">
-        <div class="material-box">
-          <div class="material-icon"><i class="fa-solid fa-tree floating-live-icon"></i></div>
-          <div>
-            <h4 style="color:#fff;margin-bottom:8px;" data-i18n="mat.t1">الأخشاب الطبيعية الصلبة</h4>
-            <p class="text-muted small" data-i18n="mat.d1">أخشاب السنديان والزان والتيك الإفريقي المعالج حرارياً ضد الرطوبة وحشرات الخشب لضمان متانة تدوم لعقود.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-3" data-anim="fade-up" data-anim-delay="100">
-        <div class="material-box">
-          <div class="material-icon"><i class="fa-solid fa-border-all floating-live-icon reverse"></i></div>
-          <div>
-            <h4 style="color:#fff;margin-bottom:8px;" data-i18n="mat.t2">ألمنيوم Thermal Break</h4>
-            <p class="text-muted small" data-i18n="mat.d2">قطاعات عازلة للحرارة والصوت فائقة الكفاءة توفر استهلاك الطاقة وتتحمل تقلبات الطقس العالية.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-3" data-anim="fade-up" data-anim-delay="200">
-        <div class="material-box">
-          <div class="material-icon"><i class="fa-solid fa-shield-halved floating-live-icon"></i></div>
-          <div>
-            <h4 style="color:#fff;margin-bottom:8px;" data-i18n="mat.t3">زجاج سيكوريت ودبل جلاس</h4>
-            <p class="text-muted small" data-i18n="mat.d3">طبقات زجاجية مقساة محقونة بغاز الأرجون العازل مع طبقات Low-E العاكسة للأشعة الضارة.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-3" data-anim="fade-up" data-anim-delay="300">
-        <div class="material-box">
-          <div class="material-icon"><i class="fa-solid fa-certificate floating-live-icon pulse-live"></i></div>
-          <div>
-            <h4 style="color:#fff;margin-bottom:8px;" data-i18n="mat.t4">إكسسوارات أوروبية أصلية</h4>
-            <p class="text-muted small" data-i18n="mat.d4">مفصلات ومقابض وسكك أدراج ألمانية وإيطالية الصنع معتمدة تضمن سلاسة حركة فائقة وتحمل أقصى الأوزان.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- INTERACTIVE COST ESTIMATOR -->
-
-
-<!-- PORTFOLIO V1: VILLAS -->
-<section class="section-pad" id="portfolio">
-  <div class="container">
-    <div class="text-center mb-4" data-anim="fade-up">
-      <span class="eyebrow"><i class="fa-solid fa-camera-retro floating-live-icon"></i> <span data-i18n="port.eyebrow">معرض الفخامة</span></span>
-      <h2 class="section-title" data-i18n="port.title">مشاريع <span class="gold-text">الفلل والقصور</span></h2>
-      <div class="divider-gold"></div>
-      <p class="section-sub mx-auto" data-i18n="port.sub">تصفح نماذج حية من مشاريع الفلل الراقية التي تشرفنا بتنفيذها وتطويرها في مختلف إمارات الدولة.</p>
-    </div>
-    
-    <div class="filter-btns" id="filterV1" data-anim="fade-up"></div>
-    <div class="gallery-grid" id="galleryV1" data-anim="fade-up"></div>
-  </div>
-</section>
-
-<!-- PORTFOLIO V2: COMPANIES WORKS -->
-<section class="section-pad bg-alt" id="portfolio2">
+<section class="section-pad bg-alt2" id="portfolio2">
   <div class="container">
     <div class="text-center mb-4" data-anim="fade-up">
       <span class="eyebrow"><i class="fa-solid fa-images floating-live-icon reverse"></i> <span data-i18n="port2.eyebrow">أعمال الشركات الأربع</span></span>
-      <h2 class="section-title" data-i18n="port2.title">إبداعات <span class="gold-text">النجارة والألمنيوم والصيانة</span></h2>
+      <h2 class="section-title" style="color:#fff;" data-i18n="port2.title">إبداعات <span class="gold-text">النجارة والألمنيوم والصيانة</span></h2>
       <div class="divider-gold"></div>
-      <p class="section-sub mx-auto" data-i18n="port2.sub">لقطات تبرز جودة التفاصيل في المطابخ، الواجهات الزجاجية، أعمال الصيانة الدقيقة والديكورات الخشبية.</p>
+      <p class="section-sub mx-auto" style="color:#e7ded0;" data-i18n="port2.sub">لقطات تبرز جودة التفاصيل في المطابخ، الواجهات الزجاجية، أعمال الصيانة الدقيقة والديكورات الخشبية.</p>
     </div>
-    
     <div class="filter-btns" id="filterV2" data-anim="fade-up"></div>
     <div class="gallery-grid" id="galleryV2" data-anim="fade-up"></div>
   </div>
 </section>
 
-
-
-<!-- BRANCHES & LOCATION -->
-<section class="section-pad" id="branches">
+<section class="section-pad bg-cocoa-mesh" id="branches">
   <div class="container">
     <div class="text-center mb-5" data-anim="fade-up">
       <span class="eyebrow"><i class="fa-solid fa-map-location-dot floating-live-icon"></i> <span data-i18n="br.eyebrow">مواقعنا وتواصلنا</span></span>
       <h2 class="section-title" data-i18n="br.title">أينما <span class="gold-text">كنتم في الإمارات</span> نصلكم فوراً</h2>
       <div class="divider-gold"></div>
     </div>
-    
     <div class="row g-4">
       <div class="col-md-4" data-anim="fade-up">
         <div class="branch-card">
           <div class="b-icon"><i class="fa-solid fa-location-dot floating-live-icon"></i></div>
-          <h5 style="color:#fff;margin-bottom:8px;" data-i18n="br.t1">المقر الإداري الرئيسي</h5>
-          <p class="text-muted mb-0" data-i18n="br.d1">بناية المدار، طابق الميزانين، شارع الملك فيصل، أم القيوين، دولة الإمارات العربية المتحدة.</p>
+          <h5 style="color:#12100e;margin-bottom:8px;font-weight:800;" data-i18n="br.t1">المقر الإداري الرئيسي</h5>
+          <p style="color:#3a332b;font-weight:600;" class="mb-0" data-i18n="br.d1">بناية المدار، طابق الميزانين، شارع الملك فيصل، أم القيوين، دولة الإمارات العربية المتحدة.</p>
         </div>
       </div>
-      
       <div class="col-md-4" data-anim="fade-up" data-anim-delay="120">
         <div class="branch-card">
           <div class="b-icon"><i class="fa-solid fa-phone floating-live-icon reverse"></i></div>
-          <h5 style="color:#fff;margin-bottom:8px;" data-i18n="br.t2">الاتصال المباشر</h5>
-          <p class="text-muted mb-2"><a href="tel:+97167649900" style="color:var(--gold-bright);font-weight:700;">+971 6 764 99 00</a></p>
-          <small class="text-dim" data-i18n="br.hours">متاح من السبت إلى الخميس: 8:00 ص - 8:00 م</small>
+          <h5 style="color:#12100e;margin-bottom:8px;font-weight:800;" data-i18n="br.t2">الاتصال المباشر</h5>
+          <p class="mb-2"><a href="tel:+97167649900" style="color:var(--gold-deep);font-weight:800;">+971 6 764 99 00</a></p>
+          <small style="color:#4a3c28;font-weight:600;" data-i18n="br.hours">متاح من السبت إلى الخميس: 8:00 ص - 8:00 م</small>
         </div>
       </div>
-      
       <div class="col-md-4" data-anim="fade-up" data-anim-delay="240">
         <div class="branch-card">
           <div class="b-icon"><i class="fa-brands fa-whatsapp floating-live-icon pulse-live"></i></div>
-          <h5 style="color:#fff;margin-bottom:8px;" data-i18n="br.t3">الدعم السريع عبر الواتساب</h5>
-          <p class="text-muted mb-2"><a href="https://wa.me/971503447262" target="_blank" style="color:#25D366;font-weight:700;">+971 50 344 7262</a></p>
-          <small class="text-dim" data-i18n="br.online">متاح على مدار الساعة لاستقبال استفساراتكم</small>
+          <h5 style="color:#12100e;margin-bottom:8px;font-weight:800;" data-i18n="br.t3">الدعم السريع عبر الواتساب</h5>
+          <p class="mb-2"><a href="https://wa.me/971503447262" target="_blank" style="color:#128C4A;font-weight:800;">+971 50 344 7262</a></p>
+          <small style="color:#4a3c28;font-weight:600;" data-i18n="br.online">متاح على مدار الساعة لاستقبال استفساراتكم</small>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-<!-- LUXURY FOOTER -->
-<footer>
+<footer id="contact">
   <div class="container">
-    <div class="row g-4">
-      
-      <!-- Brand & Summary Column -->
-      <div class="col-lg-4 col-md-12">
+    <div class="row g-4 justify-content-between">
+      <div class="col-lg-5 col-md-12">
         <div class="d-flex align-items-center gap-3 mb-3">
-          <img src="css/logo.JPG" alt="MRM Group" style="height:56px; border-radius:12px; border:1px solid var(--border-medium); box-shadow:0 0 20px rgba(212,167,81,0.25);">
+          <img src="css/logo.JPG" alt="MRM Group" style="height:56px; border-radius:12px; border:1px solid var(--border-medium); box-shadow:0 0 20px rgba(201,151,31,0.15);">
           <div class="brand-text">
-            <span class="title" style="font-size:1.3rem;">MRM GROUP</span>
-            <span class="sub" style="font-size:0.75rem;">مجموعة إم آر إم للشركات - UAE</span>
+            <span class="title" style="font-size:1.3rem;color:#12100e;font-weight:900;">MRM GROUP</span>
+            <span class="sub" style="font-size:0.78rem;color:var(--gold-deep);font-weight:800;">مجموعة إم آر إم للشركات - UAE</span>
           </div>
         </div>
-        <p class="text-muted small" style="line-height:1.9;" data-i18n="ft.desc">صرح إماراتي رائد في إمارة أم القيوين، يقدم منظومة خدمات متكاملة في الوساطة والتطوير العقاري، مقاولات الصيانة العامة، أعمال النجارة وتصنيع المطابخ، وورشة الألمنيوم والزجاج المعماري تحت سقف واحد بأعلى مقاييس الجودة والاتقان.</p>
-        
+        <p style="line-height:1.9;" data-i18n="ft.desc">صرح إماراتي رائد في إمارة أم القيوين، يقدم منظومة خدمات متكاملة في الوساطة والتطوير العقاري، مقاولات الصيانة العامة، أعمال النجارة وتصنيع المطابخ، وورشة الألمنيوم والزجاج المعماري تحت سقف واحد بأعلى مقاييس الجودة والاتقان.</p>
         <div class="d-flex gap-2 mt-4">
           <a href="https://www.instagram.com/cougar.realestate" target="_blank" class="social-ic" aria-label="Instagram Realestate"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.instagram.com/cougar.cag" target="_blank" class="social-ic" aria-label="Instagram Contracting"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/971503447262" target="_blank" class="social-ic" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="tel:+97167649900" class="social-ic" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
         </div>
       </div>
-      
-      <!-- Quick Navigation Column -->
-      <div class="col-lg-2 col-md-4 col-6">
-        <h5 data-i18n="ft.h1">روابط سريعة</h5>
-        <ul style="line-height:2.4;">
-          <li><a href="#home" data-i18n="nav.home"><i class="fa-solid fa-angle-left me-1 text-gold"></i> الرئيسية</a></li>
-          <li><a href="#about" data-i18n="nav.about"><i class="fa-solid fa-angle-left me-1 text-gold"></i> من نحن</a></li>
-          <li><a href="#companies" data-i18n="nav.companies"><i class="fa-solid fa-angle-left me-1 text-gold"></i> شركاتنا</a></li>
-          <li><a href="#services" data-i18n="nav.services"><i class="fa-solid fa-angle-left me-1 text-gold"></i> خدماتنا</a></li>
-          <li><a href="#materials" data-i18n="nav.materials"><i class="fa-solid fa-angle-left me-1 text-gold"></i> معايير الجودة</a></li>
-          <li><a href="#portfolio" data-i18n="nav.portfolio"><i class="fa-solid fa-angle-left me-1 text-gold"></i> معرض الأعمال</a></li>
-          <li><a href="#faq" data-i18n="nav.faq"><i class="fa-solid fa-angle-left me-1 text-gold"></i> الأسئلة الشائعة</a></li>
-        </ul>
-      </div>
-      
-      <!-- Companies Showcase Column -->
-      <div class="col-lg-3 col-md-4 col-6">
-        <h5 data-i18n="ft.h2">شركات المجموعة</h5>
-        
-        <a href="#realestate" class="d-block text-decoration-none">
-          <div class="footer-company-item">
-            <h6 data-i18n="companies.c1title">كوجر للعقارات</h6>
-            <span data-i18n="companies.c1tag">01 • عقارات واستثمار</span>
-          </div>
-        </a>
-        
-        <a href="#maintenance" class="d-block text-decoration-none">
-          <div class="footer-company-item">
-            <h6 data-i18n="companies.c2title">كوجر لصيانة المباني</h6>
-            <span data-i18n="companies.c2tag">02 • صيانة وتشغيل</span>
-          </div>
-        </a>
-        
-        <a href="#carpentry" class="d-block text-decoration-none">
-          <div class="footer-company-item">
-            <h6 data-i18n="companies.c3title">كوجر للنجارة</h6>
-            <span data-i18n="companies.c3tag">03 • نجارة وديكور</span>
-          </div>
-        </a>
-        
-        <a href="#aluminum" class="d-block text-decoration-none">
-          <div class="footer-company-item">
-            <h6 data-i18n="companies.c4title">ورشة كوجر للألمنيوم والزجاج</h6>
-            <span data-i18n="companies.c4tag">04 • ألمنيوم وزجاج</span>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Contact & Office Info Column -->
-      <div class="col-lg-3 col-md-4 col-12">
-        <h5 data-i18n="ft.h3">تواصل مع المقر</h5>
-        
+      <div class="col-lg-6 col-md-12">
+        <h5 data-i18n="ft.h3">تواصل معنا</h5>
         <div class="footer-contact-badge">
           <i class="fa-solid fa-location-dot"></i>
           <div>
-            <small class="text-gold d-block font-weight-bold" data-i18n="ft.addr_title">المقر الإداري:</small>
-            <span class="text-muted small" data-i18n="br.d1">بناية المدار، ميزانين، شارع الملك فيصل، أم القيوين</span>
+            <small class="text-gold d-block font-weight-bold" data-i18n="ft.addr_title">العنوان:</small>
+            <span class="small" data-i18n="br.d1">بناية المدار، ميزانين، شارع الملك فيصل، أم القيوين</span>
           </div>
         </div>
-        
         <div class="footer-contact-badge">
           <i class="fa-solid fa-phone-volume"></i>
           <div>
             <small class="text-gold d-block font-weight-bold" data-i18n="ft.call_title">الهاتف المباشر:</small>
-            <a href="tel:+97167649900" class="text-light small font-weight-bold">+971 6 764 99 00</a>
+            <a href="tel:+97167649900" class="small font-weight-bold">+971 6 764 99 00</a>
           </div>
         </div>
-        
         <div class="footer-contact-badge">
           <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
           <div>
             <small class="text-gold d-block font-weight-bold" data-i18n="ft.wa_title">واتساب الاستشارات:</small>
-            <a href="https://wa.me/971503447262" target="_blank" class="text-light small font-weight-bold">+971 50 344 7262</a>
+            <a href="https://wa.me/971503447262" target="_blank" class="small font-weight-bold">+971 50 344 7262</a>
           </div>
         </div>
-        
         <div class="footer-contact-badge">
           <i class="fa-solid fa-envelope"></i>
           <div>
             <small class="text-gold d-block font-weight-bold" data-i18n="ft.mail_title">البريد الإلكتروني:</small>
-            <a href="mailto:admin@mrmgroup.ae" class="text-light small">admin@mrmgroup.ae</a>
+            <a href="mailto:admin@mrmgroup.ae" class="small">admin@mrmgroup.ae</a>
           </div>
         </div>
       </div>
-      
     </div>
-    
     <div class="footer-bottom text-center d-flex flex-wrap justify-content-between align-items-center">
-      <span data-i18n="ft.copy">&copy; 2026 MRM Group. جميع الحقوق محفوظة. صُمم بأعلى معايير الفخامة لمجموعة</span> 
+      <span data-i18n="ft.copy">&copy; 2026 MRM Group. جميع الحقوق محفوظة. صُمم بأعلى معايير الفخامة لمجموعة</span>
       <div class="d-flex gap-3 mt-2 mt-md-0 ">
         <span data-i18n="design-by">تم التصميم بواسطة</span>
         <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" class="text-gold font-weight-bold">GMTWEB</a>
-        <span class="text-dim">|</span>
-        <a href="#calculator" class="text-muted" data-i18n="nav.calculator">حاسبة التكلفة</a>
-        <span class="text-dim">|</span>
-        <a href="#contact" class="text-muted" data-i18n="nav.contact">تواصل معنا</a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING ACTION BUTTONS -->
 <div class="floating-btns">
-  <a href="https://wa.me/971503447262?text=مرحبا، أود الاستفسار عن خدمات كوجر للعقارات" target="_blank" class="fbtn wa1" aria-label="WhatsApp Real Estate">
-    <span class="fbtn-badge" data-i18n="fl.wa1">واتساب العقارات</span>
+  <a href="https://wa.me/971503447262?text=مرحبا، أود الاستفسار عن خدمات مجموعة MRM" target="_blank" class="fbtn wa1" aria-label="WhatsApp">
+    <span class="fbtn-badge" data-i18n="fl.wa1">تواصل واتساب</span>
     <i class="fa-brands fa-whatsapp"></i>
-  </a>
-  <a href="https://wa.me/971503447262?text=مرحبا، أود الاستفسار عن خدمات المقاولات والنجارة والألمنيوم" target="_blank" class="fbtn wa2" aria-label="WhatsApp Contracting">
-    <span class="fbtn-badge" data-i18n="fl.wa2">واتساب المقاولات</span>
-    <i class="fa-solid fa-hammer"></i>
-  </a>
-  <a href="tel:+97167649900" class="fbtn call" aria-label="Call Headquarters">
-    <span class="fbtn-badge" data-i18n="fl.call">اتصال بالمقر</span>
-    <i class="fa-solid fa-phone-volume"></i>
   </a>
 </div>
 
-<!-- BACK TO TOP -->
 <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
 
-<!-- LIGHTBOX MODAL -->
 <div class="lightbox" id="lightbox">
   <button class="lb-close" id="lbClose" aria-label="Close Lightbox">&#10005;</button>
   <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous Image"><i class="fa-solid fa-chevron-right"></i></button>
@@ -1869,13 +960,11 @@ footer .social-ic:hover{
 (function(){
 "use strict";
 
-/* === PRELOADER === */
 window.addEventListener("load", function(){
   var p = document.getElementById("preloader");
   if(p) setTimeout(function(){ p.classList.add("hide"); }, 800);
 });
 
-/* === NAVBAR SCROLL & ACTIVE TRACKING === */
 var navbar = document.getElementById("mainNav");
 var backToTop = document.getElementById("backToTop");
 function handleScroll(){
@@ -1908,7 +997,6 @@ function updateActive(){
 }
 window.addEventListener("scroll", updateActive, {passive:true});
 
-/* === OFFCANVAS MOBILE MENU === */
 var offcanvas = document.getElementById("mobileNav");
 var backdrop = document.getElementById("offcanvasBackdrop");
 var navToggler = document.getElementById("navToggler");
@@ -1928,7 +1016,6 @@ if(closeBtn) closeBtn.addEventListener("click", closeOC);
 if(backdrop) backdrop.addEventListener("click", closeOC);
 document.querySelectorAll("[data-offcanvas]").forEach(function(l){ l.addEventListener("click", closeOC); });
 
-/* === ACCORDION === */
 document.querySelectorAll("[data-accordion]").forEach(function(btn){
   btn.addEventListener("click", function(){
     var tid = this.getAttribute("data-accordion");
@@ -1946,7 +1033,6 @@ document.querySelectorAll("[data-accordion]").forEach(function(btn){
   });
 });
 
-/* === NUMBER COUNTERS ANIMATION === */
 var countersAnimated = new Set();
 function animateCounter(el){
   var target = parseInt(el.getAttribute("data-count"), 10);
@@ -1963,7 +1049,6 @@ function animateCounter(el){
   requestAnimationFrame(step);
 }
 
-/* === SCROLL ANIMATIONS OBSERVER === */
 var animEls = document.querySelectorAll("[data-anim]");
 var scrollObs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
@@ -1993,49 +1078,6 @@ document.querySelectorAll("[data-count]").forEach(function(c){
   cObs.observe(c);
 });
 
-/* === INTERACTIVE COST ESTIMATOR LOGIC === */
-var calcService = document.getElementById("calcService");
-var calcArea = document.getElementById("calcArea");
-var calcQuality = document.getElementById("calcQuality");
-var areaVal = document.getElementById("areaVal");
-var calcResult = document.getElementById("calcResult");
-
-function updateCalculation(){
-  if(!calcArea || !calcResult) return;
-  var area = parseInt(calcArea.value, 10) || 150;
-  // Update area display
-  if(areaVal){
-    areaVal.textContent = area + (currentLang === "ar" ? " م²" : " m²");
-  }
-  // Prices vary with raw material market — always show agreement text
-  if(currentLang === "ar"){
-    calcResult.innerHTML = "حسب الاتفاق<br>مع العميل";
-  } else {
-    calcResult.innerHTML = "Price By<br>Agreement";
-  }
-}
-
-if(calcService) calcService.addEventListener("change", updateCalculation);
-if(calcArea) calcArea.addEventListener("input", updateCalculation);
-if(calcQuality) calcQuality.addEventListener("change", updateCalculation);
-updateCalculation();
-
-/* === GALLERY DATA & BUILDER === */
-var galleryV1Data=[
-  {src:"css/v1 (1).jpg",cat:"v1",ar:"فيلا عصرية فاخرة - أم القيوين",en:"Luxury Modern Villa - UAQ"},
-  {src:"css/v1 (2).jpg",cat:"v1",ar:"فيلا حديثة التصميم المعماري",en:"Contemporary Architectural Villa"},
-  {src:"css/v1 (3).jpg",cat:"v1",ar:"فيلا كلاسيكية فخمة",en:"Luxury Classic Palace Villa"},
-  {src:"css/v1 (4).jpg",cat:"v1",ar:"فيلا سوبر ديلوكس خاصة",en:"Super Deluxe Private Villa"},
-  {src:"css/v1 (5).jpg",cat:"v1",ar:"فيلا مودرن بمساحات واسعة",en:"Spacious Modern Villa Estate"},
-  {src:"css/v1 (6).jpg",cat:"v1",ar:"فيلا تراثية معاصرة",en:"Contemporary Heritage Villa"},
-  {src:"css/v1 (7).jpg",cat:"v2",ar:"فيلا مطلة على البحيرات",en:"Lakeside View Luxury Villa"},
-  {src:"css/v1 (8).jpg",cat:"v2",ar:"فيلا مينيماليزم راقية",en:"Elite Minimalist Villa"},
-  {src:"css/v1 (9).jpg",cat:"v2",ar:"فيلا بإطلالة بحرية مميزة",en:"Distinctive Waterfront Villa"},
-  {src:"css/v1 (10).jpg",cat:"v2",ar:"فيلا فخمة بحدائق خاصة",en:"Luxury Villa with Private Gardens"},
-  {src:"css/v1 (11).jpg",cat:"v2",ar:"فيلا ذكية متكاملة الأنظمة",en:"Smart Automated Luxury Villa"},
-  {src:"css/v1 (12).jpg",cat:"v2",ar:"فيلا بطراز إماراتي ملكي",en:"Royal Emirati Style Villa"}
-];
-
 var galleryV2Data=[
   {src:"css/v2 (1).jpg",cat:"v1",ar:"مشروع مجمع سكني فاخر",en:"Luxury Residential Development"},
   {src:"css/v2 (2).jpg",cat:"v1",ar:"واجهات عقارية حديثة",en:"Modern Real Estate Facades"},
@@ -2060,12 +1102,12 @@ var galleryV2Data=[
 ];
 
 var filterLabels={
-  ar:{"all":"كافة المشاريع","v1":"المجموعة الأولى (Villas 1)","v2":"المجموعة الثانية (Villas 2)"},
+  ar:{"all":"كافة المشاريع","v1":"المجموعة الأولى","v2":"المجموعة الثانية"},
   en:{"all":"All Projects","v1":"Collection 1","v2":"Collection 2"}
 };
 
 var currentLang = localStorage.getItem('preferredLang') || 'ar';
-var galleryGroups={v1:galleryV1Data, v2:galleryV2Data};
+var galleryGroups={v2:galleryV2Data};
 var lightboxState={group:null, index:0};
 
 function buildGallery(data, fId, gId, labels, gKey){
@@ -2073,7 +1115,7 @@ function buildGallery(data, fId, gId, labels, gKey){
   if(!fc || !gc) return;
   var cats = ["all"];
   data.forEach(function(i){ if(cats.indexOf(i.cat) === -1) cats.push(i.cat); });
-  
+
   fc.innerHTML = "";
   cats.forEach(function(cat){
     var b = document.createElement("button");
@@ -2089,7 +1131,7 @@ function buildGallery(data, fId, gId, labels, gKey){
     });
     fc.appendChild(b);
   });
-  
+
   gc.innerHTML = "";
   data.forEach(function(item, idx){
     var d = document.createElement("div");
@@ -2097,32 +1139,31 @@ function buildGallery(data, fId, gId, labels, gKey){
     d.setAttribute("data-cat", item.cat);
     d.setAttribute("data-idx", idx);
     d.setAttribute("data-group", gKey);
-    
+
     var img = document.createElement("img");
     img.src = item.src;
     img.alt = item[currentLang] || item.ar;
     img.loading = "lazy";
-    
+
     var ov = document.createElement("div");
     ov.className = "gi-overlay";
-    
+
     var sp = document.createElement("span");
     sp.textContent = item[currentLang] || item.ar;
-    
+
     var sm = document.createElement("small");
     sm.innerHTML = '<i class="fa-solid fa-magnifying-glass-plus"></i> ' + (currentLang === "ar" ? "اضغط للتكبير والتفاصيل" : "Click to view full preview");
-    
+
     ov.appendChild(sp);
     ov.appendChild(sm);
     d.appendChild(img);
     d.appendChild(ov);
-    
+
     d.addEventListener("click", function(){ openLB(gKey, idx); });
     gc.appendChild(d);
   });
 }
 
-/* === LIGHTBOX LOGIC === */
 var lightbox = document.getElementById("lightbox"), lbImg = document.getElementById("lbImg"), lbCap = document.getElementById("lbCaption");
 function openLB(g, i){
   lightboxState.group = g;
@@ -2162,96 +1203,67 @@ document.addEventListener("keydown", function(e){
   if(e.key === "ArrowRight") lbNav(-1);
 });
 
-/* === TRANSLATIONS DICTIONARY === */
 var T = {
   ar: {
     "nav.brand_sub":"مجموعة إم آر إم للشركات",
-    "nav.home":"الرئيسية","nav.services":"خدماتنا","nav.companies":"شركاتنا","nav.materials":"معايير الجودة","nav.calculator":"حاسبة التكلفة","nav.portfolio":"أعمالنا","nav.faq":"الأسئلة الشائعة","nav.contact":"تواصل معنا",
+    "nav.home":"الرئيسية","nav.about":"من نحن","nav.services":"خدماتنا","nav.portfolio":"أعمالنا","nav.branches":"فروعنا","nav.contact":"تواصل معنا","nav.call":"اتصل بنا",
     "hero.top_badge":"نحن نبني المستقبل",
     "hero.counter_text":"مشروع متكامل",
     "hero.desc":"حلول هندسية وتطويرية مبتكرة في البنية التحتية، العقارات، المقاولات، أعمال النجارة، والألمنيوم والزجاج المعماري بأعلى المعايير.",
     "hero.cta_contact":"تواصل معنا",
+    "about.eyebrow":"من نحن","about.title":"مجموعة <span class=\"gold-text\">ام ار ام</span>",
+    "about.p1":"مجموعة أعمال متكاملة ومتخصصة في مجال العقارات والخدمات الإنشائية، نقدم خدمات تأجير العقارات الخاصة مثل المباني والمستودعات والفلل والشقق وسكن العمال، بالإضافة إلى بيع وشراء وتأجير العقارات للغير.",
+    "about.p2":"كما نقدم خدمات صيانة وتجهيز المباني وتركيب السيراميك والجبس والإنترلوك، إلى جانب تصنيع وتركيب المطابخ والأبواب والشبابيك الألمنيوم، وتنفيذ أعمال النجارة وتصنيع الأبواب الخشبية للفلل والشقق.",
+    "about.p3":"نحرص على تقديم خدمات احترافية بجودة عالية وأسعار تنافسية، مع الالتزام بالمصداقية والدقة وتلبية احتياجات عملائنا.",
     "svc.eyebrow":"خدماتنا الهندسية","svc.title":"خدماتنا","svc.sub":"نقدم حلولاً هندسية وتطويرية شاملة بأعلى المعايير",
-    "svc.c1_title":"المقاولات العامة والصيانة","svc.c1_desc":"تنفيذ مشاريع البناء وصيانة المباني السكنية والتجارية بدقة واحترافية متناهية مع ضمان الجودة.",
-    "svc.c2_title":"تصنيع وتصميم النجارة والديكور","svc.c2_desc":"تصميم وتنفيذ المطابخ الحديثة، الدريسنج روم، والأعمال الخشبية والديكورات الداخلية الفاخرة.",
-    "svc.c3_title":"الألمنيوم والواجهات والزجاج","svc.c3_desc":"تركيب الواجهات الزجاجية الحديثة، قطاعات الألمنيوم العازلة، والحلول المعمارية المبتكرة.",
-    "svc.c4_title":"التطوير والوساطة العقارية","svc.c4_desc":"إدارة وتأجير العقارات، تسويق الفرص الاستثمارية المتميزة في أم القيوين والإمارات.",
+    "svc.c1_title":"العقارات","svc.c1_desc":"إدارة وتأجير وتطوير العقارات وتسويق الفرص الاستثمارية المتميزة في أم القيوين والإمارات.",
+    "svc.c2_title":"صيانة المباني","svc.c2_desc":"تنفيذ مشاريع الصيانة العامة للمباني السكنية والتجارية بدقة واحترافية متناهية مع ضمان الجودة.",
+    "svc.c3_title":"أعمال النجارة","svc.c3_desc":"تصميم وتنفيذ المطابخ الحديثة، الدريسنج روم، والأعمال الخشبية والديكورات الداخلية الفاخرة.",
+    "svc.c4_title":"أعمال الألمنيوم والزجاج","svc.c4_desc":"تركيب الواجهات الزجاجية الحديثة، قطاعات الألمنيوم العازلة، والحلول المعمارية المبتكرة.",
     "svc.banner_commit_title":"التزامنا","svc.commit_1":"الالتزام بمعايير الجودة والسلامة","svc.commit_2":"استخدام أحدث التقنيات والمعدات","svc.commit_3":"تحقيق رضا العملاء التام",
     "svc.banner_contact_title":"تواصل معنا","svc.contact_loc":"أم القيوين، شارع الملك فيصل، بناية المدار",
-    "companies.title_v3":"شركات مجموعة MRM المتكاملة","companies.sub_v3":"فخورون بتقديم أضخم المشاريع السكنية والتجارية بأعلى معايير الجودة والاتقان.",
-    "companies.c1title":"كوجر للعقارات","companies.c2title":"كوجر لصيانة المباني","companies.c3title":"كوجر للنجارة","companies.c4title":"ورشة كوجر للألمنيوم والزجاج",
-    "companies.loc_tag":"أم القيوين - الإمارات","companies.btn_details":"عرض التفاصيل",
-    "mat.eyebrow":"هندسة المواد والتصنيع","mat.title":"معايير التصنيع وخامات <span class=\"gold-text\">الدرجة الأولى</span>","mat.sub":"في مجموعة MRM لا نعتمد إلا على خامات النخبة المستوردة والمطابقة لأعلى مقاييس الجودة والسلامة المعمارية الدولية.",
-    "mat.t1":"الأخشاب الطبيعية الصلبة","mat.d1":"أخشاب السنديان والزان والتيك الإفريقي المعالج حرارياً ضد الرطوبة وحشرات الخشب لضمان متانة تدوم لعقود.",
-    "mat.t2":"ألمنيوم Thermal Break","mat.d2":"قطاعات عازلة للحرارة والصوت فائقة الكفاءة توفر استهلاك الطاقة وتتحمل تقلبات الطقس العالية.",
-    "mat.t3":"زجاج سيكوريت ودبل جلاس","mat.d3":"طبقات زجاجية مقساة محقونة بغاز الأرجون العازل مع طبقات Low-E العاكسة للأشعة الضارة.",
-    "mat.t4":"إكسسوارات أوروبية أصلية","mat.d4":"مفصلات ومقابض وسكك أدراج ألمانية وإيطالية الصنع معتمدة تضمن سلاسة حركة فائقة وتحمل أقصى الأوزان.",
-    "calc.eyebrow":"تقدير أولي فوري","calc.title":"حاسبة تقدير <span class=\"gold-text\">تكلفة مشروعك</span>","calc.sub":"احصل على تقدير تقريبي سريع لتكلفة مشروعك وفقاً للمساحة ونوع الخدمة ومستوى التشطيب المطلوب.",
-    "calc.f1":"نوع الخدمة أو المشروع المطلوبة:","calc.opt1":"أعمال النجارة والمطابخ الفاخرة","calc.opt2":"واجهات ونوافذ الألمنيوم والزجاج","calc.opt3":"صيانة وتشطيب شامل للفلل والمباني","calc.opt4":"إدارة وتطوير عقاري شامل",
-    "calc.f2":"المساحة التقديرية (بالمتر المربع / الوحدات):","calc.f3":"مستوى التشطيب والمواصفات:",
-    "calc.q1":"تشطيب قياسي ممتاز (Executive Standard)","calc.q2":"تشطيب فاخر سوبر ديلوكس (Luxury Premium)","calc.q3":"تشطيب ملكي فائق الفخامة (Ultra Royal Bespoke)",
-    "calc.res_lbl":"التقدير المالي المبدئي:","calc.res_sub":"* تقدير تقريبي مبدئي يشمل التصنيع والتنفيذ والضمان ويخضع للمعاينة الفنية النهائية.","calc.btn":"طلب عرض سعر رسمي مفصل",
-    "port.eyebrow":"معرض الفخامة","port.title":"مشاريع <span class=\"gold-text\">الفلل والقصور</span>","port.sub":"تصفح نماذج حية من مشاريع الفلل الراقية التي تشرفنا بتنفيذها وتطويرها في مختلف إمارات الدولة.",
     "port2.eyebrow":"أعمال الشركات الأربع","port2.title":"إبداعات <span class=\"gold-text\">النجارة والألمنيوم والصيانة</span>","port2.sub":"لقطات تبرز جودة التفاصيل في المطابخ، الواجهات الزجاجية، أعمال الصيانة الدقيقة والديكورات الخشبية.",
-    "faq.eyebrow":"الأسئلة الشائعة","faq.title":"إجابات وافية على <span class=\"gold-text\">استفساراتكم المتكررة</span>",
-    "faq.q1":"ما هي الشركات التابعة لمجموعة MRM وكيف تتكامل خدماتها؟","faq.a1":"تضم المجموعة 4 شركات رئيسية: كوجر للعقارات (شراء وبيع وإدارة أملاك)، كوجر لصيانة المباني (صيانة وتشطيبات متكاملة)، كوجر للنجارة (تصنيع المطابخ والديكورات الخشبية)، وورشة كوجر للألمنيوم والزجاج (تصنيع الواجهات والنوافذ العازلة). هذا التكامل يتيح للعميل إنهاء كافة مراحل مشروعه مع جهة واحدة موثوقة دون وسيط.",
-    "faq.q2":"هل تقدم المجموعة خدماتها خارج إمارة أم القيوين؟","faq.a2":"نعم بكل تأكيد، يقع مقرنا الرئيسي في أم القيوين ونمتلك فرق عمل متكاملة تقدم خدمات النجارة، الألمنيوم، المقاولات، والصيانة في كافة إمارات الدولة (دبي، الشارقة، عجمان، رأس الخيمة، أبوظبي، والفجيرة) للمشاريع السكنية والتجارية.",
-    "faq.q3":"كيف يمكنني طلب معاينة مجانية وعرض سعر رسمي؟","faq.a3":"بإمكانك التواصل معنا عبر الواتساب على 971503447262+، أو الاتصال المباشر على 97167649900+. سيقوم مهندسنا المختص بتحديد موعد لمعاينة الموقع ورفع المقاسات وتقديم عرض سعر تفصيلي مجاناً.",
-    "faq.q4":"ما هي سياسة الضمان المعتمدة لدى مجموعة MRM؟","faq.a4":"نمنح شهادات ضمان رسمية تتراوح بين سنة إلى 10 سنوات بحسب نوع الأعمال (أعمال عزل الألمنيوم والزجاج، الإكسسوارات الميكانيكية للنجارة، والأعمال الإنشائية وصيانة المباني) مع توفير خدمة صيانة دورية ومتابعة مستمرة.",
-    "faq.q5":"هل يمكن تقسيط تكاليف المشاريع الكبرى وعقود الصيانة؟","faq.a5":"نوفر تسهيلات دفع مرنة جداً تعتمد على مراحل الإنجاز الفعلي للمشروع (Milestones)، بالإضافة إلى خطط دفع سنوية ميسرة لعقود الصيانة الوقائية للمباني والفلل السكنية.",
-    "cnt.eyebrow":"تواصل مباشر","cnt.title":"فريقنا الهندسي في <span class=\"gold-text\">خدمتكم دائماً</span>","cnt.desc":"يسعدنا استقبال استفساراتكم ومشاريعكم الهندسية والعقارية مباشرة عبر الهاتف أو الواتساب، أو من خلال زيارتكم الكريمة لمقرنا الرئيسي في أم القيوين.",
-    "cnt.btn_wa":"محادثة واتساب فورية","cnt.btn_call":"اتصال مباشر بالمقر","cnt.map":"فتح الموقع في خرائط Google",
+    "br.eyebrow":"مواقعنا وتواصلنا","br.title":"أينما <span class=\"gold-text\">كنتم في الإمارات</span> نصلكم فوراً",
+    "br.t1":"المقر الإداري الرئيسي","br.d1":"بناية المدار، طابق الميزانين، شارع الملك فيصل، أم القيوين، دولة الإمارات العربية المتحدة.",
+    "br.t2":"الاتصال المباشر","br.hours":"متاح من السبت إلى الخميس: 8:00 ص - 8:00 م",
+    "br.t3":"الدعم السريع عبر الواتساب","br.online":"متاح على مدار الساعة لاستقبال استفساراتكم",
     "ft.desc":"صرح إماراتي رائد في إمارة أم القيوين، يقدم منظومة خدمات متكاملة في الوساطة والتطوير العقاري، مقاولات الصيانة العامة، أعمال النجارة وتصنيع المطابخ، وورشة الألمنيوم والزجاج المعماري تحت سقف واحد بأعلى مقاييس الجودة والاتقان.",
-    "ft.h1":"روابط سريعة","ft.h2":"شركات المجموعة","ft.h3":"تواصل مع المقر","ft.copy":"&copy; 2026 MRM Group. جميع الحقوق محفوظة. صُمم بأعلى معايير الفخامة لمجموعة",
-    "ft.addr_title":"المقر الإداري:","ft.call_title":"الهاتف المباشر:","ft.wa_title":"واتساب الاستشارات:","ft.mail_title":"البريد الإلكتروني:",
-    "fl.wa1":"واتساب العقارات","fl.wa2":"واتساب المقاولات","fl.call":"اتصال بالمقر",
+    "ft.h3":"تواصل معنا","ft.copy":"&copy; 2026 MRM Group. جميع الحقوق محفوظة. صُمم بأعلى معايير الفخامة لمجموعة",
+    "ft.addr_title":"العنوان:","ft.call_title":"الهاتف المباشر:","ft.wa_title":"واتساب الاستشارات:","ft.mail_title":"البريد الإلكتروني:",
+    "fl.wa1":"تواصل واتساب",
     "design-by":"تم التصميم بواسطة"
   },
   en: {
     "nav.brand_sub":"Group of Companies UAE",
-    "nav.home":"Home","nav.services":"Services","nav.companies":"Our Companies","nav.materials":"Quality Standards","nav.calculator":"Cost Estimator","nav.portfolio":"Portfolio","nav.faq":"FAQ","nav.contact":"Contact Us",
+    "nav.home":"Home","nav.about":"About Us","nav.services":"Services","nav.portfolio":"Portfolio","nav.branches":"Locations","nav.contact":"Contact Us","nav.call":"Call Us",
     "hero.top_badge":"We Build The Future",
     "hero.counter_text":"Turnkey Projects",
     "hero.desc":"Innovative engineering and development solutions across infrastructure, real estate, general contracting, luxury carpentry, and architectural aluminum & glass to the highest international standards.",
     "hero.cta_contact":"Contact Us",
+    "about.eyebrow":"About Us","about.title":"MRM <span class=\"gold-text\">Group</span>",
+    "about.p1":"An integrated and specialized group of companies in real estate and construction services. We provide leasing services for private properties such as buildings, warehouses, villas, apartments and labor accommodation, in addition to buying, selling and leasing properties for third parties.",
+    "about.p2":"We also provide building maintenance and fit-out services, ceramic, gypsum and interlock installation, alongside manufacturing and installing kitchens, doors and aluminum windows, and carrying out carpentry works and wooden doors for villas and apartments.",
+    "about.p3":"We are committed to delivering professional services with high quality and competitive prices, while upholding credibility, precision, and meeting our clients' needs.",
     "svc.eyebrow":"Engineering Services","svc.title":"Our Services","svc.sub":"Delivering Comprehensive Engineering & Development Solutions with Highest Standards",
-    "svc.c1_title":"General Contracting & Maintenance","svc.c1_desc":"Turnkey construction and preventative maintenance for residential and commercial assets with certified warranty.",
-    "svc.c2_title":"Luxury Carpentry & Fit-Out","svc.c2_desc":"Bespoke modern kitchens, walk-in closets, hardwood doors, and luxury architectural wall paneling.",
-    "svc.c3_title":"Aluminum & Glass Facades","svc.c3_desc":"Thermal-break insulated windows, curtain wall glass facades, and modern architectural glazing systems.",
-    "svc.c4_title":"Real Estate & Development","svc.c4_desc":"Certified property brokerage, asset management, and prime real estate investments across Umm Al Quwain and UAE.",
+    "svc.c1_title":"Real Estate","svc.c1_desc":"Certified property brokerage, asset management, and prime real estate investments across Umm Al Quwain and UAE.",
+    "svc.c2_title":"Building Maintenance","svc.c2_desc":"Turnkey construction and preventative maintenance for residential and commercial assets with certified warranty.",
+    "svc.c3_title":"Carpentry Works","svc.c3_desc":"Bespoke modern kitchens, walk-in closets, hardwood doors, and luxury architectural wall paneling.",
+    "svc.c4_title":"Aluminum & Glass Works","svc.c4_desc":"Thermal-break insulated windows, curtain wall glass facades, and modern architectural glazing systems.",
     "svc.banner_commit_title":"Our Commitment","svc.commit_1":"Strict Quality & Safety Codes","svc.commit_2":"State-of-the-Art Technologies","svc.commit_3":"Complete Client Satisfaction",
     "svc.banner_contact_title":"Contact Us","svc.contact_loc":"Al Madar Building, King Faisal St, Umm Al Quwain",
-    "companies.title_v3":"MRM Group Integrated Subsidiaries","companies.sub_v3":"Proud to deliver landmark commercial and residential projects with supreme craftsmanship.",
-    "companies.c1title":"Cougar Real Estate","companies.c2title":"Cougar Building Maintenance","companies.c3title":"Cougar Carpentry","companies.c4title":"Cougar Aluminum & Glass Workshop",
-    "companies.loc_tag":"Umm Al Quwain - UAE","companies.btn_details":"View Details",
-    "mat.eyebrow":"Materials & Craftsmanship","mat.title":"Elite Engineering & <span class=\"gold-text\">Grade-A Materials</span>","mat.sub":"At MRM Group, we exclusively employ certified imported raw materials that comply with international architectural safety standards.",
-    "mat.t1":"Solid Natural Hardwoods","mat.d1":"Kiln-dried European Oak, Beech, and African Teak treated against moisture and pests to ensure multi-decade endurance.",
-    "mat.t2":"Thermal Break Aluminum","mat.d2":"Advanced thermally insulated aluminum profiles that drastically reduce power consumption and block external heat completely.",
-    "mat.t3":"Toughened & Low-E Glass","mat.d3":"Double glazed units infused with argon gas and Low-E solar coatings to reflect UV rays while providing impenetrable safety.",
-    "mat.t4":"Genuine European Hardware","mat.d4":"German and Italian certified hinges, tracks, and locking mechanisms engineered for silent operation and heavy load capacity.",
-    "calc.eyebrow":"Instant Estimate","calc.title":"Interactive <span class=\"gold-text\">Project Cost Calculator</span>","calc.sub":"Calculate a fast ballpark estimate for your project according to square meter area, service type, and desired specification level.",
-    "calc.f1":"Select Service / Project Type:","calc.opt1":"Custom Carpentry & Luxury Kitchens","calc.opt2":"Aluminum Facades & Insulated Windows","calc.opt3":"Complete Building Maintenance & Renovation","calc.opt4":"Turnkey Real Estate Development","calc.f2":"Estimated Area (in m² / Units):","calc.f3":"Finishing & Specification Level:",
-    "calc.q1":"Executive Standard Finishing","calc.q2":"Luxury Premium Deluxe Finishing","calc.q3":"Ultra Royal Bespoke Finishing",
-    "calc.res_lbl":"Estimated Budget Range:","calc.res_sub":"* Preliminary estimate covering manufacturing, installation, and warranty, subject to final architectural site inspection.","calc.btn":"Request Official Detailed Quote",
-    "port.eyebrow":"Luxury Portfolio","port.title":"Palaces & <span class=\"gold-text\">Villa Projects</span>","port.sub":"Explore real snapshots from our prestigious villa projects executed across the United Arab Emirates.",
     "port2.eyebrow":"Subsidiaries Portfolio","port2.title":"Carpentry, <span class=\"gold-text\">Aluminum & Maintenance</span> Works","port2.sub":"A showcase of precision detailing in custom kitchens, glass curtain walls, and interior fit-outs.",
-    "faq.eyebrow":"FAQ","faq.title":"Clear Answers to <span class=\"gold-text\">Frequently Asked Questions</span>",
-    "faq.q1":"What subsidiaries form MRM Group and how do they integrate?","faq.a1":"The group consists of 4 main companies: Cougar Real Estate, Cougar Building Maintenance, Cougar Carpentry, and Cougar Aluminum & Glass. This integration allows clients to complete full projects under one trusted roof with zero middlemen.",
-    "faq.q2":"Does the group provide services outside Umm Al Quwain?","faq.a2":"Yes, absolutely. Our technical teams execute carpentry, aluminum, contracting, and maintenance across all seven emirates (Dubai, Sharjah, Ajman, Ras Al Khaimah, Abu Dhabi, and Fujairah).",
-    "faq.q3":"How can I request a complimentary site survey and formal quotation?","faq.a3":"Simply reach out via WhatsApp at +971 50 344 7262 or call +971 6 764 99 00. Our senior engineer will schedule a site visit, take laser measurements, and prepare a detailed cost breakdown free of charge.",
-    "faq.q4":"What is the official warranty policy at MRM Group?","faq.a4":"We issue official warranty certificates ranging from 1 to 10 years depending on the scope of work (facade sealing, mechanical carpentry hardware, structural repairs, and waterproofing).",
-    "faq.q5":"Are flexible milestone payments available for large projects?","faq.a5":"We offer milestone-based payment schedules tied to verified inspection stages, as well as convenient plans for preventive maintenance contracts.",
-    "cnt.eyebrow":"Direct Contact","cnt.title":"Our Engineering Team is <span class=\"gold-text\">Always at Your Service</span>","cnt.desc":"We look forward to receiving your engineering and property inquiries directly via phone, WhatsApp, or by visiting our headquarters in Umm Al Quwain.",
-    "cnt.btn_wa":"Instant WhatsApp Chat","cnt.btn_call":"Direct Call to HQ","cnt.map":"Open Location in Google Maps",
+    "br.eyebrow":"Locations & Contact","br.title":"Wherever <span class=\"gold-text\">You Are in the UAE</span> We Reach You Instantly",
+    "br.t1":"Main Headquarters","br.d1":"Al Madar Building, Mezzanine Floor, King Faisal Street, Umm Al Quwain, United Arab Emirates.",
+    "br.t2":"Direct Call","br.hours":"Available Saturday to Thursday: 8:00 AM - 8:00 PM",
+    "br.t3":"Fast WhatsApp Support","br.online":"Available around the clock to receive your inquiries",
     "ft.desc":"A premier UAE corporate group based in Umm Al Quwain, providing turnkey solutions in real estate brokerage, general building maintenance, fine wood carpentry & kitchens, and architectural aluminum & glass under one roof with unyielding mastery.",
-    "ft.h1":"Quick Links","ft.h2":"Our Subsidiaries","ft.h3":"Headquarters Contact","ft.copy":"&copy; 2026 MRM Group. All rights reserved. Designed to the highest standards of luxury for",
-    "ft.addr_title":"HQ Location:","ft.call_title":"Direct Phone:","ft.wa_title":"Consultation WhatsApp:","ft.mail_title":"Official Email:",
-    "fl.wa1":"Real Estate WhatsApp","fl.wa2":"Contracting WhatsApp","fl.call":"Call Headquarters",
+    "ft.h3":"Contact Us","ft.copy":"&copy; 2026 MRM Group. All rights reserved. Designed to the highest standards of luxury for",
+    "ft.addr_title":"Address:","ft.call_title":"Direct Phone:","ft.wa_title":"Consultation WhatsApp:","ft.mail_title":"Official Email:",
+    "fl.wa1":"WhatsApp Us",
     "design-by":"Designed by"
   }
 };
 
-/* === ADVANCED MULTI-ALPHABET DYNAMIC SCRAMBLER WITH LIVE COUNTER === */
 var combinedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzأبتثجحخدذرزسشصضطظعغفقكلمنهوي0123456789";
 var scrambleInterval = null;
 var scrambleCounter = 0;
@@ -2261,20 +1273,14 @@ function runScramble(targetWord){
   var cntBadge = document.getElementById("scrambleCount");
   if(!el) return;
   if(scrambleInterval) clearInterval(scrambleInterval);
-  
   var iterations = 0;
-  
   scrambleInterval = setInterval(function(){
     scrambleCounter = (scrambleCounter + 1) % 999;
-    if(cntBadge){
-      cntBadge.textContent = String(scrambleCounter).padStart(3, '0');
-    }
-    
+    if(cntBadge){ cntBadge.textContent = String(scrambleCounter).padStart(3, '0'); }
     el.innerText = targetWord.split("").map(function(char, idx){
       if(idx < iterations) return targetWord[idx];
       return combinedChars[Math.floor(Math.random() * combinedChars.length)];
     }).join("");
-    
     if(iterations >= targetWord.length){
       clearInterval(scrambleInterval);
       el.innerText = targetWord;
@@ -2286,27 +1292,15 @@ function runScramble(targetWord){
 function applyLang(lang){
   document.documentElement.lang = lang;
   document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
-  
   document.querySelectorAll("[data-i18n]").forEach(function(el){
     var k = el.getAttribute("data-i18n");
     if(T[lang] && T[lang][k]) el.innerHTML = T[lang][k];
   });
-  
-  buildGallery(galleryV1Data, "filterV1", "galleryV1", filterLabels, "v1");
   buildGallery(galleryV2Data, "filterV2", "galleryV2", filterLabels, "v2");
-  
   var lb = document.getElementById("langToggle"), lm = document.getElementById("langToggleMobile");
-  if(lb){
-    var span = lb.querySelector("span");
-    if(span) span.textContent = (lang === "ar") ? "EN" : "عربي";
-  }
-  if(lm){
-    var mspan = lm.querySelector("span");
-    if(mspan) mspan.textContent = (lang === "ar") ? "English" : "عربي";
-  }
-  
-  updateCalculation();
-  runScramble("MRM Group");
+  if(lb){ var span = lb.querySelector("span"); if(span) span.textContent = (lang === "ar") ? "EN" : "عربي"; }
+  if(lm){ var mspan = lm.querySelector("span"); if(mspan) mspan.textContent = (lang === "ar") ? "English" : "عربي"; }
+  runScramble("MRM Group of Companies");
 }
 
 function switchLang(){
@@ -2319,15 +1313,10 @@ var lt = document.getElementById("langToggle"), ltm = document.getElementById("l
 if(lt) lt.addEventListener("click", switchLang);
 if(ltm) ltm.addEventListener("click", switchLang);
 
-// Initialize with current language
 applyLang(currentLang);
 
-// Re-run scrambler periodically
-setInterval(function(){
-  runScramble("MRM Group");
-}, 10000);
+setInterval(function(){ runScramble("MRM Group of Companies"); }, 10000);
 
-/* === SMOOTH SCROLLING === */
 document.querySelectorAll('a[href^="#"]').forEach(function(l){
   l.addEventListener("click", function(e){
     var t = this.getAttribute("href");
