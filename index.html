@@ -987,48 +987,67 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
 [data-anim].visible{opacity:1;transform:none;}
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:1200px){
-  .gallery-grid{grid-template-columns:repeat(3,1fr);}
-  .nav-link{font-size:0.84rem;padding:6px 8px!important;}
-  .sv2-grid{grid-template-columns:repeat(2,1fr)!important;}
-  .sv2-card{height:380px;}
+@media(max-width: 1200px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .nav-link { font-size: 0.84rem; padding: 6px 8px !important; }
+  
+  /* كارتين في الصف مع مسافات مظبوطة */
+  .sv2-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px; }
+  .sv2-card { height: auto !important; }
+  .sv2-visual { height: 300px !important; }
 }
-@media(max-width:991px){
-  .hero-new{padding:140px 0 80px;}
-  .hero-new-title .en{font-size:2.6rem;}
-  .section-pad{padding:75px 0;}
-  .gallery-grid{grid-template-columns:repeat(2,1fr);}
-  .commitment-contact-banner{padding:30px 24px;}
-  .hns-divider{display:none;}
-  .hns-item{padding:12px 16px;}
-  .hns-icon{width:56px;height:56px;}
-  .hns-icon i{font-size:1.3rem;}
+
+@media(max-width: 991px) {
+  .hero-new { padding: 140px 0 80px; }
+  .hero-new-title .en { font-size: 2.6rem; }
+  .section-pad { padding: 75px 0; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .commitment-contact-banner { padding: 30px 24px; }
+  .hns-divider { display: none; }
+  .hns-item { padding: 12px 16px; }
+  .hns-icon { width: 56px; height: 56px; }
+  .hns-icon i { font-size: 1.3rem; }
 }
-@media(max-width:767px){
-  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
-  .gallery-item{height:180px;}
-  .sv2-grid{grid-template-columns:repeat(2,1fr)!important;gap:12px;}
-  .sv2-card{height:340px;}
-  .sv2-visual i{font-size:3rem;}
-  .btn-hero-contact{width:100%;}
-  .hero-new-cta{width:100%;justify-content:center;}
-  .fbtn{width:50px;height:50px;font-size:1.3rem;}
-  .floating-btns{bottom:18px;inset-inline-end:18px;gap:10px;}
-  #backToTop{bottom:18px;inset-inline-start:18px;width:42px;height:42px;}
-  .commitment-contact-banner{padding:24px 18px;}
-  .hero-corner{width:50px;height:50px;}
-  .hero-new-badge{width:90px;height:90px;margin-bottom:24px;}
+
+@media(max-width: 767px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .gallery-item { height: 180px; }
+  
+  /* ترتيب نظيف وجنب بعض بكارتين للتابلت والموبايل الكبير */
+  .sv2-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px; }
+  .sv2-card { height: auto !important; }
+  .sv2-visual { height: 220px !important; }
+  .sv2-info h3 { font-size: 1.05rem !important; }
+  .sv2-info p { font-size: 0.8rem !important; }
+
+  .sv2-visual i { font-size: 3rem; }
+  .btn-hero-contact { width: 100%; }
+  .hero-new-cta { width: 100%; justify-content: center; }
+  .fbtn { width: 50px; height: 50px; font-size: 1.3rem; }
+  .floating-btns { bottom: 18px; inset-inline-end: 18px; gap: 10px; }
+  #backToTop { bottom: 18px; inset-inline-start: 18px; width: 42px; height: 42px; }
+  .commitment-contact-banner { padding: 24px 18px; }
+  .hero-corner { width: 50px; height: 50px; }
+  .hero-new-badge { width: 90px; height: 90px; margin-bottom: 24px; }
 }
-@media(max-width:480px){
-  .gallery-grid{grid-template-columns:1fr;}
-  .gallery-item{height:220px;}
-  .sv2-grid{grid-template-columns:repeat(2,1fr)!important;gap:8px;} /* كارتين في الصف على الموبايل */
-  .sv2-card{height:260px;} /* تقليل الارتفاع يناسب عرض الشاشات الصغيرة */
-  .hero-new-services{gap:0;}
-  .hns-item{padding:10px 12px;}
-  .hns-icon{width:50px;height:50px;}
-  .hns-icon i{font-size:1.1rem;}
-  .hns-item span{font-size:0.78rem;}
+
+@media(max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item { height: 220px; }
+  
+  /* الشاشات الصغيرة جداً: كارتين في الصف مرتبين ومتناسقين من غير لعبكة */
+  .sv2-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px; }
+  .sv2-card { height: auto !important; }
+  .sv2-visual { height: 160px !important; } /* يصغر حجم الصورة عشان الكارت يظبط */
+  .sv2-info { padding: 10px 4px !important; }
+  .sv2-info h3 { font-size: 0.95rem !important; margin-bottom: 4px !important; }
+  .sv2-info p { font-size: 0.75rem !important; line-height: 1.2 !important; }
+
+  .hero-new-services { gap: 0; }
+  .hns-item { padding: 10px 12px; }
+  .hns-icon { width: 50px; height: 50px; }
+  .hns-icon i { font-size: 1.1rem; }
+  .hns-item span { font-size: 0.78rem; }
 }
 </style>
 </head>
