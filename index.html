@@ -628,9 +628,8 @@ section{overflow-x:hidden;}
 }
 .btn-outline-gold:hover{background:var(--gold-grad);color:#0c0a08;border-color:transparent;transform:translateY(-3px) scale(1.03);box-shadow:0 12px 32px rgba(192,154,103,0.3);}
 
-/* ============================================================
-   ===== HERO SECTION — جرادينت خفيف جداً + كتابة بيضاء
-   ============================================================ */
+/* ====================== HERO ====================== */
+
 .hero-new{
   min-height: 100vh;
   display: flex;
@@ -767,8 +766,9 @@ section{overflow-x:hidden;}
 
 /* ===== ABOUT SECTION ===== */
 .about-section{background:#ffffff;padding:90px 0;}
-.about-card{background:linear-gradient(160deg,#ffffff 0%,#FAF7F2 100%);border:1px solid rgba(192,154,103,0.2);border-radius:var(--radius-lg);padding:44px 40px;box-shadow:var(--shadow-sm);}
-.about-card p{color:var(--text-dark);font-size:1.28rem;font-weight:600;line-height:2.05;margin-bottom:20px;}
+.about-card{background:linear-gradient(160deg,#ffffff 0%,#FAF7F2 100%);border:1px solid rgba(192,154,103,0.2);border-radius:var(--radius-lg);padding:44px 40px;box-shadow:var(--shadow-sm);text-align:right;}
+[dir="ltr"] .about-card{text-align:left;}
+.about-card p{color:var(--text-dark);font-size:1.28rem;font-weight:600;line-height:2.05;margin-bottom:20px;text-align:inherit;}
 .about-card p:last-child{margin-bottom:0;}
 
 /* ===== SERVICES SECTION ===== */
@@ -931,26 +931,35 @@ section{overflow-x:hidden;}
 .direct-contact-card{background:linear-gradient(145deg,#1E2834 0%,#0F171F 100%);border:1.5px solid var(--border-medium);border-radius:var(--radius-lg);padding:50px 40px;box-shadow:var(--shadow-lg);}
 
 /* ===== FOOTER ===== */
-footer{background:linear-gradient(180deg,#ffffff 0%,#F5F0E8 100%);border-top:3px solid var(--gold-primary);padding:70px 0 30px;position:relative;color:var(--text-dark);}
-footer h5{color:#2C3238;margin-bottom:24px;font-size:1.25rem;font-weight:900;position:relative;padding-bottom:10px;}
+footer{background:linear-gradient(180deg,#1E2834 0%,#131B24 100%);border-top:3px solid var(--gold-primary);padding:70px 0 30px;position:relative;color:#fff;}
+footer h5{color:#fff;margin-bottom:18px;font-size:1.08rem;font-weight:900;position:relative;padding-bottom:8px;text-align:right;}
 footer h5::after{content:'';position:absolute;bottom:0;right:0;width:35px;height:2.5px;background:var(--gold-grad);border-radius:2px;}
 [dir="ltr"] footer h5::after{right:auto;left:0;}
-footer p{color:#2C3238;font-weight:600;}
-footer a{color:#2C3238;font-weight:700;transition:all .3s var(--ease-out);display:inline-block;}
-footer a:hover{color:var(--gold-deep);transform:translateX(-5px);}
+[dir="ltr"] footer h5{text-align:left;}
+footer p{color:#C9D2DA;font-weight:600;font-size:0.92rem;text-align:right;}
+[dir="ltr"] footer p{text-align:left;}
+footer a{color:#D9C3A3;font-weight:700;font-size:0.92rem;transition:all .3s var(--ease-out);display:inline-block;}
+footer a:hover{color:var(--gold-bright);transform:translateX(-5px);}
 [dir="ltr"] footer a:hover{transform:translateX(5px);}
+footer ul{text-align:right;}
+[dir="ltr"] footer ul{text-align:left;}
 
-.footer-contact-badge{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#ffffff;border:1px solid rgba(192,154,103,0.25);border-radius:14px;margin-bottom:12px;transition:var(--transition-smooth);box-shadow:0 4px 14px rgba(0,0,0,0.06);}
-.footer-contact-badge:hover{border-color:var(--gold-primary);box-shadow:0 8px 22px rgba(192,154,103,0.12);}
-.footer-contact-badge i{font-size:1.3rem;color:var(--gold-deep);}
-.footer-contact-badge span,.footer-contact-badge a{color:#2C3238!important;font-weight:800!important;}
-.footer-contact-badge small.text-gold{color:var(--gold-deep)!important;font-weight:800!important;}
+.footer-contact-badge{display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(192,154,103,0.2);border-radius:14px;margin-bottom:12px;transition:var(--transition-smooth);}
+.footer-contact-badge:hover{border-color:var(--gold-primary);background:rgba(255,255,255,0.08);}
+.footer-contact-badge i{font-size:1.15rem;color:var(--gold-bright);}
+.footer-contact-badge span,.footer-contact-badge a{color:#fff!important;font-weight:700!important;font-size:0.9rem!important;}
+.footer-contact-badge small.text-gold{color:var(--gold-bright)!important;font-weight:800!important;}
 
-footer .social-ic{width:44px;height:44px;border-radius:50%;border:1px solid var(--border-medium);display:inline-flex;align-items:center;justify-content:center;color:var(--gold-deep);background:#ffffff;transition:var(--transition-smooth);}
+.footer-follow-item{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.footer-follow-item a{display:flex;align-items:center;gap:12px;}
+
+footer .social-ic{width:40px;height:40px;border-radius:50%;border:1px solid var(--border-medium);display:inline-flex;align-items:center;justify-content:center;color:var(--gold-bright);background:rgba(255,255,255,0.05);transition:var(--transition-smooth);flex-shrink:0;}
 footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:transparent;transform:scale(1.15) rotate(8deg);box-shadow:var(--shadow-gold);}
 
-.footer-bottom{border-top:1px solid rgba(192,154,103,0.2);margin-top:50px;padding-top:25px;font-size:0.95rem;color:#2C3238;font-weight:700;}
-.footer-bottom a{color:var(--gold-deep);font-weight:800;}
+.footer-bottom{border-top:1px solid rgba(192,154,103,0.2);margin-top:50px;padding-top:22px;font-size:0.85rem;color:#C9D2DA;font-weight:600;}
+.footer-bottom a{color:var(--gold-bright);font-weight:800;}
+.footer-credit{margin-top:8px;font-size:0.8rem;color:#8A97A3;}
+.footer-credit a{color:var(--gold-bright);font-weight:700;}
 
 /* ===== FLOATING BUTTONS ===== */
 .floating-btns{position:fixed;bottom:30px;inset-inline-end:30px;z-index:9000;display:flex;flex-direction:column;gap:14px;align-items:center;}
@@ -1071,20 +1080,11 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
       <a class="nav-link active" href="#home" data-i18n="nav.home">الرئيسية</a>
       <a class="nav-link" href="#about" data-i18n="nav.about">من نحن</a>
       <a class="nav-link" href="#services" data-i18n="nav.services">خدماتنا</a>
-      <a class="nav-link" href="#portfolio2" data-i18n="nav.portfolio">أعمالنا</a>
-      <a class="nav-link" href="#branches" data-i18n="nav.branches">فروعنا</a>
+      <a class="nav-link" href="#branches" data-i18n="nav.branches">شركات المجموعة</a>
       <a class="nav-link" href="#contact" data-i18n="nav.contact">تواصل معنا</a>
-      
-      <a class="btn-navbar-call" href="tel:+97167649900">
-        <i class="fa-solid fa-phone"></i> 
-        <span data-i18n="nav.call">اتصل بنا</span>
-      </a>
+      <a class="nav-link" href="#portfolio2" data-i18n="nav.portfolio">أعمالنا</a>
 
       <div class="nav-actions">
-        <button class="nav-icon-btn" id="searchBtn" aria-label="Search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        
         <button class="nav-lang-text" id="langToggle" aria-label="Switch Language">
           <span>EN</span>
         </button>
@@ -1092,10 +1092,7 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
         <a href="https://www.instagram.com/cougar.realestate" class="nav-icon-btn" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-        
-        <a href="#" class="nav-icon-btn" target="_blank" rel="noopener" aria-label="X Twitter">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
+       
       </div>
     </div>
   </div>
@@ -1116,7 +1113,7 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
       <li><a class="nav-link" href="#about" data-offcanvas data-i18n="nav.about">من نحن</a></li>
       <li><a class="nav-link" href="#services" data-offcanvas data-i18n="nav.services">خدماتنا</a></li>
       <li><a class="nav-link" href="#portfolio2" data-offcanvas data-i18n="nav.portfolio">أعمالنا</a></li>
-      <li><a class="nav-link" href="#branches" data-offcanvas data-i18n="nav.branches">فروعنا</a></li>
+      <li><a class="nav-link" href="#branches" data-offcanvas data-i18n="nav.branches">شركات المجموعة</a></li>
       <li><a class="nav-link" href="#contact" data-offcanvas data-i18n="nav.contact">تواصل معنا</a></li>
       <li><a class="nav-link" href="tel:+97167649900" data-offcanvas><i class="fa-solid fa-phone me-2"></i> <span data-i18n="nav.call">اتصل بنا</span></a></li>
     </ul>
@@ -1130,7 +1127,7 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
   <div class="hero-new-content" data-anim="fade-up">
     <h1 class="hero-new-title">
       <span class="en">MRM GROUP</span>
-      <span class="ar" data-i18n="hero.subtitle">مجموعة إم آر إم للشركات</span>
+      <span class="ar" data-i18n="hero.subtitle">مجموعة شركات إم اّر إم</span>
     </h1>
   </div>
 </section>
@@ -1138,7 +1135,7 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
 <!-- ===== ABOUT SECTION ===== -->
 <section class="about-section" id="about">
   <div class="container">
-    <div class="text-center mb-5" data-anim="fade-up">
+    <div class=" mb-5" data-anim="fade-up">
       <span class="eyebrow"><i class="fa-solid fa-building-columns floating-live-icon"></i> <span data-i18n="about.eyebrow">من نحن</span></span>
       <h2 class="section-title text-dark" data-i18n="about.title">مجموعة <span class="gold-text">ام ار ام</span></h2>
       <div class="divider-gold"></div>
@@ -1218,7 +1215,7 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
   <div class="container">
     <div class="text-center mb-5" data-anim="fade-up">
       <span class="eyebrow"><i class="fa-solid fa-images floating-live-icon"></i> <span data-i18n="port.eyebrow">معرض أعمالنا</span></span>
-      <h2 class="section-title" data-i18n="port.title">مشاريع <span class="gold-text">نفخر بها</span></h2>
+      <h2 class="section-title" data-i18n="port.title">معرض <span class="gold-text">أعمالنا</span></h2>
       <div class="divider-gold"></div>
       <p class="section-sub mx-auto mt-3" data-i18n="port.sub">نماذج من أعمالنا في الفلل والمشاريع السكنية</p>
     </div>
@@ -1232,58 +1229,12 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
     <div class="gallery-grid" id="galleryGrid" data-anim="fade-up"></div>
   </div>
 </section>
-<section style="background-color: #f4f5f7; padding: 60px 20px; font-family: sans-serif; direction: rtl;">
-  <div style="max-width: 1300px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
-    
-    <!-- جهة اليمين: اللوجو والعنوان -->
-    <div style="display: flex; align-items: center; gap: 20px;">
-      <img src="css/logo.JPG" alt="COUGAR Logo" style="height: 130px; object-fit: contain; border-radius: 20px;" />
-      <div style="text-align: right;">
-        <h2 style="color: #0b3c5d; font-size: 2.6rem; font-weight: 800; margin: 0; line-height: 1.2;">شركات</h2>
-        <span style="color: #c59b27; font-size: 2.3rem; font-weight: 700; display: block;">المجموعة</span>
-      </div>
-    </div>
-
-    <!-- جهة اليسار: الكروت الثلاثة -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 45px; flex: 1;">
-      
-      <!-- الكارت الأول: النجارة والألومنيوم -->
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 220px;">
-        <div style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #c59b27; overflow: hidden; background-color: #fff; box-shadow: 0 6px 15px rgba(0,0,0,0.12); margin-bottom: 20px;">
-          <img src="css/wrsha.JPG" alt="ورشة كوجر" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-        </div>
-        <h3 style="color: #111; font-size: 1.5rem; font-weight: 800; margin: 0 0 8px 0;">ورشة كوجر</h3>
-        <p style="color: #444; font-size: 1.1rem; font-weight: 600; margin: 0; line-height: 1.4;">للنجارة والألومنيوم والزجاج</p>
-      </div>
-
-      <!-- الكارت الثاني: صيانة المباني -->
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 220px;">
-        <div style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #c59b27; overflow: hidden; background-color: #fff; box-shadow: 0 6px 15px rgba(0,0,0,0.12); margin-bottom: 20px;">
-          <img src="css/mbanykojar.JPG" alt="كوجر لصيانة المباني" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-        </div>
-        <h3 style="color: #111; font-size: 1.5rem; font-weight: 800; margin: 0 0 8px 0;">كوجر</h3>
-        <p style="color: #444; font-size: 1.1rem; font-weight: 600; margin: 0; line-height: 1.4;">لصيانة المباني</p>
-      </div>
-
-      <!-- الكارت الثالث: العقارات -->
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 220px;">
-        <div style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #c59b27; overflow: hidden; background-color: #fff; box-shadow: 0 6px 15px rgba(0,0,0,0.12); margin-bottom: 20px;">
-          <img src="css/kogar.JPG" alt="كوجر للعقارات" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-        </div>
-        <h3 style="color: #111; font-size: 1.5rem; font-weight: 800; margin: 0 0 8px 0;">كوجر</h3>
-        <p style="color: #444; font-size: 1.1rem; font-weight: 600; margin: 0; line-height: 1.4;">للعقارات</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 <!-- ===== BRANCHES SECTION ===== -->
 <section class="section-light section-pad" id="branches">
   <div class="container">
     <div class="text-center mb-5" data-anim="fade-up">
-      <span class="eyebrow"><i class="fa-solid fa-code-branch floating-live-icon"></i> <span data-i18n="branch.eyebrow">فروعنا</span></span>
+      <span class="eyebrow"><i class="fa-solid fa-code-branch floating-live-icon"></i> <span data-i18n="branch.eyebrow">شركات المجموعة</span></span>
       <h2 class="section-title" data-i18n="branch.title">شركات <span class="gold-text">المجموعة</span></h2>
       <div class="divider-gold"></div>
     </div>
@@ -1346,13 +1297,19 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
         </ul>
       </div>
       <div class="col-lg-3">
-        <h5 data-i18n="footer.branches">فروعنا</h5>
-        <ul style="display:flex;flex-direction:column;gap:10px;">
-          <li><a href="#services" data-i18n="branch.b1_title">كوجر للعقارات</a></li>
-          <li><a href="#services" data-i18n="branch.b2_title">كوجر لصيانة المباني</a></li>
-          <li><a href="#services" data-i18n="branch.b3_title">كوجر للنجارة</a></li>
-          <li><a href="#services" data-i18n="branch.b4_title">ورشة كوجر للألمنيوم</a></li>
-        </ul>
+        <h5 data-i18n="footer.follow">تابعنا</h5>
+        <div class="footer-follow-item">
+          <a href="https://www.instagram.com/cougar.realestate" target="_blank" rel="noopener">
+            <span class="social-ic"><i class="fa-brands fa-instagram"></i></span>
+            <span>Cougar Real Estate</span>
+          </a>
+        </div>
+        <div class="footer-follow-item">
+          <a href="https://www.instagram.com/cougar.cag" target="_blank" rel="noopener">
+            <span class="social-ic"><i class="fa-brands fa-instagram"></i></span>
+            <span>Cougar CAG</span>
+          </a>
+        </div>
       </div>
       <div class="col-lg-3">
         <h5 data-i18n="footer.contact_title">تواصل معنا</h5>
@@ -1368,14 +1325,11 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
           <i class="fa-solid fa-location-dot"></i>
           <span style="font-size:0.88rem;" data-i18n="contact.addr_short">أم القيوين، الإمارات</span>
         </div>
-        <div class="d-flex gap-2 mt-3">
-          <a href="https://www.instagram.com/cougar.realestate" target="_blank" rel="noopener" class="social-ic"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.instagram.com/cougar.cag" target="_blank" rel="noopener" class="social-ic"><i class="fa-brands fa-instagram"></i></a>
-        </div>
       </div>
     </div>
     <div class="footer-bottom text-center">
       <span data-i18n="footer.copy">© 2025 MRM Group. جميع الحقوق محفوظة.</span>
+      <div class="footer-credit">تم التصميم بواسطة <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" rel="noopener">GMTWEB</a></div>
     </div>
   </div>
 </footer>
@@ -1402,10 +1356,12 @@ footer .social-ic:hover{background:var(--gold-grad);color:#0c0a08;border-color:t
 document.addEventListener('DOMContentLoaded', function() {
 
   var preloader = document.getElementById('preloader');
-  window.addEventListener('load', function() {
-    setTimeout(function() { preloader.classList.add('hide'); }, 1800);
-  });
-  setTimeout(function() { preloader.classList.add('hide'); }, 4000);
+  if(preloader){
+    window.addEventListener('load', function() {
+      setTimeout(function() { preloader.classList.add('hide'); }, 1800);
+    });
+    setTimeout(function() { preloader.classList.add('hide'); }, 4000);
+  }
 
   var navbar = document.getElementById('mainNav');
   var backToTop = document.getElementById('backToTop');
@@ -1522,17 +1478,17 @@ document.addEventListener('DOMContentLoaded', function() {
     return Array.from(galleryItems).filter(function(i) { return !i.classList.contains('hide'); });
   }
 
-  galleryItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      visibleItems = getVisibleItems();
-      currentLbIndex = visibleItems.indexOf(item);
-      var img = item.querySelector('img');
-      var caption = item.querySelector('.gi-overlay span');
-      lbImg.src = img.src;
-      lbCaption.textContent = caption ? caption.textContent : '';
-      lightbox.classList.add('show');
-      document.body.style.overflow = 'hidden';
-    });
+  document.addEventListener('click', function(e){
+    var item = e.target.closest('.gallery-item');
+    if(!item) return;
+    visibleItems = getVisibleItems();
+    currentLbIndex = visibleItems.indexOf(item);
+    var img = item.querySelector('img');
+    var caption = item.querySelector('.gi-overlay span');
+    lbImg.src = img.src;
+    lbCaption.textContent = caption ? caption.textContent : '';
+    lightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
   });
 
   function closeLb() {
@@ -1574,16 +1530,126 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  /* ============ TRANSLATIONS ============ */
+  var translations = {
+    ar: {
+      "nav.brand_sub": "مجموعة إم آر إم للشركات",
+      "nav.home": "الرئيسية",
+      "nav.about": "من نحن",
+      "nav.services": "خدماتنا",
+      "nav.branches": "شركات المجموعة",
+      "nav.contact": "تواصل معنا",
+      "nav.portfolio": "أعمالنا",
+      "nav.call": "اتصل بنا",
+      "hero.subtitle": "مجموعة شركات إم اّر إم",
+      "about.eyebrow": "من نحن",
+      "about.title": 'مجموعة <span class="gold-text">ام ار ام</span>',
+      "about.p1": "مجموعة أعمال متكاملة ومتخصصة في مجال العقارات والخدمات الإنشائية، نقدم خدمات تأجير العقارات الخاصة مثل المباني والمستودعات والفلل والشقق وسكن العمال، بالإضافة إلى بيع وشراء وتأجير العقارات للغير.",
+      "about.p2": "كما نقدم خدمات صيانة وتجهيز المباني وتركيب السيراميك والجبس والإنترلوك، إلى جانب تصنيع وتركيب المطابخ والأبواب والشبابيك الألمنيوم، وتنفيذ أعمال النجارة وتصنيع الأبواب الخشبية للفلل والشقق.",
+      "about.p3": "نحرص على تقديم خدمات احترافية بجودة عالية وأسعار تنافسية، مع الالتزام بالمصداقية والدقة وتلبية احتياجات عملائنا.",
+      "svc.title": "خدماتنا",
+      "svc.c1_title": "العقارات",
+      "svc.c1_desc": "إدارة وتأجير وتطوير العقارات وتسهيل عمليات البيع والشراء",
+      "svc.c2_title": "صيانة المباني",
+      "svc.c2_desc": "صيانة شاملة وتجهيز المباني بالسيراميك والجبس والإنترلوك",
+      "svc.c3_title": "النجارة",
+      "svc.c3_desc": "تصنيع المطابخ والأبواب الخشبية وتنفيذ أعمال النجارة المتخصصة",
+      "svc.c4_title": "الألمنيوم والزجاج",
+      "svc.c4_desc": "تركيب الشبابيك والأبواب الألمنيوم وأعمال الزجاج المتخصصة",
+      "port.eyebrow": "معرض أعمالنا",
+      "port.title": 'معرض <span class="gold-text">أعمالنا</span>',
+      "port.sub": "نماذج من أعمالنا في الفلل والمشاريع السكنية",
+      "port.all": "الكل",
+      "branch.eyebrow": "شركات المجموعة",
+      "branch.title": 'شركات <span class="gold-text">المجموعة</span>',
+      "branch.b1_title": "كوجر للعقارات",
+      "branch.b1": "تأجير وإدارة وتطوير العقارات السكنية والتجارية في أم القيوين",
+      "branch.b2_title": "كوجر لصيانة المباني",
+      "branch.b2": "صيانة شاملة وتجهيز المباني بالسيراميك والجبس والدهانات",
+      "branch.b3_title": "كوجر للنجارة",
+      "branch.b3": "تصنيع المطابخ والأبواب الخشبية وأعمال النجارة المتخصصة",
+      "branch.b4_title": "ورشة كوجر للألمنيوم",
+      "branch.b4": "تركيب الألمنيوم والزجاج والشبابيك والأبواب",
+      "footer.brand_sub": "مجموعة إم آر إم للشركات",
+      "footer.about": "مجموعة شركات إماراتية متكاملة تقدم حلولاً احترافية في العقارات والصيانة والنجارة والألمنيوم والزجاج من أم القيوين.",
+      "footer.links": "روابط سريعة",
+      "footer.follow": "تابعنا",
+      "footer.contact_title": "تواصل معنا",
+      "contact.addr_short": "أم القيوين، الإمارات",
+      "footer.copy": "© 2025 MRM Group. جميع الحقوق محفوظة."
+    },
+    en: {
+      "nav.brand_sub": "MRM Group of Companies",
+      "nav.home": "Home",
+      "nav.about": "About Us",
+      "nav.services": "Services",
+      "nav.branches": "Our Companies",
+      "nav.contact": "Contact Us",
+      "nav.portfolio": "Our Work",
+      "nav.call": "Call Us",
+      "hero.subtitle": "MRM Group of Companies",
+      "about.eyebrow": "About Us",
+      "about.title": 'MRM <span class="gold-text">Group</span>',
+      "about.p1": "An integrated business group specialized in real estate and construction services. We offer private real estate rental services such as buildings, warehouses, villas, apartments, and labor accommodation, in addition to buying, selling, and renting properties for third parties.",
+      "about.p2": "We also provide building maintenance and fit-out services including ceramic tiling, gypsum works, and interlock installation, alongside manufacturing and installing aluminum kitchens, doors and windows, and carrying out carpentry works and manufacturing wooden doors for villas and apartments.",
+      "about.p3": "We are committed to delivering professional, high-quality services at competitive prices, with a strong focus on credibility, precision, and meeting our clients' needs.",
+      "svc.title": "Our Services",
+      "svc.c1_title": "Real Estate",
+      "svc.c1_desc": "Property management, leasing, and development, and facilitating sale and purchase deals",
+      "svc.c2_title": "Building Maintenance",
+      "svc.c2_desc": "Comprehensive maintenance and fit-out with ceramic tiling, gypsum, and interlock",
+      "svc.c3_title": "Carpentry",
+      "svc.c3_desc": "Manufacturing kitchens, wooden doors, and specialized carpentry works",
+      "svc.c4_title": "Aluminum & Glass",
+      "svc.c4_desc": "Installation of aluminum windows, doors, and specialized glass works",
+      "port.eyebrow": "Our Portfolio",
+      "port.title": 'Our <span class="gold-text">Portfolio</span>',
+      "port.sub": "Samples of our work on villas and residential projects",
+      "port.all": "All",
+      "branch.eyebrow": "Our Companies",
+      "branch.title": 'Group <span class="gold-text">Companies</span>',
+      "branch.b1_title": "Cougar Real Estate",
+      "branch.b1": "Leasing, managing, and developing residential and commercial properties in Umm Al Quwain",
+      "branch.b2_title": "Cougar Building Maintenance",
+      "branch.b2": "Comprehensive building maintenance and fit-out with ceramic tiling, gypsum, and paint",
+      "branch.b3_title": "Cougar Carpentry",
+      "branch.b3": "Manufacturing kitchens, wooden doors, and specialized carpentry works",
+      "branch.b4_title": "Cougar Aluminum Workshop",
+      "branch.b4": "Installation of aluminum, glass, windows, and doors",
+      "footer.brand_sub": "MRM Group of Companies",
+      "footer.about": "An integrated UAE group of companies offering professional solutions in real estate, maintenance, carpentry, aluminum, and glass from Umm Al Quwain.",
+      "footer.links": "Quick Links",
+      "footer.follow": "Follow Us",
+      "footer.contact_title": "Contact Us",
+      "contact.addr_short": "Umm Al Quwain, UAE",
+      "footer.copy": "© 2025 MRM Group. All rights reserved."
+    }
+  };
+
+  var i18nElements = document.querySelectorAll('[data-i18n]');
+
+  function applyTranslations(lang){
+    i18nElements.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      var dict = translations[lang];
+      if(dict && dict[key] !== undefined){
+        el.innerHTML = dict[key];
+      }
+    });
+  }
+
   var langBtn = document.getElementById('langToggle');
   var langBtnMobile = document.getElementById('langToggleMobile');
   var isAr = true;
 
   function toggleLang() {
     isAr = !isAr;
-    document.documentElement.lang = isAr ? 'ar' : 'en';
+    var lang = isAr ? 'ar' : 'en';
+    document.documentElement.lang = lang;
     document.documentElement.dir = isAr ? 'rtl' : 'ltr';
     if (langBtn) langBtn.querySelector('span').textContent = isAr ? 'EN' : 'عر';
     if (langBtnMobile) langBtnMobile.querySelector('span').textContent = isAr ? 'English' : 'العربية';
+    applyTranslations(lang);
   }
 
   if (langBtn) langBtn.addEventListener('click', toggleLang);
