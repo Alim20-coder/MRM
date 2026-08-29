@@ -2034,6 +2034,23 @@
       padding: 50px 0 25px;
       position: relative;
       color: #ffffff;
+      direction: rtl;
+      text-align: right;
+    }
+
+    [dir="ltr"] footer {
+      direction: ltr;
+      text-align: left;
+    }
+
+    /* توحيد اتجاه كل عناصر الفوتر (اللينكات، الانستغرام، التواصل) مع اتجاه الصفحة */
+    footer .footer-work-hours,
+    footer .footer-instagram-list,
+    footer .instagram-list,
+    footer .footer-contact-list,
+    footer .footer-contact-row {
+      direction: inherit;
+      text-align: inherit;
     }
 
     .footer-grid {
@@ -3090,7 +3107,7 @@
 
 
   <!-- ===== FOOTER ===== -->
-<footer id="contact" style="background-color: #000000; color: #ffffff; padding: 40px 0 20px; direction: rtl; text-align: right; font-family: sans-serif;">
+<footer id="contact" style="background-color: #000000; color: #ffffff; padding: 40px 0 20px; font-family: sans-serif;">
   <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
     
     <!-- 4 Columns Grid -->
@@ -3124,15 +3141,15 @@
 
       <!-- Col 3: Follow Us On Instagram -->
       <div class="footer-col-instagram">
-        <h5 style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">تابعنا على الانستغرام</h5>
-        <ul class="instagram-list" style="list-style: none; padding: 0; margin: 0;">
+        <h5 data-i18n="footer.follow" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">تابعنا على الانستغرام</h5>
+        <ul class="instagram-list footer-instagram-list" style="list-style: none; padding: 0; margin: 0;">
           
           <li style="margin-bottom: 15px;">
             <a href="#" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 15px;"
                onmouseover="this.querySelector('.insta-icon').style.borderColor='#d4af37'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.transform='translateY(-3px)'; this.querySelector('.insta-text').style.color='#d4af37';"
                onmouseout="this.querySelector('.insta-icon').style.borderColor='#444444'; this.querySelector('.insta-icon').style.color='#ffffff'; this.querySelector('.insta-icon').style.transform='translateY(0)'; this.querySelector('.insta-text').style.color='#ffffff';">
               <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444444; border-radius: 10px; color: #ffffff; font-size: 20px; transition: all 0.3s ease;"></i>
-              <span class="insta-text" style="transition: color 0.3s ease;"  data-i18n="branch.b1_title">كوجر للعقارات</span>
+              <span class="insta-text" data-i18n="branch.b1_title" style="transition: color 0.3s ease;">كوجر للعقارات</span>
             </a>
           </li>
 
@@ -3141,7 +3158,7 @@
                onmouseover="this.querySelector('.insta-icon').style.borderColor='#d4af37'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.transform='translateY(-3px)'; this.querySelector('.insta-text').style.color='#d4af37';"
                onmouseout="this.querySelector('.insta-icon').style.borderColor='#444444'; this.querySelector('.insta-icon').style.color='#ffffff'; this.querySelector('.insta-icon').style.transform='translateY(0)'; this.querySelector('.insta-text').style.color='#ffffff';">
               <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444444; border-radius: 10px; color: #ffffff; font-size: 20px; transition: all 0.3s ease;"></i>
-              <span class="insta-text" style="transition: color 0.3s ease;" data-i18n="branch.b2_title">كوجر لصيانة المباني</span>
+              <span class="insta-text" data-i18n="branch.b2_title" style="transition: color 0.3s ease;">كوجر لصيانة المباني</span>
             </a>
           </li>
 
@@ -3196,7 +3213,7 @@
     <!-- Bottom Section -->
     <div class="footer-bottom text-center" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222222; text-align: center; font-size: 13px; color: #888888;">
       <span data-i18n="footer.copy">© 2026 MRM Group. جميع الحقوق محفوظة.</span>
-      <div class="footer-credit" style="margin-top: 5px;" data-i18n="designed by">تم التصميم بواسطة <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" rel="noopener" style="color: #d4af37; text-decoration: none;">GMTWEB</a></div>
+      <div class="footer-credit" style="margin-top: 5px;"><span data-i18n="footer.designed_by">تم التصميم بواسطة</span> <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" rel="noopener" style="color: #d4af37; text-decoration: none;">GMTWEB</a></div>
     </div>
 
   </div>
@@ -3453,10 +3470,10 @@
           "footer.hours_fri": "يوم الجمعة من الساعة 8.00 صباحا إلى 12.00 مساءا",
           "footer.hours_sat": "السبت ( أجازة )",
           "footer.contact_title": "بيانات التواصل",
+          "footer.follow": "تابعنا على الانستغرام",
+          "footer.designed_by": "تم التصميم بواسطة",
           "contact.addr_short": "أم القيوين، الإمارات",
-          "branch.b2_title":"كوجر للمباني",
-          "footer.copy": "© 2026 MRM Group. جميع الحقوق محفوظة.",
-          "designed by": "تم التصميم بواسطة",
+          "footer.copy": "© 2026 MRM Group. جميع الحقوق محفوظة."
         },
         en: {
           "nav.brand_sub": "MRM Companies Group ",
@@ -3511,10 +3528,10 @@
           "footer.hours_fri": "Friday: 8:00 AM - 12:00 PM",
           "footer.hours_sat": "Saturday (Closed)",
           "footer.contact_title": "Contact Us",
-          "branch.b2_title":"Cougar Building Maintenance",
+          "footer.follow": "Follow us on Instagram",
+          "footer.designed_by": "Designed by",
           "contact.addr_short": "Umm Al Quwain, UAE",
-          "footer.copy": "© 2026 MRM Group. All rights reserved.",
-          "designed by": "Designed by",
+          "footer.copy": "© 2026 MRM Group. All rights reserved."
         }
       };
 
