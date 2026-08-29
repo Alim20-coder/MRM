@@ -2031,14 +2031,14 @@
     footer {
       background: #000000;
       border-top: 2px solid var(--gold-primary);
-      padding: 45px 0 20px;
+      padding: 50px 0 25px;
       position: relative;
       color: #ffffff;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1.2fr 1.2fr;
+      grid-template-columns: 1.3fr 1fr 1.2fr 1.5fr;
       gap: 30px;
       margin-bottom: 35px;
     }
@@ -2057,8 +2057,8 @@
 
     .footer-logo-img {
       width: auto;
-      max-width: 260px;
-      height: 60px;
+      max-width: 240px;
+      height: auto;
       object-fit: contain;
       margin-bottom: 15px;
       display: block;
@@ -2067,14 +2067,14 @@
     .footer-work-hours h6 {
       color: #ffffff;
       font-weight: 800;
-      font-size: 0.98rem;
-      margin: 10px 0 8px 0;
+      font-size: 1.05rem;
+      margin: 12px 0 8px 0;
     }
 
     .footer-work-hours p {
       color: #b8c2cc;
-      font-size: 0.82rem;
-      line-height: 1.8;
+      font-size: 0.85rem;
+      line-height: 1.85;
       margin: 0 0 4px 0;
       font-weight: 600;
     }
@@ -2082,7 +2082,7 @@
     footer h5 {
       color: var(--gold-bright);
       margin-bottom: 20px;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 800;
       position: relative;
       padding-bottom: 8px;
@@ -2095,7 +2095,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 40px;
+      width: 45px;
       height: 2px;
       background: var(--gold-primary);
       border-radius: 2px;
@@ -2126,7 +2126,7 @@
 
     .footer-links-list li a {
       color: #c9d2da;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       transition: all 0.3s ease;
       display: inline-flex;
@@ -2148,41 +2148,104 @@
       font-size: 0.75rem;
     }
 
+    /* Instagram Links in Footer */
+    .footer-instagram-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-insta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer-insta-icon {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid rgba(192, 154, 103, 0.4);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.25rem;
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .footer-insta-item:hover {
+      color: var(--gold-bright);
+    }
+
+    .footer-insta-item:hover .footer-insta-icon {
+      border-color: var(--gold-primary);
+      background: var(--gold-primary);
+      color: #000000;
+      box-shadow: 0 0 15px var(--gold-glow);
+    }
+
+    /* Elegant Golden Contact Boxes */
     .footer-contact-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      text-align: right;
+      gap: 10px;
+      width: 100%;
     }
 
-    [dir="ltr"] .footer-contact-list {
-      text-align: left;
-    }
-
-    .footer-contact-row {
+    .footer-contact-box {
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: #c9d2da;
-      font-size: 0.9rem;
-      font-weight: 600;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px 18px;
+      background: #171d24;
+      border: 1.5px solid rgba(192, 154, 103, 0.5);
+      border-radius: 14px;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .footer-contact-row i {
+    .footer-contact-box i {
       color: var(--gold-bright);
-      font-size: 1.05rem;
-      width: 20px;
-      text-align: center;
-      flex-shrink: 0;
+      font-size: 1.15rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .footer-contact-row a {
-      color: #c9d2da;
+    .footer-contact-box span,
+    .footer-contact-box a {
+      color: #ffffff;
       transition: color 0.3s ease;
     }
 
-    .footer-contact-row a:hover {
-      color: var(--gold-bright);
+    /* Hover effect: Golden Background & Black Text */
+    .footer-contact-box:hover {
+      background: #C09A67 !important;
+      border-color: #D9C3A3 !important;
+      color: #000000 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(192, 154, 103, 0.45);
+    }
+
+    .footer-contact-box:hover i {
+      color: #000000 !important;
+      transform: scale(1.1);
+    }
+
+    .footer-contact-box:hover span,
+    .footer-contact-box:hover a {
+      color: #000000 !important;
     }
 
     .footer-mobile-desc {
@@ -2220,7 +2283,7 @@
 
     @media (max-width: 767px) {
       footer {
-        padding: 40px 0 160px;
+        padding: 40px 0 100px;
       }
 
       .footer-grid {
@@ -2228,7 +2291,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 22px;
+        gap: 28px;
         margin-bottom: 25px;
       }
 
@@ -2239,31 +2302,23 @@
 
       .footer-logo-img {
         max-width: 220px;
-        height: 52px;
         margin: 0 auto 12px auto;
       }
 
       .footer-mobile-desc {
-        display: block;
-        color: #94a3b8;
-        font-size: 0.88rem;
-        line-height: 1.85;
-        max-width: 360px;
-        margin: 0 auto 10px auto;
-        text-align: center;
+        display: none;
       }
 
       .footer-work-hours {
-        display: none;
+        display: block;
+        text-align: center;
       }
 
-      .footer-col-services,
+      .footer-col-links,
+      .footer-col-instagram,
       .footer-col-contact {
-        display: none;
-      }
-
-      .footer-col-links {
         width: 100%;
+        max-width: 380px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2271,7 +2326,7 @@
 
       footer h5 {
         text-align: center;
-        font-size: 1.12rem;
+        font-size: 1.15rem;
         margin-bottom: 16px;
         padding-bottom: 8px;
       }
@@ -2289,35 +2344,107 @@
         gap: 14px;
       }
 
+      .footer-instagram-list {
+        align-items: center;
+        gap: 12px;
+      }
+
+      .footer-contact-list {
+        width: 100%;
+      }
+
       .footer-links-list li a {
         font-size: 0.95rem;
         color: #d1d5db;
         justify-content: center;
       }
 
-      .footer-links-list li a .bullet {
-        display: none;
-      }
-
-      .footer-links-list li a:hover {
-        transform: none;
-      }
-
       .footer-bottom {
         margin-top: 25px;
         padding-top: 18px;
+      }
+
+      /* توسيط كامل بيانات الفوتر في الموبايل (يتغلب على الـ inline styles) */
+      footer .footer-grid {
+        text-align: center !important;
+      }
+
+      footer .footer-col-brand,
+      footer .footer-col-links,
+      footer .footer-col-instagram,
+      footer .footer-col-contact {
+        text-align: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+      }
+
+      footer .footer-work-hours,
+      footer .footer-work-hours h6,
+      footer .footer-work-hours p {
+        text-align: center !important;
+      }
+
+      footer .footer-links-list {
+        align-items: center !important;
+        text-align: center !important;
+        width: 100%;
+      }
+
+      footer .footer-links-list li {
+        text-align: center !important;
+        width: 100%;
+      }
+
+      footer .footer-links-list li a {
+        justify-content: center !important;
+        width: 100%;
+      }
+
+      footer .instagram-list {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+      }
+
+      footer .instagram-list li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      footer .instagram-list li a {
+        justify-content: center !important;
+      }
+
+      footer .footer-contact-list {
+        align-items: center !important;
+        width: 100%;
+      }
+
+      footer .footer-contact-row {
+        justify-content: center !important;
+        width: 100%;
+      }
+
+      footer h5 {
+        text-align: center !important;
+        width: 100%;
+      }
+
+      footer .footer-bottom {
+        text-align: center !important;
       }
     }
 
     @media (max-width: 480px) {
       .footer-logo-img {
         max-width: 190px;
-        height: 46px;
       }
 
-      .footer-mobile-desc {
-        font-size: 0.82rem;
-        max-width: 310px;
+      .footer-contact-box {
+        font-size: 0.88rem;
+        padding: 9px 14px;
       }
 
       .footer-links-list li a {
@@ -2813,8 +2940,8 @@
   <section class="about-section" id="about">
     <div class="container">
       <div class=" mb-5" data-anim="fade-up">
-        <h2 class="section-title text-dark text-center data-i18n=" about.title">مجموعة <span class="gold-text">ام ار
-            ام</span></h2>
+        <h2 class="section-title text-dark text-center" data-i18n="about.title">من <span class="gold-text">نحن</span>
+        </h2>
         <div class="divider-gold"></div>
       </div>
       <div class="about-card" data-anim="fade-up">
@@ -2963,84 +3090,117 @@
 
 
   <!-- ===== FOOTER ===== -->
-  <footer id="contact">
-    <div class="container">
-      <!-- 4 Columns Grid for Desktop (Image 3) & Mobile (Image 2) -->
-      <div class="footer-grid">
-        <!-- Col 1: Logo & Work Hours -->
-        <div class="footer-col-brand">
-          <a href="#home" style="display: inline-block;">
-            <img src="css/newlogo.png" class="footer-logo-img" alt="MRM GROUP OF COMPANIES">
-          </a>
+<footer id="contact" style="background-color: #000000; color: #ffffff; padding: 40px 0 20px; direction: rtl; text-align: right; font-family: sans-serif;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+    
+    <!-- 4 Columns Grid -->
+    <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; align-items: start;">
+
+      <!-- Col 1: Logo & Work Hours -->
+      <div class="footer-col-brand">
+        <a href="#home" style="display: inline-block; margin-bottom: 15px;">
+          <img src="css/newlogo.png" class="footer-logo-img" alt="MRM GROUP OF COMPANIES" style="max-width: 180px; height: auto;">
+        </a>
+        
+        <div class="footer-work-hours" style="line-height: 1.8; font-size: 14px; color: #cccccc;">
+          <h6 data-i18n="footer.hours_title" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 10px 0;">أوقات العمل</h6>
+          <p data-i18n="footer.hours_week" style="margin: 0 0 5px 0;">من الاحد الى الخميس من الساعة 8.00 صباحاً إلى 3:00 مساءً</p>
+          <p data-i18n="footer.hours_fri" style="margin: 0 0 5px 0;">يوم الجمعة من الساعة 8.00 صباحا إلى 12.00 مساءا</p>
+          <p data-i18n="footer.hours_sat" style="margin: 0;">السبت ( أجازة )</p>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col-links">
+        <h5 data-i18n="footer.links" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">روابط سريعة</h5>
+        <ul class="footer-links-list" style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
+          <li><a href="#home" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
+          <li><a href="#about" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
+          <li><a href="#portfolio2" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
+          <li><a href="#branches" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
+          <li><a href="#contact" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Follow Us On Instagram -->
+      <div class="footer-col-instagram">
+        <h5 style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">تابعنا على الانستغرام</h5>
+        <ul class="instagram-list" style="list-style: none; padding: 0; margin: 0;">
           
-          <p class="footer-mobile-desc" data-i18n="footer.about">
-            مجموعة شركات إماراتية متكاملة تقدم حلولاً احترافية في العقارات والصيانة والنجارة والألمنيوم والزجاج من أم القيوين.
-          </p>
+          <li style="margin-bottom: 15px;">
+            <a href="#" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 15px;"
+               onmouseover="this.querySelector('.insta-icon').style.borderColor='#d4af37'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.transform='translateY(-3px)'; this.querySelector('.insta-text').style.color='#d4af37';"
+               onmouseout="this.querySelector('.insta-icon').style.borderColor='#444444'; this.querySelector('.insta-icon').style.color='#ffffff'; this.querySelector('.insta-icon').style.transform='translateY(0)'; this.querySelector('.insta-text').style.color='#ffffff';">
+              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444444; border-radius: 10px; color: #ffffff; font-size: 20px; transition: all 0.3s ease;"></i>
+              <span class="insta-text" style="transition: color 0.3s ease;"  data-i18n="branch.b1_title">كوجر للعقارات</span>
+            </a>
+          </li>
 
-          <div class="footer-work-hours">
-            <h6 data-i18n="footer.hours_title">أوقات العمل</h6>
-            <p data-i18n="footer.hours_week">من الاحد الى الخميس من الساعة 8.00 صباحاً إلى 3:00 مساءً</p>
-            <p data-i18n="footer.hours_fri">يوم الجمعة من الساعة 8.00 صباحا إلى 12.00 مساءا</p>
-            <p data-i18n="footer.hours_sat">السبت ( أجازة )</p>
+          <li style="margin-bottom: 15px;">
+            <a href="#" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 15px;"
+               onmouseover="this.querySelector('.insta-icon').style.borderColor='#d4af37'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.transform='translateY(-3px)'; this.querySelector('.insta-text').style.color='#d4af37';"
+               onmouseout="this.querySelector('.insta-icon').style.borderColor='#444444'; this.querySelector('.insta-icon').style.color='#ffffff'; this.querySelector('.insta-icon').style.transform='translateY(0)'; this.querySelector('.insta-text').style.color='#ffffff';">
+              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444444; border-radius: 10px; color: #ffffff; font-size: 20px; transition: all 0.3s ease;"></i>
+              <span class="insta-text" style="transition: color 0.3s ease;" data-i18n="branch.b2_title">كوجر لصيانة المباني</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div class="footer-col-contact">
+        <h5 data-i18n="footer.contact_title" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">تواصل معنا</h5>
+        <div class="footer-contact-list" style="display: flex; flex-direction: column; gap: 12px;">
+          
+          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
+               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
+               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
+            <i class="fa-solid fa-phone" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
+            <a href="tel:+97167649900" dir="ltr" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">+971 6 764 9900</a>
           </div>
-        </div>
 
-        <!-- Col 2: Quick Links -->
-        <div class="footer-col-links">
-          <h5 data-i18n="footer.links">روابط سريعة</h5>
-          <ul class="footer-links-list">
-            <li><a href="#home"><span class="bullet">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
-            <li><a href="#about"><span class="bullet">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
-            <li><a href="#portfolio2"><span class="bullet">▪</span> <span data-i18n="nav.portfolio">معرض أعمالنا</span></a></li>
-            <li><a href="#branches"><span class="bullet">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
-            <li><a href="#contact"><span class="bullet">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Services -->
-        <div class="footer-col-services">
-          <h5 data-i18n="footer.svc_title">خدماتنا</h5>
-          <ul class="footer-links-list">
-            <li><a href="#services"><span class="bullet">▪</span> <span data-i18n="footer.s1">دهانات داخلية وخارجية</span></a></li>
-            <li><a href="#services"><span class="bullet">▪</span> <span data-i18n="footer.s2">إيبوكسي وتخطيط مواقف</span></a></li>
-            <li><a href="#services"><span class="bullet">▪</span> <span data-i18n="footer.s3">بديل الرخام والخشب</span></a></li>
-            <li><a href="#services"><span class="bullet">▪</span> <span data-i18n="footer.s4">سواتر ومظلات</span></a></li>
-            <li><a href="#services"><span class="bullet">▪</span> <span data-i18n="footer.s5">تشطيب متكامل</span></a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Contact Info -->
-        <div class="footer-col-contact">
-          <h5 data-i18n="footer.contact_title">بيانات التواصل</h5>
-          <div class="footer-contact-list">
-            <div class="footer-contact-row">
-              <i class="fa-solid fa-phone"></i>
-              <a href="tel:+97167649900" dir="ltr">06 764 9900</a>
-            </div>
-            <div class="footer-contact-row">
-              <i class="fa-brands fa-whatsapp"></i>
-              <a href="https://wa.me/971503447262" target="_blank" rel="noopener" dir="ltr">050 344 7262</a>
-            </div>
-            <div class="footer-contact-row">
-              <i class="fa-solid fa-location-dot"></i>
-              <span data-i18n="contact.addr_short">أم القيوين، الإمارات</span>
-            </div>
-            <div class="footer-contact-row">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:admin@mrmgroup.ae">admin@mrmgroup.ae</a>
-            </div>
+          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
+               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
+               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
+            <i class="fa-brands fa-whatsapp" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
+            <a href="https://wa.me/971503447262" target="_blank" rel="noopener" dir="ltr" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">+971 50 344 7262</a>
           </div>
+
+          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
+               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
+               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
+            <i class="fa-brands fa-whatsapp" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
+            <a href="https://wa.me/971559837371" target="_blank" rel="noopener" dir="ltr" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">+971 55 983 7371</a>
+          </div>
+
+          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
+               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
+               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
+            <i class="fa-solid fa-envelope" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
+            <a href="mailto:admin@mrmgroup.ae" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">admin@mrmgroup.ae</a>
+          </div>
+
+          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
+               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('span').style.color='#d4af37';"
+               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('span').style.color='#ffffff';">
+            <i class="fa-solid fa-location-dot" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
+            <span data-i18n="contact.addr_short" style="color: #ffffff; font-size: 15px; transition: color 0.3s ease;">بناية المدار، أم القيوين، الإمارات</span>
+          </div>
+
         </div>
       </div>
 
-      <div class="footer-bottom text-center">
-        <span data-i18n="footer.copy">© 2026 MRM Group. جميع الحقوق محفوظة.</span>
-        <div class="footer-credit">تم التصميم بواسطة <a
-            href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank"
-            rel="noopener">GMTWEB</a></div>
-      </div>
     </div>
-  </footer>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom text-center" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222222; text-align: center; font-size: 13px; color: #888888;">
+      <span data-i18n="footer.copy">© 2026 MRM Group. جميع الحقوق محفوظة.</span>
+      <div class="footer-credit" style="margin-top: 5px;" data-i18n="designed by">تم التصميم بواسطة <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" rel="noopener" style="color: #d4af37; text-decoration: none;">GMTWEB</a></div>
+    </div>
+
+  </div>
+</footer>
 
   <!-- ===== FLOATING BUTTONS ===== -->
 
@@ -3252,7 +3412,7 @@
           "hero.title": "مجموعة شركات ام ار ام",
           "hero.subtitle": "مجموعة شركات إم اّر إم",
           "about.eyebrow": "من نحن",
-          "about.title": 'مجموعة <span class="gold-text">ام ار ام</span>',
+          "about.title": 'من <span class="gold-text">نحن</span>',
           "about.p1": "مجموعة أعمال متكاملة ومتخصصة في مجال العقارات والخدمات الإنشائية، نقدم خدمات تأجير العقارات الخاصة مثل المباني والمستودعات والفلل والشقق وسكن العمال، بالإضافة إلى بيع وشراء وتأجير العقارات للغير.",
           "about.p2": "كما نقدم خدمات صيانة وتجهيز المباني وتركيب السيراميك والجبس والإنترلوك، إلى جانب تصنيع وتركيب المطابخ والأبواب والشبابيك الألمنيوم، وتنفيذ أعمال النجارة وتصنيع الأبواب الخشبية للفلل والشقق.",
           "about.p3": "نحرص على تقديم خدمات احترافية بجودة عالية وأسعار تنافسية، مع الالتزام بالمصداقية والدقة وتلبية احتياجات عملائنا.",
@@ -3294,7 +3454,9 @@
           "footer.hours_sat": "السبت ( أجازة )",
           "footer.contact_title": "بيانات التواصل",
           "contact.addr_short": "أم القيوين، الإمارات",
-          "footer.copy": "© 2026 MRM Group. جميع الحقوق محفوظة."
+          "branch.b2_title":"كوجر للمباني",
+          "footer.copy": "© 2026 MRM Group. جميع الحقوق محفوظة.",
+          "designed by": "تم التصميم بواسطة",
         },
         en: {
           "nav.brand_sub": "MRM Companies Group ",
@@ -3308,7 +3470,7 @@
           "hero.title": "MRM GROUP OF COMPANIES",
           "hero.subtitle": "MRM Group of Companies",
           "about.eyebrow": "About Us",
-          "about.title": 'MRM <span class="gold-text">Group</span>',
+          "about.title": 'About <span class="gold-text">Us</span>',
           "about.p1": "An integrated business group specialized in real estate and construction services. We offer private real estate rental services such as buildings, warehouses, villas, apartments, and labor accommodation, in addition to buying, selling, and renting properties for third parties.",
           "about.p2": "We also provide building maintenance and fit-out services including ceramic tiling, gypsum works, and interlock installation, alongside manufacturing and installing aluminum kitchens, doors and windows, and carrying out carpentry works and manufacturing wooden doors for villas and apartments.",
           "about.p3": "We are committed to delivering professional, high-quality services at competitive prices, with a strong focus on credibility, precision, and meeting our clients' needs.",
@@ -3349,8 +3511,10 @@
           "footer.hours_fri": "Friday: 8:00 AM - 12:00 PM",
           "footer.hours_sat": "Saturday (Closed)",
           "footer.contact_title": "Contact Us",
+          "branch.b2_title":"Cougar Building Maintenance",
           "contact.addr_short": "Umm Al Quwain, UAE",
-          "footer.copy": "© 2026 MRM Group. All rights reserved."
+          "footer.copy": "© 2026 MRM Group. All rights reserved.",
+          "designed by": "Designed by",
         }
       };
 
