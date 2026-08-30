@@ -2056,8 +2056,9 @@
     .footer-grid {
       display: grid;
       grid-template-columns: 1.3fr 1fr 1.2fr 1.5fr;
-      gap: 30px;
+      gap: 20px;
       margin-bottom: 35px;
+      align-items: start;
     }
 
     .footer-col-brand {
@@ -2097,7 +2098,7 @@
     }
 
     footer h5 {
-      color: var(--gold-bright);
+      color: #D9C3A3;
       margin-bottom: 20px;
       font-size: 1.2rem;
       font-weight: 800;
@@ -2133,7 +2134,7 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
       text-align: right;
     }
 
@@ -2142,13 +2143,18 @@
     }
 
     .footer-links-list li a {
-      color: #c9d2da;
-      font-size: 0.95rem;
+      color: #8A9BB0;
+      font-size: 0.9rem;
       font-weight: 600;
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+    }
+
+    .footer-links-list li a,
+    .footer-links-list li a span {
+      font-size: 0.9rem !important;
     }
 
     .footer-links-list li a:hover {
@@ -2171,7 +2177,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 12px !important;
+      padding: 2px 5px !important;
       border-radius: 8px;
       transition: all 0.3s ease;
     }
@@ -2232,7 +2238,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #724e20 !important;
+      color: #C09A67 !important;
       font-size: 1.25rem;
       background: rgba(255, 255, 255, 0.03);
       transition: all 0.3s ease;
@@ -2334,8 +2340,50 @@
     /* ===== FOOTER MEDIA QUERIES ===== */
     @media (min-width: 768px) and (max-width: 991px) {
       .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+
+      .footer-link-anim {
+        padding: 3px 6px !important;
+      }
+
+      footer h5 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+
+      .footer-links-list {
+        gap: 6px;
+      }
+
+      .footer-links-list li a {
+        font-size: 0.82rem;
+      }
+
+      .footer-instagram-list {
+        gap: 8px;
+      }
+
+      .footer-insta-item {
+        font-size: 0.82rem;
+      }
+
+      .footer-contact-list {
+        gap: 6px;
+      }
+
+      .footer-contact-row a,
+      .footer-contact-row span {
+        font-size: 0.8rem !important;
+      }
+
+      .footer-work-hours {
+        font-size: 13px;
+      }
+
+      .footer-work-hours h6 {
+        font-size: 15px;
       }
     }
 
@@ -3152,7 +3200,7 @@
   <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
     
     <!-- 4 Columns Grid -->
-    <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; align-items: start;">
+    <div class="footer-grid">
 
       <!-- Col 1: Logo & Work Hours -->
       <div class="footer-col-brand">
@@ -3171,12 +3219,12 @@
       <!-- Col 2: Quick Links -->
       <div class="footer-col-links">
         <h5 data-i18n="footer.links" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">روابط سريعة</h5>
-        <ul class="footer-links-list" style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-          <li><a href="#home" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
-          <li><a href="#about" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
-          <li><a href="#portfolio2" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
-          <li><a href="#branches" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
-          <li><a href="#contact" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
+        <ul class="footer-links-list" style="list-style: none; padding: 0; margin: 0;">
+          <li><a href="#home" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
+          <li><a href="#about" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
+          <li><a href="#portfolio2" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
+          <li><a href="#branches" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
+          <li><a href="#contact" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
         </ul>
       </div>
 
