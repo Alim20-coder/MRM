@@ -2134,7 +2134,7 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 4px;
       text-align: right;
     }
 
@@ -2143,7 +2143,7 @@
     }
 
     .footer-links-list li a {
-      color: #8A9BB0;
+      color: rgba(255, 255, 255, 0.85);
       font-size: 0.9rem;
       font-weight: 600;
       transition: all 0.3s ease;
@@ -2158,158 +2158,151 @@
     }
 
     .footer-links-list li a:hover {
-      color: var(--gold-bright);
-      transform: translateX(-4px);
-    }
-
-    [dir="ltr"] .footer-links-list li a:hover {
-      transform: translateX(4px);
+      color: #D9C3A3 !important;
+      background: rgba(217, 195, 163, 0.1) !important;
     }
 
     .footer-links-list li a .bullet {
-      color: var(--gold-primary);
+      color: #d4af37;
       font-size: 0.75rem;
     }
 
-    /* ===== FOOTER LINK HOVER/ANIMATION (matches navbar nav-link style) ===== */
+    /* ===== FOOTER LINK HOVER/ANIMATION ===== */
     .footer-link-anim {
       position: relative;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 2px 5px !important;
+      padding: 3px 6px !important;
       border-radius: 8px;
       transition: all 0.3s ease;
-    }
-
-    .footer-link-anim::after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      right: 12px;
-      width: 0;
-      height: 2.5px;
-      background: var(--gold-grad);
-      border-radius: 2px;
-      transition: width 0.35s ease;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
     }
 
     footer .footer-link-anim:hover {
-      background: rgba(217, 195, 163, 0.12) !important;
+      background: rgba(192, 154, 103, 0.1) !important;
       color: var(--gold-bright) !important;
       transform: translateY(-2px);
     }
 
-    footer .footer-link-anim:hover::after {
-      width: calc(100% - 24px);
-    }
-
-    footer .footer-link-anim:hover span,
-    footer .footer-link-anim:hover .insta-text,
-    footer .footer-link-anim:hover i,
-    footer .footer-link-anim:hover .insta-icon {
+    footer .footer-link-anim:hover span {
       color: var(--gold-bright) !important;
-      border-color: var(--gold-primary) !important;
     }
 
-    /* Instagram Links in Footer */
+    /* Instagram List & Items */
     .footer-instagram-list {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 4px;
     }
 
     .footer-insta-item {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 700;
-      transition: all 0.3s ease;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
       text-decoration: none;
     }
 
+    .footer-insta-item .insta-text {
+      color: rgba(255, 255, 255, 0.85);
+      transition: color 0.3s ease;
+    }
+
     .footer-insta-icon {
-      width: 40px;
-      height: 40px;
-      border: 1.5px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      display: flex;
+      color: #D9C3A3;
+      font-size: 1.05rem;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border: 1.5px solid rgba(217, 195, 163, 0.35);
+      border-radius: 10px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: rgba(255, 255, 255, 0.85) !important;
-      font-size: 1.1rem;
-      background: #1a1a1a;
-      transition: all 0.3s ease;
+      background: rgba(217, 195, 163, 0.05);
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .footer-insta-item:hover {
+      background: rgba(192, 154, 103, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .footer-insta-item:hover .insta-text {
       color: var(--gold-bright);
     }
 
     .footer-insta-item:hover .footer-insta-icon {
-      border-color: var(--gold-primary);
-      background: var(--gold-primary);
-      color: #000000;
-      box-shadow: 0 0 15px var(--gold-glow);
+      color: var(--gold-bright);
+      border-color: rgba(217, 195, 163, 0.7);
+      background: rgba(217, 195, 163, 0.15);
+      transform: scale(1.08);
+      box-shadow: 0 4px 15px rgba(192, 154, 103, 0.25);
     }
 
-    /* Elegant Golden Contact Boxes */
+    /* Contact List & Items */
     .footer-contact-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 4px;
       width: 100%;
     }
 
-    .footer-contact-box {
-      display: flex;
+    .footer-contact-row {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 10px 18px;
-      background: #171d24;
-      border: 1.5px solid rgba(192, 154, 103, 0.5);
-      border-radius: 14px;
-      color: #ffffff;
-      font-size: 0.95rem;
-      font-weight: 700;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
       text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .footer-contact-box i {
-      color: var(--gold-bright);
-      font-size: 1.15rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    .footer-contact-box span,
-    .footer-contact-box a {
-      color: #ffffff;
+    .footer-contact-row .contact-text,
+    .footer-contact-row a,
+    .footer-contact-row span {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem !important;
+      font-weight: 600 !important;
+      text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    /* Hover effect: Golden Background & Black Text */
-    .footer-contact-box:hover {
-      background: #C09A67 !important;
-      border-color: #D9C3A3 !important;
-      color: #000000 !important;
+    .footer-contact-icon {
+      color: #D9C3A3;
+      font-size: 1.15rem;
+      width: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .footer-contact-row:hover {
+      background: rgba(192, 154, 103, 0.1);
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(192, 154, 103, 0.45);
     }
 
-    .footer-contact-box:hover i {
-      color: #000000 !important;
-      transform: scale(1.1);
+    .footer-contact-row:hover .contact-text,
+    .footer-contact-row:hover a,
+    .footer-contact-row:hover span {
+      color: var(--gold-bright) !important;
     }
 
-    .footer-contact-box:hover span,
-    .footer-contact-box:hover a {
-      color: #000000 !important;
+    .footer-contact-row:hover .footer-contact-icon {
+      color: var(--gold-bright);
+      transform: scale(1.15);
+      filter: drop-shadow(0 2px 8px rgba(192, 154, 103, 0.4));
     }
 
     .footer-mobile-desc {
@@ -2318,7 +2311,7 @@
 
     .footer-bottom {
       border-top: 1px solid rgba(192, 154, 103, 0.2);
-      margin-top: 35px;
+      margin-top: 30px;
       padding-top: 20px;
       font-size: 0.85rem;
       color: #8A97A3;
@@ -2344,8 +2337,10 @@
         gap: 12px;
       }
 
-      .footer-link-anim {
-        padding: 3px 6px !important;
+      .footer-link-anim,
+      .footer-insta-item,
+      .footer-contact-row {
+        padding: 2px 4px !important;
       }
 
       footer h5 {
@@ -2354,28 +2349,28 @@
       }
 
       .footer-links-list {
-        gap: 6px;
+        gap: 4px;
       }
 
       .footer-links-list li a {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
       }
 
-      .footer-instagram-list {
-        gap: 8px;
-      }
-
-      .footer-insta-item {
-        font-size: 0.82rem;
-      }
-
+      .footer-instagram-list,
       .footer-contact-list {
-        gap: 6px;
+        gap: 4px;
       }
 
+      .footer-insta-item,
       .footer-contact-row a,
       .footer-contact-row span {
-        font-size: 0.8rem !important;
+        font-size: 0.85rem !important;
+      }
+
+      .footer-insta-icon,
+      .footer-contact-icon {
+        width: 20px;
+        font-size: 1.05rem;
       }
 
       .footer-work-hours {
@@ -2470,7 +2465,6 @@
         padding-top: 18px;
       }
 
-      /* توسيط كامل بيانات الفوتر في الموبايل (يتغلب على الـ inline styles) */
       footer .footer-grid {
         text-align: center !important;
       }
@@ -3220,11 +3214,11 @@
       <div class="footer-col-links">
         <h5 data-i18n="footer.links" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">روابط سريعة</h5>
         <ul class="footer-links-list" style="list-style: none; padding: 0; margin: 0;">
-          <li><a href="#home" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
-          <li><a href="#about" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
-          <li><a href="#portfolio2" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
-          <li><a href="#branches" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
-          <li><a href="#contact" class="footer-link-anim" style="text-decoration: none;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
+          <li><a href="#home" class="footer-link-anim"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
+          <li><a href="#about" class="footer-link-anim"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
+          <li><a href="#portfolio2" class="footer-link-anim"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
+          <li><a href="#branches" class="footer-link-anim"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
+          <li><a href="#contact" class="footer-link-anim"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
         </ul>
       </div>
 
@@ -3233,21 +3227,17 @@
         <h5 data-i18n="footer.follow" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">تابعنا على الانستغرام</h5>
         <ul class="instagram-list footer-instagram-list" style="list-style: none; padding: 0; margin: 0;">
           
-          <li style="margin-bottom: 10px;">
-            <a href="#" target="_blank" rel="noopener" class="footer-link-anim" style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; font-weight: 600;"
-               onmouseover="this.querySelector('.insta-icon').style.borderColor='rgba(192,154,103,0.4)'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.background='#252525'; this.querySelector('.insta-text').style.color='#D9C3A3';"
-               onmouseout="this.querySelector('.insta-icon').style.borderColor='rgba(255,255,255,0.08)'; this.querySelector('.insta-icon').style.color='rgba(255,255,255,0.85)'; this.querySelector('.insta-icon').style.background='#1a1a1a'; this.querySelector('.insta-text').style.color='rgba(255,255,255,0.85)';">
-              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1.5px solid rgba(255,255,255,0.08); border-radius: 12px; color: rgba(255,255,255,0.85); font-size: 1.1rem; background: #1a1a1a; transition: all 0.3s ease;"></i>
-              <span class="insta-text" data-i18n="branch.b1_title" style="color: rgba(255,255,255,0.85); transition: color 0.3s ease;">كوجر للعقارات</span>
+          <li>
+            <a href="#" target="_blank" rel="noopener" class="footer-insta-item">
+              <i class="fa-brands fa-instagram footer-insta-icon"></i>
+              <span class="insta-text" data-i18n="branch.b1_title">كوجر للعقارات</span>
             </a>
           </li>
 
-          <li style="margin-bottom: 10px;">
-            <a href="#" target="_blank" rel="noopener" class="footer-link-anim" style="display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; font-weight: 600;"
-               onmouseover="this.querySelector('.insta-icon').style.borderColor='rgba(192,154,103,0.4)'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.background='#252525'; this.querySelector('.insta-text').style.color='#D9C3A3';"
-               onmouseout="this.querySelector('.insta-icon').style.borderColor='rgba(255,255,255,0.08)'; this.querySelector('.insta-icon').style.color='rgba(255,255,255,0.85)'; this.querySelector('.insta-icon').style.background='#1a1a1a'; this.querySelector('.insta-text').style.color='rgba(255,255,255,0.85)';">
-              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1.5px solid rgba(255,255,255,0.08); border-radius: 12px; color: rgba(255,255,255,0.85); font-size: 1.1rem; background: #1a1a1a; transition: all 0.3s ease;"></i>
-              <span class="insta-text" data-i18n="branch.b2_title" style="color: rgba(255,255,255,0.85); transition: color 0.3s ease;">كوجر لصيانة المباني</span>
+          <li>
+            <a href="#" target="_blank" rel="noopener" class="footer-insta-item">
+              <i class="fa-brands fa-instagram footer-insta-icon"></i>
+              <span class="insta-text" data-i18n="branch.b2_title">كوجر لصيانة المباني</span>
             </a>
           </li>
 
@@ -3257,41 +3247,31 @@
       <!-- Col 4: Contact Info -->
       <div class="footer-col-contact">
         <h5 data-i18n="footer.contact_title" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">تواصل معنا</h5>
-        <div class="footer-contact-list" style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="footer-contact-list">
           
-          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
-               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
-               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
-            <i class="fa-solid fa-phone" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="tel:+97167649900" dir="ltr" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">+971 6 764 9900</a>
-          </div>
+          <a href="tel:+97167649900" class="footer-contact-row">
+            <i class="fa-solid fa-phone footer-contact-icon"></i>
+            <span dir="ltr" class="contact-text">+971 6 764 9900</span>
+          </a>
 
-          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
-               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
-               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
-            <i class="fa-brands fa-whatsapp" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="https://wa.me/971503447262" target="_blank" rel="noopener" dir="ltr" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">+971 50 344 7262</a>
-          </div>
+          <a href="https://wa.me/971503447262" target="_blank" rel="noopener" class="footer-contact-row">
+            <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+            <span dir="ltr" class="contact-text">+971 50 344 7262</span>
+          </a>
 
-          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
-               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
-               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
-            <i class="fa-brands fa-whatsapp" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="https://wa.me/971559837371" target="_blank" rel="noopener" dir="ltr" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">+971 55 983 7371</a>
-          </div>
+          <a href="https://wa.me/971559837371" target="_blank" rel="noopener" class="footer-contact-row">
+            <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+            <span dir="ltr" class="contact-text">+971 55 983 7371</span>
+          </a>
 
-          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
-               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
-               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
-            <i class="fa-solid fa-envelope" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="mailto:admin@mrmgroup.ae" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">admin@mrmgroup.ae</a>
-          </div>
+          <a href="mailto:admin@mrmgroup.ae" class="footer-contact-row">
+            <i class="fa-solid fa-envelope footer-contact-icon"></i>
+            <span class="contact-text">admin@mrmgroup.ae</span>
+          </a>
 
-          <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
-               onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('span').style.color='#d4af37';"
-               onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('span').style.color='#ffffff';">
-            <i class="fa-solid fa-location-dot" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <span data-i18n="contact.addr_short" style="color: #ffffff; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">بناية المدار، أم القيوين، الإمارات</span>
+          <div class="footer-contact-row" style="cursor: default;">
+            <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+            <span class="contact-text" data-i18n="contact.addr_short">بناية المدار، أم القيوين، الإمارات</span>
           </div>
 
         </div>
