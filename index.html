@@ -2165,6 +2165,47 @@
       font-size: 0.75rem;
     }
 
+    /* ===== FOOTER LINK HOVER/ANIMATION (matches navbar nav-link style) ===== */
+    .footer-link-anim {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px !important;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .footer-link-anim::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      right: 12px;
+      width: 0;
+      height: 2.5px;
+      background: var(--gold-grad);
+      border-radius: 2px;
+      transition: width 0.35s ease;
+    }
+
+    footer .footer-link-anim:hover {
+      background: rgba(217, 195, 163, 0.12) !important;
+      color: var(--gold-bright) !important;
+      transform: translateY(-2px);
+    }
+
+    footer .footer-link-anim:hover::after {
+      width: calc(100% - 24px);
+    }
+
+    footer .footer-link-anim:hover span,
+    footer .footer-link-anim:hover .insta-text,
+    footer .footer-link-anim:hover i,
+    footer .footer-link-anim:hover .insta-icon {
+      color: var(--gold-bright) !important;
+      border-color: var(--gold-primary) !important;
+    }
+
     /* Instagram Links in Footer */
     .footer-instagram-list {
       display: flex;
@@ -2191,7 +2232,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
+      color: #724e20 !important;
       font-size: 1.25rem;
       background: rgba(255, 255, 255, 0.03);
       transition: all 0.3s ease;
@@ -2956,7 +2997,7 @@
   <!-- ===== ABOUT SECTION ===== -->
   <section class="about-section" id="about">
     <div class="container">
-      <div class=" mb-5" data-anim="fade-up">
+      <div class="mb-5 text-center" data-anim="fade-up">
         <h2 class="section-title text-dark text-center" data-i18n="about.title">من <span class="gold-text">نحن</span>
         </h2>
         <div class="divider-gold"></div>
@@ -3052,7 +3093,7 @@
     </div>
   </section>
    <!-- ===== BRANCHES SECTION ===== -->
-  <section class="section-light section-pad" id="branches">
+  <section class="section-light section-pad" id="branches" style="border-bottom: 3px solid #C09A67; box-shadow: 0 6px 18px -6px rgba(192,154,103,0.45);">
     <div class="container">
       <div class="text-center mb-5" data-anim="fade-up">
         <h2 class="section-title" data-i18n="branch.title">شركات <span class="gold-text">المجموعة</span></h2>
@@ -3119,8 +3160,8 @@
           <img src="css/newlogo.png" class="footer-logo-img" alt="MRM GROUP OF COMPANIES" style="max-width: 180px; height: auto;">
         </a>
         
-        <div class="footer-work-hours" style="line-height: 1.8; font-size: 14px; color: #cccccc;">
-          <h6 data-i18n="footer.hours_title" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 10px 0;">أوقات العمل</h6>
+        <div class="footer-work-hours" style="line-height: 1.85; font-size: 15px; font-weight: 700; color: #cccccc;">
+          <h6 data-i18n="footer.hours_title" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 10px 0;">أوقات العمل</h6>
           <p data-i18n="footer.hours_week" style="margin: 0 0 5px 0;">من الاحد الى الخميس من الساعة 8.00 صباحاً إلى 3:00 مساءً</p>
           <p data-i18n="footer.hours_fri" style="margin: 0 0 5px 0;">يوم الجمعة من الساعة 8.00 صباحا إلى 12.00 مساءا</p>
           <p data-i18n="footer.hours_sat" style="margin: 0;">السبت ( أجازة )</p>
@@ -3129,35 +3170,35 @@
 
       <!-- Col 2: Quick Links -->
       <div class="footer-col-links">
-        <h5 data-i18n="footer.links" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">روابط سريعة</h5>
+        <h5 data-i18n="footer.links" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">روابط سريعة</h5>
         <ul class="footer-links-list" style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-          <li><a href="#home" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
-          <li><a href="#about" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
-          <li><a href="#portfolio2" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
-          <li><a href="#branches" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
-          <li><a href="#contact" style="color: #ffffff; text-decoration: none; font-size: 15px;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
+          <li><a href="#home" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.home">الرئيسية</span></a></li>
+          <li><a href="#about" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.about">من نحن</span></a></li>
+          <li><a href="#portfolio2" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.portfolio">أعمالنا</span></a></li>
+          <li><a href="#branches" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.branches">شركات المجموعة</span></a></li>
+          <li><a href="#contact" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"><span class="bullet" style="color: #d4af37; margin-left: 5px;">▪</span> <span data-i18n="nav.contact">تواصل معنا</span></a></li>
         </ul>
       </div>
 
       <!-- Col 3: Follow Us On Instagram -->
       <div class="footer-col-instagram">
-        <h5 data-i18n="footer.follow" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">تابعنا على الانستغرام</h5>
+        <h5 data-i18n="footer.follow" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">تابعنا على الانستغرام</h5>
         <ul class="instagram-list footer-instagram-list" style="list-style: none; padding: 0; margin: 0;">
           
           <li style="margin-bottom: 15px;">
-            <a href="#" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 15px;"
+            <a href="#" target="_blank" rel="noopener" class="footer-link-anim" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"
                onmouseover="this.querySelector('.insta-icon').style.borderColor='#d4af37'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.transform='translateY(-3px)'; this.querySelector('.insta-text').style.color='#d4af37';"
                onmouseout="this.querySelector('.insta-icon').style.borderColor='#444444'; this.querySelector('.insta-icon').style.color='#ffffff'; this.querySelector('.insta-icon').style.transform='translateY(0)'; this.querySelector('.insta-text').style.color='#ffffff';">
-              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444444; border-radius: 10px; color: #ffffff; font-size: 20px; transition: all 0.3s ease;"></i>
+              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid #444444; border-radius: 9px; color: #ffffff; font-size: 16px; transition: all 0.3s ease;"></i>
               <span class="insta-text" data-i18n="branch.b1_title" style="transition: color 0.3s ease;">كوجر للعقارات</span>
             </a>
           </li>
 
           <li style="margin-bottom: 15px;">
-            <a href="#" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 15px;"
+            <a href="#" target="_blank" rel="noopener" class="footer-link-anim" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;"
                onmouseover="this.querySelector('.insta-icon').style.borderColor='#d4af37'; this.querySelector('.insta-icon').style.color='#d4af37'; this.querySelector('.insta-icon').style.transform='translateY(-3px)'; this.querySelector('.insta-text').style.color='#d4af37';"
                onmouseout="this.querySelector('.insta-icon').style.borderColor='#444444'; this.querySelector('.insta-icon').style.color='#ffffff'; this.querySelector('.insta-icon').style.transform='translateY(0)'; this.querySelector('.insta-text').style.color='#ffffff';">
-              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #444444; border-radius: 10px; color: #ffffff; font-size: 20px; transition: all 0.3s ease;"></i>
+              <i class="fa-brands fa-instagram insta-icon" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid #444444; border-radius: 9px; color: #ffffff; font-size: 16px; transition: all 0.3s ease;"></i>
               <span class="insta-text" data-i18n="branch.b2_title" style="transition: color 0.3s ease;">كوجر لصيانة المباني</span>
             </a>
           </li>
@@ -3167,42 +3208,42 @@
 
       <!-- Col 4: Contact Info -->
       <div class="footer-col-contact">
-        <h5 data-i18n="footer.contact_title" style="color: #ffffff; font-size: 18px; font-weight: bold; margin: 0 0 15px 0;">تواصل معنا</h5>
+        <h5 data-i18n="footer.contact_title" style="color: #D9C3A3; font-size: 19px; font-weight: 800; letter-spacing: 0.3px; margin: 0 0 15px 0;">تواصل معنا</h5>
         <div class="footer-contact-list" style="display: flex; flex-direction: column; gap: 12px;">
           
           <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
                onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
                onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
             <i class="fa-solid fa-phone" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="tel:+97167649900" dir="ltr" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">+971 6 764 9900</a>
+            <a href="tel:+97167649900" dir="ltr" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">+971 6 764 9900</a>
           </div>
 
           <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
                onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
                onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
             <i class="fa-brands fa-whatsapp" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="https://wa.me/971503447262" target="_blank" rel="noopener" dir="ltr" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">+971 50 344 7262</a>
+            <a href="https://wa.me/971503447262" target="_blank" rel="noopener" dir="ltr" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">+971 50 344 7262</a>
           </div>
 
           <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
                onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
                onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
             <i class="fa-brands fa-whatsapp" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="https://wa.me/971559837371" target="_blank" rel="noopener" dir="ltr" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">+971 55 983 7371</a>
+            <a href="https://wa.me/971559837371" target="_blank" rel="noopener" dir="ltr" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">+971 55 983 7371</a>
           </div>
 
           <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
                onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('a').style.color='#d4af37';"
                onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('a').style.color='#ffffff';">
             <i class="fa-solid fa-envelope" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <a href="mailto:admin@mrmgroup.ae" style="color: #ffffff; text-decoration: none; font-size: 15px; transition: color 0.3s ease;">admin@mrmgroup.ae</a>
+            <a href="mailto:admin@mrmgroup.ae" class="footer-link-anim" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">admin@mrmgroup.ae</a>
           </div>
 
           <div class="footer-contact-row" style="display: flex; align-items: center; gap: 12px;"
                onmouseover="this.querySelector('i').style.color='#ffffff'; this.querySelector('i').style.transform='scale(1.25)'; this.querySelector('span').style.color='#d4af37';"
                onmouseout="this.querySelector('i').style.color='#d4af37'; this.querySelector('i').style.transform='scale(1)'; this.querySelector('span').style.color='#ffffff';">
             <i class="fa-solid fa-location-dot" style="color: #d4af37; font-size: 22px; width: 28px; text-align: center; transition: all 0.3s ease;"></i>
-            <span data-i18n="contact.addr_short" style="color: #ffffff; font-size: 15px; transition: color 0.3s ease;">بناية المدار، أم القيوين، الإمارات</span>
+            <span data-i18n="contact.addr_short" style="color: #ffffff; font-size: 16px; font-weight: 700; transition: color 0.3s ease;">بناية المدار، أم القيوين، الإمارات</span>
           </div>
 
         </div>
@@ -3211,7 +3252,7 @@
     </div>
 
     <!-- Bottom Section -->
-    <div class="footer-bottom text-center" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222222; text-align: center; font-size: 13px; color: #888888;">
+    <div class="footer-bottom text-center" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #222222; text-align: center; font-size: 14px; font-weight: 700; color: #888888;">
       <span data-i18n="footer.copy">© 2026 MRM Group. جميع الحقوق محفوظة.</span>
       <div class="footer-credit" style="margin-top: 5px;"><span data-i18n="footer.designed_by">تم التصميم بواسطة</span> <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" rel="noopener" style="color: #d4af37; text-decoration: none;">GMTWEB</a></div>
     </div>
@@ -3530,7 +3571,7 @@
           "footer.contact_title": "Contact Us",
           "footer.follow": "Follow us on Instagram",
           "footer.designed_by": "Designed by",
-          "contact.addr_short": "Benayet Al Madar, Umm Al Quwain, UAE",
+          "contact.addr_short": "Al Madar Building, Umm Al Quwain, UAE",
           "footer.copy": "© 2026 MRM Group. All rights reserved."
         }
       };
