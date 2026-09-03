@@ -1931,6 +1931,9 @@
       background: var(--navy-light);
       transition: var(--transition-smooth);
       box-shadow: var(--shadow-sm);
+        content-visibility: auto;
+  contain-intrinsic-size: 260px 260px;
+  will-change: transform;
     }
 
     .gallery-item:hover {
@@ -3668,7 +3671,7 @@
     function renderGallery(items) {
       galleryGrid.innerHTML = items.map(item => `
     <div class="gallery-item" data-category="">
-      <img src="${item.img}" alt="${item.title}" loading="lazy">
+      <img src="${item.img}" alt="${item.title}" loading="lazy" decoding="async">
       <div class="gi-overlay">
         <small><i class="fa-solid fa-tag"></i></small>
       </div>
