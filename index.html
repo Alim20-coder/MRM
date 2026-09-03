@@ -3685,7 +3685,7 @@
         const priorityAttr = index < 2 ? 'fetchpriority="high"' : '';
         return `
     <div class="gallery-item" data-category="">
-      <img ${srcAttr} alt="${item.title || ''}" decoding="async" ${priorityAttr}>
+      <img ${srcAttr} alt="${item.title || ''}" ${priorityAttr}>
       <div class="gi-overlay">
         <small><i class="fa-solid fa-tag"></i></small>
       </div>
