@@ -1931,9 +1931,9 @@
       background: var(--navy-light);
       transition: var(--transition-smooth);
       box-shadow: var(--shadow-sm);
-        content-visibility: auto;
-  contain-intrinsic-size: 260px 260px;
-  will-change: transform;
+      content-visibility: auto;
+      contain-intrinsic-size: 260px 260px;
+      will-change: transform;
     }
 
     .gallery-item:hover {
@@ -1948,7 +1948,13 @@
       height: 100%;
       object-fit: cover !important;
       object-position: center;
-      transition: transform 0.7s var(--ease-out);
+      transition: transform 0.7s var(--ease-out), opacity 0.35s ease;
+      background: linear-gradient(135deg, rgba(192,154,103,0.08), rgba(192,154,103,0.02));
+      opacity: 0;
+    }
+
+    .gallery-item img.loaded {
+      opacity: 1;
     }
 
     .gallery-item:hover img {
@@ -3637,6 +3643,8 @@
       if (langBtnMobile) langBtnMobile.addEventListener('click', toggleLang);
 
     });
+
+    // ============ GALLERY: صور محسّنة للسرعة ============
     // 1. مصفوفة البيانات (Array)
     const projectsData = [
       { img: "css/A (1).jpg" },
@@ -3661,57 +3669,75 @@
       { img: "css/B (6).jpg" },
       { img: "css/B (7).jpg" },
       { img: "css/B (8).jpg" }
-
-
     ];
 
     const galleryGrid = document.getElementById('galleryGrid');
     const filterBtns = document.querySelectorAll('.filter-btn');
 
+    // أول 6 صور بتتحمل فورًا (من غير لازي لود) عشان تظهر بسرعة أول ما السكشن يوصل،
+    // والباقي بيتحمل تدريجيًا وقت السكرول عشان الشبكة متتخنقش من 22 صورة مرة واحدة
+    const EAGER_LOAD_COUNT = 6;
+
     function renderGallery(items) {
-  galleryGrid.innerHTML = items.map(item => `
+      galleryGrid.innerHTML = items.map((item, index) => {
+        const isEager = index < EAGER_LOAD_COUNT;
+        const srcAttr = isEager ? `src="${item.img}"` : `data-src="${item.img}"`;
+        const priorityAttr = index < 2 ? 'fetchpriority="high"' : '';
+        return `
     <div class="gallery-item" data-category="">
-      <img data-src="${item.img}" alt="${item.title}" decoding="async">
+      <img ${srcAttr} alt="${item.title || ''}" decoding="async" ${priorityAttr}>
       <div class="gi-overlay">
         <small><i class="fa-solid fa-tag"></i></small>
       </div>
     </div>
-  `).join('');
-  initGalleryLazyLoad();
-}
+  `;
+      }).join('');
 
-// لازي لود مخصص: يبدأ يحمّل الصورة قبل ما توصلها بمسافة كبيرة (800px)
-// عشان تكون جاهزة خالص وقت ما توصلها بالسكرول، بدل ما تستناها تظهر فجأة
-function initGalleryLazyLoad() {
-  var lazyImages = galleryGrid.querySelectorAll('img[data-src]');
+      // نضيف كلاس loaded لأي صورة خلصت تحميل عشان تظهر بفيد أوباسيتي بدل ما تلمع فجأة
+      galleryGrid.querySelectorAll('img').forEach(function (img) {
+        if (img.complete) {
+          img.classList.add('loaded');
+        } else {
+          img.addEventListener('load', function () { img.classList.add('loaded'); }, { once: true });
+        }
+      });
 
-  if (!('IntersectionObserver' in window)) {
-    lazyImages.forEach(function (img) {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    });
-    return;
-  }
+      initGalleryLazyLoad();
+    }
 
-  var imgObserver = new IntersectionObserver(function (entries, obs) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        obs.unobserve(img);
+    // Lazy-load مضبوط: مسافة معقولة (600px) عشان الصور تتحمل تباعًا وهي قريبة
+    // من غير ما كل الصور تتكدس مع بعض وتتنافس على النت في نفس اللحظة
+    function initGalleryLazyLoad() {
+      var lazyImages = galleryGrid.querySelectorAll('img[data-src]');
+
+      if (!('IntersectionObserver' in window)) {
+        lazyImages.forEach(function (img) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+        });
+        return;
       }
-    });
-  }, {
-    root: null,
-    rootMargin: '800px 0px',
-    threshold: 0.01
-  });
 
-  lazyImages.forEach(function (img) {
-    imgObserver.observe(img);
-  });
-}
+      var imgObserver = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            img.addEventListener('load', function () { img.classList.add('loaded'); }, { once: true });
+            obs.unobserve(img);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '600px 0px',
+        threshold: 0.01
+      });
+
+      lazyImages.forEach(function (img) {
+        imgObserver.observe(img);
+      });
+    }
 
     renderGallery(projectsData);
 
