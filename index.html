@@ -3669,15 +3669,49 @@
     const filterBtns = document.querySelectorAll('.filter-btn');
 
     function renderGallery(items) {
-      galleryGrid.innerHTML = items.map(item => `
+  galleryGrid.innerHTML = items.map(item => `
     <div class="gallery-item" data-category="">
-      <img src="${item.img}" alt="${item.title}" loading="lazy" decoding="async">
+      <img data-src="${item.img}" alt="${item.title}" decoding="async">
       <div class="gi-overlay">
         <small><i class="fa-solid fa-tag"></i></small>
       </div>
     </div>
   `).join('');
-    }
+  initGalleryLazyLoad();
+}
+
+// لازي لود مخصص: يبدأ يحمّل الصورة قبل ما توصلها بمسافة كبيرة (800px)
+// عشان تكون جاهزة خالص وقت ما توصلها بالسكرول، بدل ما تستناها تظهر فجأة
+function initGalleryLazyLoad() {
+  var lazyImages = galleryGrid.querySelectorAll('img[data-src]');
+
+  if (!('IntersectionObserver' in window)) {
+    lazyImages.forEach(function (img) {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    });
+    return;
+  }
+
+  var imgObserver = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        obs.unobserve(img);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '800px 0px',
+    threshold: 0.01
+  });
+
+  lazyImages.forEach(function (img) {
+    imgObserver.observe(img);
+  });
+}
 
     renderGallery(projectsData);
 
